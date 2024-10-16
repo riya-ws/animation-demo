@@ -100,24 +100,7 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
 }
-/* body[dir=rtl] .home-v4 .search-subject-container .nav-subjects-container.prev {
-  left: auto;
-  right: 0;
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg)
-}
 
-body[dir=rtl] .home-v4 .search-subject-container .nav-subjects-container.next {
-  right: auto;
-  left: 0;
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg)
-} */
-
-/* .next-card {
-  -webkit-transition: 0.15s all ease-in-out;
-  transition: 0.15s all ease-in-out;
-} */
 .card-wrapper-1 {
   transform: translateX(-496px);
 }
