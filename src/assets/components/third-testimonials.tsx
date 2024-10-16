@@ -124,7 +124,7 @@ const ThirdTestimonials = () => {
     }
   }, [currentIndex]);
   return (
-    <div className="main-testimonial">
+    <div className="main-testimonial my-16">
       <div className="testimonial-container">
         <div className="testimonial-wrapper flex overflow-hidden">
           <div className="title-section space-y-3 ">

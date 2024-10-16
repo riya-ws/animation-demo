@@ -1,13 +1,19 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import Home from "./pages/home/home";
+import ThirdTestimonials from "./assets/components/third-testimonials";
 import Work from "./assets/components/work";
 
 function App() {
-  // const [count, setCount] = useState(0)
-
   return (
     <>
-      {/*On scroll how to works section*/}
-      <Work />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/arrow-card-stack-swipe" element={ <ThirdTestimonials />} />
+          <Route path="/on-scroll-sticky-card-stack" element={ <Work />} />
+          </Routes>
+      </BrowserRouter>
     </>
   );
 }
