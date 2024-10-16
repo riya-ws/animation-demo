@@ -1,0 +1,327 @@
+/*Home slider css start*/
+.swiper-container {
+  width: 100%;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: 50%;
+  min-height: 20vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+/* .slick-list {
+    width: 80%;
+} */
+
+.slick-track {
+  display: flex !important;
+  gap: 20px;
+}
+.slick-arrow.slick-prev.bg-black.rounded-full {
+  transform: translate(-725px, 85px);
+}
+.slick-arrow.slick-next.bg-black.rounded-full {
+  transform: translate(-1590px, 85px);
+}
+.slick-next:before {
+  font-size: 20px;
+  line-height: 1;
+  opacity: 0.75;
+  color: blue !important;
+}
+.slick-prev:before {
+  font-size: 20px;
+  line-height: 1;
+  opacity: 0.75;
+  color: blue !important;
+}
+/*Home slider css end*/
+
+/*Testimonails Slider start*/
+/* .testimonial-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial-list {
+  display: flex;
+  width: 60%;
+}
+
+.testimonial-card {
+  position: relative;
+  min-width: 496px;
+  margin: 0 20px;
+  background-color: #FFE192;
+  padding: 20px;
+  border-radius: 60px;
+  height:450px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease, z-index 0.5s;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.review {
+  text-align: left;
+}
+
+.arrows {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  left: 242px;
+  top: 215px;
+} */
+/*Testimonails Slider end*/
+
+/*Testimonails  stack Slider start*/
+/* .testimonial-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  gap: 0 160px;
+}
+.testimonial-wrapper {
+  max-width: 1008px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 600px;
+  z-index: 1;
+}
+.testimonial-list {
+  display: flex;
+  transition: .3s all;
+  width: 496px;
+  gap: 24px;
+}
+.testimonial-card {
+  width: 496px;
+  height: 500px;
+  padding: 25px;
+  border-radius: 40px;
+}
+.avatar {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  border-radius: 50%;
+}
+.review {
+  text-align: left;
+}
+.arrows {
+  display: flex;
+  gap:20px;
+  justify-content: space-between;
+  width: 100px;
+}
+
+.card-wrapper-1 {
+  transform: translateX(-496px);
+} 
+ .card-wrapper-2 {
+  z-index: -1;
+  transform: translateX(-992px);
+}
+.card-wrapper-3 {
+  z-index: -1;
+  transform: translateX(-1488px);
+}
+.card-wrapper-4 {
+  z-index: -1;
+  transform: translateX(-1984px);
+}
+.card-wrapper-5 {
+  z-index: -1;
+  transform: translateX(-2480px);
+} */
+
+/*Testimonails  stack Slider end*/
+
+.main-testimonial {
+  /* --color-yellow-light: #FFE192;
+    --color-green-light: #D7F1DF; */
+  position: relative;
+  overflow: hidden;
+  margin: 0 calc((-50vw + 50%) + 10px) 130px;
+  -ms-touch-action: none;
+  touch-action: none;
+}
+.testimonial-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  gap: 0 160px;
+  height: 600px;
+}
+.testimonial-wrapper {
+  max-width: 1008px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 600px;
+  z-index: 1;
+  flex-shrink: 0;
+}
+.card-container {
+  -webkit-transition: .3s all;
+  transition: .3s all
+}
+.testimonial-list {
+  display: flex;
+  transition: 0.3s all;
+  width: 496px;
+  gap: 24px;
+}
+.testimonial-card {
+  width: 496px;
+  height: 600px;
+  padding: 32px;
+  border-radius: 40px;
+  -webkit-transition: .3s all;
+  transition: .3s all
+}
+.avatar {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  border-radius: 50%;
+}
+/* .prev-card {
+  -webkit-transition: 0.15s all ease-in-out;
+  transition: 0.15s all ease-in-out;
+} */
+.review{
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+}
+/* body[dir=rtl] .home-v4 .search-subject-container .nav-subjects-container.prev {
+  left: auto;
+  right: 0;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg)
+}
+
+body[dir=rtl] .home-v4 .search-subject-container .nav-subjects-container.next {
+  right: auto;
+  left: 0;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg)
+} */
+
+/* .next-card {
+  -webkit-transition: 0.15s all ease-in-out;
+  transition: 0.15s all ease-in-out;
+} */
+.card-wrapper-1 {
+  transform: translateX(-496px);
+}
+.card-wrapper-2 {
+  z-index: -1;
+  transform: translateX(-992px);
+}
+.card-wrapper-3 {
+  z-index: -1;
+  transform: translateX(-1488px);
+}
+.card-wrapper-4 {
+  z-index: -1;
+  transform: translateX(-1984px);
+  scale: 0.36;
+}
+.card-wrapper-5 {
+  z-index: -1;
+  transform: translateX(-2480px);
+}
+/*Testimonails  stack third Slider end*/
+
+/*Work section*/
+
+/* h1 {
+  margin-bottom: 80vh;
+} */
+
+.container {
+  /* padding-top: 100vh; */
+  display: flex;
+}
+
+/* .cards {
+  margin-left: 100px;
+}
+
+.card {
+  height: 200px;
+  width: 400px;
+  margin-bottom: 50px;
+  background: white;
+  font-size: 36px;
+} */
+
+.container2 {
+  padding-top: 40px;
+  width: 100%;
+  height: 150vh;
+  border-top: 1px solid red;
+}
+.account-main {
+  align-items: center;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 60px;
+  height: min-content;
+  justify-content: center;
+  max-width: 1280px;
+  min-height: 75vh;
+  overflow: visible;
+  padding: 40px;
+  position: sticky;
+  top: 80px;
+  width: 100%;
+  will-change: transform;
+  z-index: 1;
+}
+.account-wrapper {
+  opacity: 1;
+  transform: none;
+  transform-origin: 50% 0% 0px;
+  --border-style: solid;
+  --border-top-width: 1px;
+  background: linear-gradient(180deg, #fcfaff 0%, rgb(233, 229, 255) 100%);
+  border-radius: 30px;
+  flex: none;
+  height: 520px;
+  overflow: hidden;
+  position: relative;
+  width: 500px;
+  max-width: 1280px;
+  will-change: var(--framer-will-change-override, transform);
+}
+@media screen and (max-width: 768px) {
+  .account-main {
+    flex-direction: column !important;
+    max-width: 0px !important;
+  }
+}
