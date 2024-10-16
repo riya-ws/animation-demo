@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+
 const Home = () => {
   return (
     <div className="my-5 flex flex-col gap-6">
@@ -19,6 +20,15 @@ const Home = () => {
           className="text-lg font-medium hover:text-blue-600 hover:underline"
         >
           on scroll sticky card stack
+        </Link>
+      </div>
+      <div className="flex flex-col items-center">
+        <h1 className="text-2xl font-medium"> Demo 3 : </h1>
+        <Link
+          to="/sticky-scroll-reveal"
+          className="text-lg font-medium hover:text-blue-600 hover:underline"
+        >
+          Sticky scroll reveal
         </Link>
       </div>
     </div>

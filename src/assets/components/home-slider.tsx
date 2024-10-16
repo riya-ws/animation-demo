@@ -51,7 +51,7 @@ const SimpleSlider = () => {
     arrows: true,
     prevArrow: <PreviousArrow />,
     nextArrow: <NextArrow />,
-    afterChange: handleAfterChange, // Track active slide
+    afterChange: handleAfterChange, 
   };
 
   const reviews = [

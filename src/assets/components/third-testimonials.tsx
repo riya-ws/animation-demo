@@ -1,58 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Avatar, GradientStar } from "../../locals/icon";
-
-const tempTestimonials = [
-  {
-    id: 1,
-    name: "Melina",
-    desc: "Greek tutor",
-    comment:
-      "Melina is an excellent teacher. I’ve wanted to improve my Greek for a long time however I’ve always been a little scared to take the plunge, however Melina instantly put me at ease. I believe that I will learn a lot from her, which",
-    rating: "Kshi",
-    style: null,
-    bgColor: "#FFE192",
-  },
-  {
-    id: 2,
-    name: "Greta",
-    desc: "Violin tutor",
-    comment:
-      "I was really impressed with Greta's approach. She knows what needs to be achieved, but the 'how' is tailored to my own current strengths, weaknesses, and goals. She's also really encouraging and pays attention to detail which I",
-    rating: "Gerasimos",
-    style: null,
-    bgColor: "#D7F1DF",
-  },
-  {
-    id: 3,
-    name: "Alex",
-    desc: "Singing teacher",
-    comment:
-      "Alex is gifted, creative, and fun, and messaged me withe several exercises to continue with, which were greatly appreciated. High energy and encouraging.",
-    rating: "Bonnie",
-    style: null,
-    bgColor: "#FFE192",
-  },
-  {
-    id: 4,
-    name: "Rula",
-    desc: "Greek tutor",
-    comment:
-      "It’s been great taking sessions with Rula. She is helpful, professional and really enjoy my lessons with her. Highly recommend!",
-    rating: "Laura",
-    style: null,
-    bgColor: "#D7F1DF",
-  },
-  {
-    id: 5,
-    name: "Agnes",
-    desc: "Maths tutor",
-    comment:
-      "Agnes is well organised & explains maths concepts in a clear concise manner. Overall an excellent tutor.",
-    rating: "Bonnie",
-    style: null,
-    bgColor: "#FFE192",
-  },
-];
+import { tempTestimonials } from "../../utils/constant";
 
 const ThirdTestimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
