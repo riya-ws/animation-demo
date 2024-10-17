@@ -1,0 +1,69 @@
+/* h1 {
+  margin-bottom: 80vh;
+} */
+
+.container {
+    /* padding-top: 100vh; */
+    display: flex;
+  }
+  
+  /* .cards {
+    margin-left: 100px;
+  }
+  
+  .card {
+    height: 200px;
+    width: 400px;
+    margin-bottom: 50px;
+    background: white;
+    font-size: 36px;
+  } */
+  
+  .container2 {
+    padding-top: 40px;
+    width: 100%;
+    height: 150vh;
+    border-top: 1px solid red;
+  }
+  .account-main {
+    align-items: center;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 60px;
+    height: min-content;
+    justify-content: center;
+    max-width: 1280px;
+    min-height: 75vh;
+    overflow: visible;
+    padding: 40px;
+    position: sticky;
+    top: 80px;
+    width: 100%;
+    will-change: transform;
+    z-index: 1;
+  }
+  .account-wrapper {
+    opacity: 1;
+    transform: none;
+    transform-origin: 50% 0% 0px;
+    --border-style: solid;
+    --border-top-width: 1px;
+    background: linear-gradient(180deg, #fcfaff 0%, rgb(233, 229, 255) 100%);
+    border-radius: 30px;
+    flex: none;
+    height: 520px;
+    overflow: hidden;
+    position: relative;
+    width: 500px;
+    max-width: 1280px;
+    will-change: var(--framer-will-change-override, transform);
+  }
+  @media screen and (max-width: 768px) {
+    .account-main {
+      flex-direction: column !important;
+      max-width: 0px !important;
+    }
+  }
+  
