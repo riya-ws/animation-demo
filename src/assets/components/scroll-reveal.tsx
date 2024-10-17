@@ -34,16 +34,16 @@ const ScrollReveal = () => {
   return (
     <>
       <div
-        className={`bg-black flex w-full gap-10 my-10 overflow-y-hidden ${
+        className={`bg-black flex w-full gap-10 my-10 ${
           currentItem.title === "Real time changes"
             ? "bg-black"
             : "bg-[#0f172a]"
         }`}
       >
-        <div className="overflow-y-auto flex justify-center flex-col relative space-x-10 p-10 rounded-md container mx-auto">
+        <div className="overflow-y-auto flex justify-center flex-col space-x-10 p-10 rounded-md container mx-auto">
           <div className="flex w-full">
             {/* Left Content */}
-            <div className="flex flex-col gap-10 items-start w-[60%]">
+            <div className="flex flex-col gap-10 items-start w-[60%] max-md:w-full">
               {stickyRevealData.map((item, index) => (
                 <div
                   key={index}
@@ -51,7 +51,7 @@ const ScrollReveal = () => {
                   ref={(el) => (sectionRef.current[index] = el)}
                 >
                   <div
-                    className={`flex flex-col gap-10 items-start w-[60%] transition-all duration-500 ${
+                    className={`flex flex-col gap-10 items-start w-[60%] max-md:w-full transition-all duration-500 ${
                       currentItem.title === item.title
                         ? "text-white opacity-100"
                         : "text-gray-400 opacity-50"
@@ -65,7 +65,7 @@ const ScrollReveal = () => {
               ))}
             </div>
             {/* Sticky Box */}
-            <div className="w-[40%] flex items-center justify-center">
+            <div className="w-[40%] flex items-center justify-center max-md:hidden">
               <div
                 className={`sticky top-20 w-80 h-80 rounded-2xl flex flex-col items-center justify-center transition-all duration-500 z-10 ${
                   currentItem.title === "Real time changes" ? "" : "bg-gradient"
