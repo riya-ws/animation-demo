@@ -1,73 +1,72 @@
+import { useEffect, useRef, useState } from "react";
 import { stickyRevealData } from "../../utils/constant";
 
 const ScrollReveal = () => {
-  //   const [backgroundGradient, setBackgroundGradient] = useState(
-  //     linearGradients[0]
-  //   );
+  const [currentItem, setCurrentItem] = useState(stickyRevealData[0]);
+  const sectionRef = useRef<(HTMLDivElement | null)[]>([]);
+  const [bgGradient, setBgGradient] = useState(
+    "linear-gradient(to bottom right, #FF007A, #6A00FF)"
+  );
 
-  //   useEffect(() => {
-  //     setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
-  //   }, [activeCard]);
-  //   const backgroundColors = [
-  //     "var(--slate-900)",
-  //     "var(--black)",
-  //     "var(--neutral-900)",
-  //   ];
-  //   const linearGradients = [
-  //     "linear-gradient(to bottom right, var(--cyan-500), var(--emerald-500))",
-  //     "linear-gradient(to bottom right, var(--pink-500), var(--indigo-500))",
-  //     "linear-gradient(to bottom right, var(--orange-500), var(--yellow-500))",
-  //   ];
+  const gradients = [
+    "linear-gradient(to bottom right, #FF007A, #6A00FF)",
+    "linear-gradient(to bottom right, #FFA500, #FFFF00)",
+  ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      sectionRef.current.forEach((section, index) => {
+        if (
+          section &&
+          section.getBoundingClientRect().top < window.innerHeight / 2
+        ) {
+          setCurrentItem(stickyRevealData[index]);
+          setBgGradient(gradients[index % gradients.length]);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [gradients]);
+
   return (
     <>
-      {/* <div className="bg-[#000000] flex w-full gap-10 my-10">
-        <div className="h-[30rem] overflow-y-auto flex justify-center flex-col relative space-x-10 rounded-md ">
-          {stickyRevealData.map((item, index) => {
-            return (
-              <>
-                <div className="flex w-full">
-                  <div className="flex flex-col gap-10 items-start w-[60%]">
-                    <h1 key={index} className="text-2xl font-medium">
-                      {item.title}
-                    </h1>
+      <div  className=" bg-black flex w-full gap-10 my-10 overflow-auto">
+        <div className="h-[30rem] flex justify-center flex-col relative space-x-10 rounded-md container mx-auto">
+          <div className="flex w-full">
+            {/* Left Content */}
+            <div className="flex flex-col gap-10 items-start w-[60%]">
+              {stickyRevealData.map((item, index) => (
+                <div
+                  key={index}
+                  className="flex w-full"
+                  ref={(el) => (sectionRef.current[index] = el)}
+                >
+                  <div
+                    className={`flex flex-col gap-10 items-start w-[60%] transition-all duration-500 ${
+                      currentItem.title === item.title
+                        ? "text-white opacity-100"
+                        : "text-gray-400 opacity-50"
+                    }`}
+                  >
+                    {/* <h1 className="text-2xl font-medium">{item.title}</h1> */}
                     <p className="text-4xl font-bold">{item.content}</p>
-                    <p className="text-lg font-normal text-white">
-                      {item.description}
-                    </p>
-                  </div>
-                  <div className="w-[40%] flex items-center justify-center">
-                    <div className="w-80 h-80 bg-slate-200 rounded-2xl"></div>
+                    <p className="text-lg font-normal">{item.description}</p>
                   </div>
                 </div>
-              </>
-            );
-          })}
-        </div>
-      </div> */}
-      <div className="bg-[#000000] flex w-full gap-10 my-10">
-        <div className="h-[30rem] overflow-y-auto flex justify-center flex-col relative space-x-10 rounded-md container mx-auto ">
-          <div className="flex w-full ">
-            <div className="flex flex-col gap-10 items-start w-[60%]">
-              {stickyRevealData.map((item, index) => {
-                return (
-                  <>
-                    <div className="flex w-full">
-                      <div className="flex flex-col gap-10 items-start w-[60%]">
-                        <h1 key={index} className="text-2xl font-medium">
-                          {item.title}
-                        </h1>
-                        <p className="text-4xl font-bold">{item.content}</p>
-                        <p className="text-lg font-normal text-white">
-                          {item.description}
-                        </p>
-                      </div>
-                    </div>
-                  </>
-                );
-              })}
+              ))}
             </div>
+            {/* Sticky Box */}
             <div className="w-[40%] flex items-center justify-center">
-              <div className="w-80 h-80 bg-slate-200 rounded-2xl"></div>
+              <div
+                className="sticky top-20 w-80 h-80 rounded-2xl flex flex-col items-center justify-center transition-all duration-500 z-10"
+                style={{ background: bgGradient }}
+              >
+                <h2 className="text-xl font-bold text-center text-white">
+                  {currentItem.title}
+                </h2>
+              </div>
             </div>
           </div>
         </div>
