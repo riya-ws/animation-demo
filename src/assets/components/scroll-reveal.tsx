@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { stickyRevealData } from "../../utils/constant";
 
 const ScrollReveal = () => {

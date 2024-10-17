@@ -1,43 +1,9 @@
 import { useEffect, useState, CSSProperties } from "react";
-import workSection from "../work.png";
 import { workData } from "../../utils/constant";
-
-// const workData = [
-//   {
-//     title: "Create Your Account",
-//     description:
-//       "Sign up in minutes and start your journey to smarter financial management with Fintro.",
-//     image: workSection,
-//   },
-//   {
-//     title: "Link Your Bank Accounts",
-//     description:
-//       "Securely connect all your bank accounts and credit cards for a complete financial overview.",
-//     image: workSection,
-//   },
-//   {
-//     title: "Begin Tracking Your Spending",
-//     description:
-//       "Automatically track your expenses and stay on top of your finances effortlessly.",
-//     image: workSection,
-//   },
-//   {
-//     title: "Analyse Your Spends",
-//     description:
-//       "Create custom budgets, monitor spending, and get alerts when limits are near.",
-//     image: workSection,
-//   },
-//   {
-//     title: "Explore with Smart Search",
-//     description:
-//       "Quickly find any transaction or insight with Fintro’s AI-powered smart search.",
-//     image: workSection,
-//   },
-// ];
+import "../../assets/style/work-slider.css"
 
 const Work = () => {
   const [activeIndex, setActiveIndex] = useState<number>(-1);
-  // const [flexDirection, setFlexDirection] = useState("row");
   const [flexDirection, setFlexDirection] =
     useState<CSSProperties["flexDirection"]>("row");
   useEffect(() => {
