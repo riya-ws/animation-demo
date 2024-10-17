@@ -3,32 +3,53 @@ import { stickyRevealData } from "../../utils/constant";
 import stickyReveal from "../../assets/linear.png";
 
 const ScrollReveal = () => {
-  const [currentItem, setCurrentItem] = useState(stickyRevealData[0]);
+  // Set default to the "Collaborative" item
+  const [currentItem, setCurrentItem] = useState(() => {
+    return (
+      stickyRevealData.find((item) => item.title === "Collaborative") ||
+      stickyRevealData[0]
+    );
+  });
+
   const sectionRef = useRef<(HTMLDivElement | null)[]>([]);
-  const [bgGradient, setBgGradient] = useState(
+  const scrollContainerRef = useRef<HTMLDivElement | null>(null);
+
+  const [bgGradient, setBgGradient] = useState<string>(
     "linear-gradient(to bottom right, #FF007A, #6A00FF)"
   );
 
-  const gradients = [
+  const gradients: string[] = [
     "linear-gradient(to bottom right, #FF007A, #6A00FF)",
     "linear-gradient(to bottom right, #FFA500, #FFFF00)",
   ];
 
-  useEffect(() => {
-    const handleScroll = () => {
+  const handleScroll = () => {
+    const scrollContainer = scrollContainerRef.current;
+
+    if (scrollContainer) {
       sectionRef.current.forEach((section, index) => {
-        if (
-          section &&
-          section.getBoundingClientRect().top < window.innerHeight / 2
-        ) {
-          setCurrentItem(stickyRevealData[index]);
-          setBgGradient(gradients[index % gradients.length]);
+        if (section) {
+          const sectionTop =
+            section.getBoundingClientRect().top -
+            scrollContainer.getBoundingClientRect().top;
+
+          if (sectionTop < scrollContainer.clientHeight / 4
+
+          ) {
+            setCurrentItem(stickyRevealData[index]);
+            setBgGradient(gradients[index % gradients.length]);
+          }
         }
       });
-    };
+    }
+  };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+  useEffect(() => {
+    const scrollContainer = scrollContainerRef.current;
+    if (scrollContainer) {
+      scrollContainer.addEventListener("scroll", handleScroll);
+      return () => scrollContainer.removeEventListener("scroll", handleScroll);
+    }
   }, [gradients]);
 
   return (
@@ -40,10 +61,13 @@ const ScrollReveal = () => {
             : "bg-[#0f172a]"
         }`}
       >
-        <div className="overflow-y-auto flex justify-center flex-col space-x-10 p-10 rounded-md container mx-auto">
+        <div
+          className="overflow-y-auto flex justify-center flex-col space-x-10 p-10 rounded-md container mx-auto"
+          ref={scrollContainerRef}
+          style={{ height: "600px", overflowY: "scroll" }}
+        >
           <div className="flex w-full">
-            {/* Left Content */}
-            <div className="flex flex-col gap-10 items-start w-[60%] max-md:w-full">
+            <div className="flex flex-col gap-10 items-start w-[60%] max-md:w-full mt-[900px] mb-[170px]">
               {stickyRevealData.map((item, index) => (
                 <div
                   key={index}
@@ -58,16 +82,14 @@ const ScrollReveal = () => {
                     }`}
                   >
                     <h1 className="text-4xl font-bold">{item.title}</h1>
-                    {/* <p className="text-4xl font-bold">{item.content}</p> */}
                     <p className="text-lg font-normal">{item.description}</p>
                   </div>
                 </div>
               ))}
             </div>
-            {/* Sticky Box */}
             <div className="w-[40%] flex items-center justify-center max-md:hidden">
               <div
-                className={`sticky top-20 w-80 h-80 rounded-2xl flex flex-col items-center justify-center transition-all duration-500 z-10 ${
+                className={`sticky top-28 w-80 h-80 rounded-2xl flex flex-col items-center justify-center transition-all duration-500 z-10 ${
                   currentItem.title === "Real time changes" ? "" : "bg-gradient"
                 }`}
                 style={{
