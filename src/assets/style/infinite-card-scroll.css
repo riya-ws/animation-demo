@@ -22,7 +22,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    transform: translate(-47%, -20%);
+    transform: translate(-47%, -10%);
   }
   
   .card {
@@ -39,6 +39,7 @@
     transform: translateX(-50%);
     transition: transform 0.5s ease, opacity 0.5s ease;
     border-radius: 0.8rem;
+    /* opacity: 0; */
   }
   
   .actions {
@@ -63,4 +64,8 @@
   
   button:hover {
     background: #57a818;
+  }
+  .drag-proxy {
+    visibility: hidden;
+    position: absolute;
   }
