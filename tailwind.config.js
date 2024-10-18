@@ -9,8 +9,17 @@ export default {
       colors: {
         primary: "#000000",
         secondary: "#FFFFFF",
+        darkBlue:"#0f172a",
       },
 
+      margin: {
+        large: "75rem",
+        medium:"63.75rem"
+      },
+
+      height: {
+        large: "37.5rem",
+      },
       fontSize: {
         xxs: "10px",
         screens: {

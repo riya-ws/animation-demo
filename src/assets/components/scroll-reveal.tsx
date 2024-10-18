@@ -3,7 +3,6 @@ import { stickyRevealData } from "../../utils/constant";
 import stickyReveal from "../../assets/linear.png";
 
 const ScrollReveal = () => {
-  // Set default to the "Collaborative" item
   const [currentItem, setCurrentItem] = useState(() => {
     return (
       stickyRevealData.find((item) => item.title === "Collaborative") ||
@@ -58,16 +57,15 @@ const ScrollReveal = () => {
         className={`bg-black flex w-full gap-10 my-10 ${
           currentItem.title === "Real time changes"
             ? "bg-black"
-            : "bg-[#0f172a]"
+            : "bg-darkBlue"
         }`}
       >
         <div
-          className="overflow-y-auto flex justify-center flex-col space-x-10 p-10 rounded-md container mx-auto"
+          className="h-large overflow-y-scroll flex justify-center flex-col space-x-10 p-10 rounded-md container mx-auto"
           ref={scrollContainerRef}
-          style={{ height: "600px", overflowY: "scroll" }}
         >
           <div className="flex w-full">
-            <div className="flex flex-col gap-10 items-start w-[60%] max-md:w-full mt-[900px] mb-[170px]">
+            <div className="flex flex-col gap-10 items-start w-3/5 max-md:w-full mt-large lg:mt-medium lg:mb-44">
               {stickyRevealData.map((item, index) => (
                 <div
                   key={index}
@@ -75,19 +73,19 @@ const ScrollReveal = () => {
                   ref={(el) => (sectionRef.current[index] = el)}
                 >
                   <div
-                    className={`flex flex-col gap-10 items-start w-[60%] max-md:w-full transition-all duration-500 ${
+                    className={`flex flex-col gap-10 items-start w-3/5 max-md:w-full transition-all duration-500 ${
                       currentItem.title === item.title
                         ? "text-white opacity-100"
                         : "text-gray-400 opacity-50"
                     }`}
                   >
-                    <h1 className="text-4xl font-bold">{item.title}</h1>
+                    <h1 className="lg:text-4xl text-2xl font-bold">{item.title}</h1>
                     <p className="text-lg font-normal">{item.description}</p>
                   </div>
                 </div>
               ))}
             </div>
-            <div className="w-[40%] flex items-center justify-center max-md:hidden">
+            <div className="w-2/5 flex items-center justify-center max-md:hidden">
               <div
                 className={`sticky top-28 w-80 h-80 rounded-2xl flex flex-col items-center justify-center transition-all duration-500 z-10 ${
                   currentItem.title === "Real time changes" ? "" : "bg-gradient"
@@ -102,8 +100,8 @@ const ScrollReveal = () => {
                 {currentItem.title === "Real time changes" && (
                   <img
                     src={stickyReveal}
-                    width={300}
-                    height={300}
+                    width={320}
+                    height={320}
                     className="h-full w-full object-cover rounded-2xl"
                     alt="linear board demo"
                   />
