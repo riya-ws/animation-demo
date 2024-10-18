@@ -32,7 +32,7 @@ const InfiniteCardScroll = () => {
 
   return (
     <>
-      <div className="infinite-scroll">
+      <div className="infinite-scroll max-xl:overflow-hidden">
         <div className="gallery">
           <ul className="cards" onWheel={handleScroll}>
             {cardsArray.map((card, index) => {
@@ -40,6 +40,7 @@ const InfiniteCardScroll = () => {
               const isNext1 = index === (activeIndex + 1) % cardsArray.length;
               const isNext2 = index === (activeIndex + 2) % cardsArray.length;
               const isNext3 = index === (activeIndex + 3) % cardsArray.length;
+              const isNext4 = index === (activeIndex + 4) % cardsArray.length;
               const isPrev1 =
                 index ===
                 (activeIndex - 1 + cardsArray.length) % cardsArray.length;
@@ -49,6 +50,9 @@ const InfiniteCardScroll = () => {
               const isPrev3 =
                 index ===
                 (activeIndex - 3 + cardsArray.length) % cardsArray.length;
+              const isPrev4 =
+                index ===
+                (activeIndex - 4 + cardsArray.length) % cardsArray.length;
 
               return (
                 <li
@@ -67,21 +71,27 @@ const InfiniteCardScroll = () => {
                       ? "scale(0.6) translateX(200%)"
                       : isNext3
                       ? "scale(0.5) translateX(300%)"
+                      : isNext4
+                      ? "scale(0.3) translateX(200%)"
                       : isPrev1
                       ? "scale(0.8) translateX(-100%)"
                       : isPrev2
                       ? "scale(0.7) translateX(-200%)"
                       : isPrev3
                       ? "scale(0.5) translateX(-300%)"
+                       : isPrev4
+                      ? "scale(0.3) translateX(-200%)"
                       : "scale(0.5)",
                     opacity: isActive
                       ? 1
                       : isNext1 || isPrev1
                       ? 0.6
-                      : isNext2 || isPrev2 
+                      : isNext2 || isPrev2
                       ? 0.4
                       : isNext3 || isPrev3
                       ? 0.1
+                      : isNext4 || isPrev4
+                      ? 0
                       : 0,
 
                     zIndex: isActive ? 10 : isNext1 || isPrev1 ? 5 : 0,
