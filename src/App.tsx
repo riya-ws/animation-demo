@@ -5,6 +5,7 @@ import ThirdTestimonials from "./assets/components/third-testimonials";
 import Work from "./assets/components/work";
 import ScrollReveal from "./assets/components/scroll-reveal";
 import InfiniteCardScroll from "./assets/components/infinite-card-scroll";
+import InfiniteLogo from "./assets/components/infinite-logo";
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
           <Route path="/on-scroll-sticky-card-stack" element={<Work />} />
           <Route path="/sticky-scroll-reveal" element={<ScrollReveal />} />
           <Route path="/infinite-scrolling-card" element={<InfiniteCardScroll />} />
+          <Route path="/infinite-logo-slider" element={<InfiniteLogo />} />
+          
 
         </Routes>
       </BrowserRouter>

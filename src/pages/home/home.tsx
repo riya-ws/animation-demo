@@ -39,6 +39,15 @@ const Home = () => {
           Infinite scrolling,dragging and snapping card
         </Link>
       </div>
+      <div className="flex flex-col items-center">
+        <h1 className="text-2xl font-medium"> Demo 5 : </h1>
+        <Link
+          to="/infinite-logo-slider"
+          className="text-lg font-medium hover:text-blue-600 hover:underline"
+        >
+          Infinite logo slider 
+        </Link>
+      </div>
     </div>
   );
 };
