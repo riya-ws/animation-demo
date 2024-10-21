@@ -6,6 +6,7 @@ import Work from "./assets/components/work";
 import ScrollReveal from "./assets/components/scroll-reveal";
 import InfiniteCardScroll from "./assets/components/infinite-card-scroll";
 import InfiniteLogo from "./assets/components/infinite-logo";
+import ScrollDriven from "./assets/components/scroll-driven";
 
 function App() {
   return (
@@ -21,8 +22,7 @@ function App() {
           <Route path="/sticky-scroll-reveal" element={<ScrollReveal />} />
           <Route path="/infinite-scrolling-card" element={<InfiniteCardScroll />} />
           <Route path="/infinite-logo-slider" element={<InfiniteLogo />} />
-          
-
+          <Route path="/scroll-driven" element={<ScrollDriven />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -43,7 +43,11 @@ export default {
             "2xl": "1172px",
           },
         },
+        
       },
+      supports: {
+          sda: 'timeline-scope: none'
+        }
     },
   },
 };

@@ -34,7 +34,7 @@ const Home = () => {
         <h1 className="text-2xl font-medium"> Demo 4 : </h1>
         <Link
           to="/infinite-scrolling-card"
-          className="text-lg font-medium hover:text-blue-600 hover:underline"
+          className="text-lg font-medium text-center hover:text-blue-600 hover:underline"
         >
           Infinite scrolling,dragging and snapping card
         </Link>
@@ -46,6 +46,15 @@ const Home = () => {
           className="text-lg font-medium hover:text-blue-600 hover:underline"
         >
           Infinite logo slider 
+        </Link>
+      </div>
+      <div className="flex flex-col items-center">
+        <h1 className="text-2xl font-medium"> Demo 6 : </h1>
+        <Link
+          to="/scroll-driven"
+          className="text-lg text-center font-medium hover:text-blue-600 hover:underline"
+        >
+          Carousals with scroll driven animation
         </Link>
       </div>
     </div>
