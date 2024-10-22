@@ -1,6 +1,9 @@
+import { Link } from "react-router-dom";
 import biker from "../../assets/1/biker.jpg";
 import bottle from "../../assets/1/bottle.jpg";
 import helmet from "../../assets/1/helmet.jpg";
+import "../../assets/style/shared.css"
+
 
 const ScrollDriven = () => {
   
@@ -73,11 +76,11 @@ const ScrollDriven = () => {
           </a>
         </div>
         <nav className="flex items-center gap-10">
-          <a href="/scroll-driven" aria-current="page">
+          <Link to="/scroll-driven" aria-current="page">
             Demo 1
-          </a>
-          <a href="/scroll-driven-demo-two">Demo 2</a>
-          <a href="index3.html">Demo 3</a>
+          </Link>
+          <Link to="/scroll-driven-demo-two">Demo 2</Link>
+          <Link to="/scroll-driven-demo-three">Demo 3</Link>
         </nav>
       </header>
       <div className="flex-1 px-7 relative hidden supports-sda:flex flex-col gap-[inherit]">
@@ -205,7 +208,7 @@ const ScrollDriven = () => {
               <span
                 className="block uppercase font-medium tracking-widest mb-4 animate-text-up"
                 style={{
-                  animationTimeline: "--slide-2",
+                  animationTimeline: "--slide-3",
                   animationRangeStart: "30cqw",
                 }}
               >

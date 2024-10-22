@@ -8,6 +8,7 @@ import InfiniteCardScroll from "./pages/infinite-card-scroll/infinite-card-scrol
 import InfiniteLogo from "./pages/infinite-logo/infinite-logo";
 import ScrollDriven from "./pages/scroll-driven/scroll-driven";
 import ScrollDrivenDemoTwo from "./pages/scroll-driven-demo-two/scroll-driven-demo-two";
+import ScrollDrivenDemoThree from "./pages/scroll-driven-demo-three/scroll-driven-demo-three";
 
 function App() {
   return (
@@ -23,8 +24,9 @@ function App() {
           <Route path="/sticky-scroll-reveal" element={<ScrollReveal />} />
           <Route path="/infinite-scrolling-card" element={<InfiniteCardScroll />} />
           <Route path="/infinite-logo-slider" element={<InfiniteLogo />} />
-          <Route path="/scroll-driven" element={<ScrollDriven />} />ScrollDrivenDemoTwo
+          <Route path="/scroll-driven" element={<ScrollDriven />} />
           <Route path="/scroll-driven-demo-two" element={<ScrollDrivenDemoTwo />} />
+          <Route path="/scroll-driven-demo-three" element={<ScrollDrivenDemoThree />} />
         </Routes>
       </BrowserRouter>
     </>

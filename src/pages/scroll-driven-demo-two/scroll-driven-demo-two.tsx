@@ -1,8 +1,12 @@
-
-
+import { Link } from "react-router-dom";
 import abyss from "../../assets/2/abyss.png";
 import black from "../../assets/2/black.png";
 import white from "../../assets/2/white.png";
+import beach from "../../assets/2/beach.jpg";
+import savana from "../../assets/2/savanna.jpg";
+import glacier from "../../assets/2/glacier.jpg";
+import "../../assets/style/shared.css"
+
 
 const ScrollDrivenDemoTwo = () => {
   return (
@@ -47,11 +51,11 @@ const ScrollDrivenDemoTwo = () => {
             </a>
           </div>
           <nav className="flex items-center gap-10">
-            <a href="index.html">Demo 1</a>
-            <a href="index2.html" aria-current="page">
+            <Link to="/scroll-driven">Demo 1</Link>
+            <Link to="/scroll-driven-demo-two" aria-current="page">
               Demo 2
-            </a>
-            <a href="index3.html">Demo 3</a>
+            </Link>
+            <Link to="/scroll-driven-demo-three">Demo 3</Link>
           </nav>
         </header>
         <main className="lg:max-h-[1000px] hidden supports-sda:flex flex-1 py-14 lg:pb-9 relative flex-col">
@@ -60,21 +64,21 @@ const ScrollDrivenDemoTwo = () => {
               <img
                 className="object-cover animate-bg -left-[25%] -top-[25%] absolute size-[150%] max-w-none"
                 style={{ animationTimeline: " --slide-1" }}
-                src="img/2/beach.jpg"
+                src={beach}
                 role="presentation"
                 alt=""
               />
               <img
                 className="object-cover object-left-top animate-bg -left-[25%] -top-[25%] absolute size-[150%] max-w-none"
                 style={{ animationTimeline: " --slide-2" }}
-                src="img/2/savanna.jpg"
+                src={glacier}
                 role="presentation"
                 alt=""
               />
               <img
                 className="object-cover animate-bg object-top -left-[25%] -top-[25%] absolute size-[150%] max-w-none"
                 style={{ animationTimeline: " --slide-3" }}
-                src="img/2/glacier.jpg"
+                src={savana}
                 role="presentation"
                 alt=""
               />

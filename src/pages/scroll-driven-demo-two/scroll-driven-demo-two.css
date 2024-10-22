@@ -1,7 +1,8 @@
 .animate-bottle {
   animation: bottle linear both;
-
-  @media screen and (lg) {
+}
+@media only screen and (max-width: 1024px) {
+  .animate-bottle {
     animation-name: bottle-lg;
   }
 }
