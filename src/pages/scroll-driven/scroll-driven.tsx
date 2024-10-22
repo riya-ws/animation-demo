@@ -2,14 +2,13 @@ import { Link } from "react-router-dom";
 import biker from "../../assets/1/biker.jpg";
 import bottle from "../../assets/1/bottle.jpg";
 import helmet from "../../assets/1/helmet.jpg";
-import "../../assets/style/shared.css"
-
+import "./scroll-driven.css"
 
 const ScrollDriven = () => {
   
   return (
     <div
-      className="@container min-h-screen relative isolate flex flex-col gap-8 supports-sda:pointer-events-none overflow-clip"
+      className="@container min-h-screen text-white relative isolate flex flex-col gap-8 supports-sda:pointer-events-none overflow-clip"
       style={{ timelineScope: "--scroller, --slide-1, --slide-2, --slide-3" }} // Only valid CSS property
       data-slides="3"
     >

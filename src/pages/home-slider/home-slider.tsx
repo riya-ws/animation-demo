@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Avatar, GradientStar } from "../../locals/icon";
 import { useState } from "react";
+import "./home-slider.css";
 
 const SimpleSlider = () => {
   interface ArrowProps {
@@ -51,7 +52,7 @@ const SimpleSlider = () => {
     arrows: true,
     prevArrow: <PreviousArrow />,
     nextArrow: <NextArrow />,
-    afterChange: handleAfterChange, 
+    afterChange: handleAfterChange,
   };
 
   const reviews = [

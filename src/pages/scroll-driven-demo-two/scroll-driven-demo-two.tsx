@@ -5,8 +5,7 @@ import white from "../../assets/2/white.png";
 import beach from "../../assets/2/beach.jpg";
 import savana from "../../assets/2/savanna.jpg";
 import glacier from "../../assets/2/glacier.jpg";
-import "../../assets/style/shared.css"
-
+import "./scroll-driven-demo-two.css";
 
 const ScrollDrivenDemoTwo = () => {
   return (

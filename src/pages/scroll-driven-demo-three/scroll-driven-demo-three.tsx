@@ -5,7 +5,10 @@ import woman from "../../assets/3/woman.jpg";
 import sunglasses from "../../assets/3/sunglasses.jpg";
 import pockets from "../../assets/3/pockets.jpg";
 import lights from "../../assets/3/lights.jpg";
-import "../../assets/style/shared.css"
+import "./scroll-driven-demo-three.css";
+import "../../assets/style/shared.css";
+
+
 const ScrollDrivenDemoThree = () => {
   return (
     <div>
