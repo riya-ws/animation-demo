@@ -1,29 +1,9 @@
-import { useEffect } from "react";
 import biker from "../../assets/1/biker.jpg";
 import bottle from "../../assets/1/bottle.jpg";
 import helmet from "../../assets/1/helmet.jpg";
 
 const ScrollDriven = () => {
-    useEffect(() => {
-        const handleScroll = () => {
-          const scrollPosition = window.scrollY;
-    
-          // Example: Update an element based on scroll position
-          const slide1 = document.querySelector("#slide-1") as HTMLElement;
-          if (slide1) {
-            slide1.style.transform = `translateY(${scrollPosition * 0.5}px)`;
-          }
-    
-          // Repeat this for other slides as necessary
-        };
-    
-        window.addEventListener("scroll", handleScroll);
-    
-        return () => {
-          window.removeEventListener("scroll", handleScroll);
-        };
-      }, []);
-    
+  
   return (
     <div
       className="@container min-h-screen relative isolate flex flex-col gap-8 supports-sda:pointer-events-none overflow-clip"
@@ -175,11 +155,11 @@ const ScrollDriven = () => {
             ></div>
           </div>
         </div>
-        <div className="overlap items-end w-[31rem]">
+        <div className="overlap items-end w-[33rem]">
           <div>
             <span className="block overflow-clip">
               <span
-                className="block uppercase font-medium tracking-widest mb-4 animate-text-up"
+                className="block uppercase font-medium text-white tracking-widest mb-4 animate-text-up"
                 style={{
                   animationTimeline: "--slide-1",
                   animationRangeStart: "30cqw",
@@ -189,7 +169,7 @@ const ScrollDriven = () => {
               </span>
             </span>
             <p
-              className="pb-7 font-serif text-8xl animate-text translate-y-[205%] skew-y-6"
+              className="pb-7 font-serif text-8xl text-white animate-text translate-y-[205%] skew-y-6"
               style={{
                 animationTimeline: "--slide-1",
                 animationRangeStart: "30cqw",
@@ -245,7 +225,7 @@ const ScrollDriven = () => {
         </div>
         <a
           href="https://tympanus.net/Tutorials/Velvette/"
-          className="max-lg:hidden absolute z-50 bottom-7 right-7 pointer-events-auto"
+          className="max-lg:hidden text-white absolute z-50 bottom-7 right-7 pointer-events-auto"
         >
           Previous Demo
         </a>

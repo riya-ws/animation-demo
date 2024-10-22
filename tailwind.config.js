@@ -10,6 +10,9 @@ export default {
         primary: "#000000",
         secondary: "#FFFFFF",
         darkBlue:"#0f172a",
+        neutral: {
+          '750': '#2d2d2d'
+        }
       },
 
       margin: {
