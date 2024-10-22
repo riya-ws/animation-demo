@@ -1,12 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/home/home";
-import ThirdTestimonials from "./assets/components/third-testimonials";
-import Work from "./assets/components/work";
-import ScrollReveal from "./assets/components/scroll-reveal";
-import InfiniteCardScroll from "./assets/components/infinite-card-scroll";
-import InfiniteLogo from "./assets/components/infinite-logo";
-import ScrollDriven from "./assets/components/scroll-driven";
+import ThirdTestimonials from "./pages/third-testimonials/third-testimonials";
+import Work from "./pages/work/work";
+import ScrollReveal from "./pages/scroll-reveal/scroll-reveal";
+import InfiniteCardScroll from "./pages/infinite-card-scroll/infinite-card-scroll";
+import InfiniteLogo from "./pages/infinite-logo/infinite-logo";
+import ScrollDriven from "./pages/scroll-driven/scroll-driven";
+import ScrollDrivenDemoTwo from "./pages/scroll-driven-demo-two/scroll-driven-demo-two";
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
           <Route path="/sticky-scroll-reveal" element={<ScrollReveal />} />
           <Route path="/infinite-scrolling-card" element={<InfiniteCardScroll />} />
           <Route path="/infinite-logo-slider" element={<InfiniteLogo />} />
-          <Route path="/scroll-driven" element={<ScrollDriven />} />
+          <Route path="/scroll-driven" element={<ScrollDriven />} />ScrollDrivenDemoTwo
+          <Route path="/scroll-driven-demo-two" element={<ScrollDrivenDemoTwo />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Avatar, GradientStar } from "../../locals/icon";
 import { tempTestimonials } from "../../utils/constant";
-import "../../assets/style/third-testimonial.css"
+import "./third-testimonial.css"
 
 const ThirdTestimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

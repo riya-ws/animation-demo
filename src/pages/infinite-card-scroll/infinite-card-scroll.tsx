@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../../assets/style/infinite-card-scroll.css";
+import "./infinite-card-scroll.css";
 
 const cardsArray = Array.from({ length: 31 }, (_, i) => i);
 

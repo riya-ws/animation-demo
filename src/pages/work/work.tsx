@@ -1,6 +1,6 @@
 import { useEffect, useState, CSSProperties } from "react";
 import { workData } from "../../utils/constant";
-import "../../assets/style/work-slider.css"
+import "./work-slider.css"
 
 const Work = () => {
   const [activeIndex, setActiveIndex] = useState<number>(-1);

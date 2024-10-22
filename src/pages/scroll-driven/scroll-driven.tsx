@@ -93,10 +93,10 @@ const ScrollDriven = () => {
           </a>
         </div>
         <nav className="flex items-center gap-10">
-          <a href="index.html" aria-current="page">
+          <a href="/scroll-driven" aria-current="page">
             Demo 1
           </a>
-          <a href="index2.html">Demo 2</a>
+          <a href="/scroll-driven-demo-two">Demo 2</a>
           <a href="index3.html">Demo 3</a>
         </nav>
       </header>

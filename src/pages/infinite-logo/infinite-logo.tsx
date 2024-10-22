@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import "../../assets/style/infinite-logo.css";
+import "./infinite-logo.css";
 import { InfiniteLogoData } from "../../utils/constant";
 
 const InfiniteLogo = () => {
@@ -33,7 +33,7 @@ const InfiniteLogo = () => {
       <div className="main-scroll-slider">
         <div className="scroller" data-speed="fast">
           <ul className="tag-list scroller__inner">
-            <li className="flex gap-5">
+            <li className="flex gap-16">
               {InfiniteLogoData.map((item,index)=>{
                 return(
                   <div key={index}>{item.icon}</div>
