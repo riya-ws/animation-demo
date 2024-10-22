@@ -3,12 +3,12 @@ import "./App.css";
 import Home from "./pages/home/home";
 import ThirdTestimonials from "./pages/third-testimonials/third-testimonials";
 import Work from "./pages/work/work";
-import ScrollReveal from "./pages/scroll-reveal/scroll-reveal";
 import InfiniteCardScroll from "./pages/infinite-card-scroll/infinite-card-scroll";
 import InfiniteLogo from "./pages/infinite-logo/infinite-logo";
 import ScrollDriven from "./pages/scroll-driven/scroll-driven";
 import ScrollDrivenDemoTwo from "./pages/scroll-driven-demo-two/scroll-driven-demo-two";
 import ScrollDrivenDemoThree from "./pages/scroll-driven-demo-three/scroll-driven-demo-three";
+import ScrollReveal from "./pages/scroll-reveal/scroll-reveal";
 
 function App() {
   return (

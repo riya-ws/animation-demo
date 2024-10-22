@@ -11,6 +11,44 @@ import {
   Kasa,
 } from "../locals/icon";
 
+export const SliderDemoData = [
+  {
+    title: "Demo 1",
+    description: "Arrow card stack swipe",
+    path:"/arrow-card-stack-swipe"
+  },
+  {
+    title: "Demo 2",
+    description: "On scroll sticky card stack",
+    path:"/on-scroll-sticky-card-stack"
+
+  },
+  {
+    title: "Demo 3",
+    description: " Sticky scroll reveal",
+    path:"/sticky-scroll-reveal"
+
+  },
+  {
+    title: "Demo 4",
+    description: "Infinite scrolling,dragging and snapping card",
+    path:"/infinite-scrolling-card"
+  
+  },
+  {
+    title: "Demo 5",
+    description: "Infinite logo slider ",
+    path:"/infinite-logo-slider"
+
+  },
+  {
+    title: "Demo 6",
+    description: "Carousals with scroll driven animation",
+    path:"/scroll-driven"
+
+  },
+];
+
 export const workData = [
   {
     title: "Create Your Account",
