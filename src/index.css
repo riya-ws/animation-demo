@@ -1,6 +1,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
 /*Scroll driven animation css start*/
 /* @property --scroll-position {
   syntax: "<number>";

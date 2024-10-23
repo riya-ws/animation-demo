@@ -10,7 +10,7 @@ export default {
         serif: ["Cardo", "serif"],
       },
       backgroundImage: {
-        noise: 'url("/img/3/noise.png")',
+        noise: 'url("/src/assets/3/noise.png")',
       },
       supports: {
         sda: "timeline-scope: none",

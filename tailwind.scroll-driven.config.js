@@ -1,24 +1,21 @@
-import containerQueries from '@tailwindcss/container-queries'
+import containerQueries from "@tailwindcss/container-queries";
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/pages/scroll-driven'],
+  content: ["./src/pages/scroll-driven"],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter Variable', 'sans-serif'],
-        serif: ['Cardo', 'serif']
+        sans: ["Inter Variable", "sans-serif"],
+        serif: ["Cardo", "serif"],
       },
       letterSpacing: {
-        widest: '0.3em'
+        widest: "0.3em",
       },
       supports: {
-        sda: 'timeline-scope: none'
-      }
-    }
+        sda: "timeline-scope: none",
+      },
+    },
   },
-  plugins: [
-    containerQueries
-  ]
-}
-
+  plugins: [containerQueries],
+};

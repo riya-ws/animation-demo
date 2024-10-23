@@ -1,6 +1,6 @@
 @import "../../assets/style/shared.css";
-/* @config "../tailwind.scroll-driven-demo-two.config.js"; */
-
+/* @config "../../../tailwind.scroll-driven-demo-two.config.js"; */
+@config "../../../tailwind.config.js";
 @layer utilities {
   .animate-bottle {
     animation: bottle linear both;
@@ -11,32 +11,32 @@
     }
   }
 
-  .animate-bg {
+  .bottle-animate-bg {
     animation: bg linear both;
   }
-
+/* 
   .animate-page {
     animation: page linear both;
-  }
+  } */
 
-  .animate-fade {
+  .bottle-animate-fade {
     animation: fade linear both;
   }
 
-  .animate-progress {
+  .bottle-animate-progress {
     animation: progress linear both;
   }
 
-  .animate-text {
+  .bottle-bottle-animate-text {
     animation: text linear both;
   }
   @media only screen and (max-width: 1024px) {
-    .animate-text {
+    .bottle-animate-text {
       animation-name: text-lg;
     }
   }
   @media only screen and (min-width: 1800px) {
-    .animate-text {
+    .bottle-animate-text {
       animation-name: text-3xl;
     }
   }

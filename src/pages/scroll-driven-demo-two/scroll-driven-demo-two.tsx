@@ -18,11 +18,11 @@ const ScrollDrivenDemoTwo = () => {
         }}
       >
         <div
-          className="absolute bg-[#EDC089] -z-20 inset-0 h-full w-full animate-fade"
+          className="absolute bg-[#EDC089] -z-20 inset-0 h-full w-full bottle-animate-fade"
           style={{ animationTimeline: " --slide-2" }}
         ></div>
         <div
-          className="absolute bg-[#B6D6C9] -z-20 inset-0 h-full w-full animate-fade"
+          className="absolute bg-[#B6D6C9] -z-20 inset-0 h-full w-full bottle-animate-fade"
           style={{ animationTimeline: "--slide-3" }}
         ></div>
         <header className="frame mx-7 relative z-50 flex max-lg:flex-col justify-between py-6 border-b gap-2 border-black/20 pointer-events-auto">
@@ -61,21 +61,21 @@ const ScrollDrivenDemoTwo = () => {
           <div className="max-lg:relative lg:contents">
             <div className="rounded-full -z-10 absolute top-0 lg:top-14 left-1/2 -translate-x-1/2 h-3/4 aspect-[3/4] overflow-clip">
               <img
-                className="object-cover animate-bg -left-[25%] -top-[25%] absolute size-[150%] max-w-none"
+                className="object-cover bottle-animate-bg -left-[25%] -top-[25%] absolute size-[150%] max-w-none"
                 style={{ animationTimeline: " --slide-1" }}
                 src={beach}
                 role="presentation"
                 alt=""
               />
               <img
-                className="object-cover object-left-top animate-bg -left-[25%] -top-[25%] absolute size-[150%] max-w-none"
+                className="object-cover object-left-top bottle-animate-bg -left-[25%] -top-[25%] absolute size-[150%] max-w-none"
                 style={{ animationTimeline: " --slide-2" }}
                 src={glacier}
                 role="presentation"
                 alt=""
               />
               <img
-                className="object-cover animate-bg object-top -left-[25%] -top-[25%] absolute size-[150%] max-w-none"
+                className="object-cover bottle-animate-bg object-top -left-[25%] -top-[25%] absolute size-[150%] max-w-none"
                 style={{ animationTimeline: " --slide-3" }}
                 src={savana}
                 role="presentation"
@@ -135,7 +135,7 @@ const ScrollDrivenDemoTwo = () => {
           <span className="flex font-semibold absolute top-14 right-7">
             <span className="overflow-y-clip mr-[0.5em]">
               <span
-                className="animate-progress overlap justify-items-end"
+                className="bottle-animate-progress overlap justify-items-end"
                 aria-hidden="true"
                 style={{ animationTimeline: " --scroller" }}
               >
@@ -153,25 +153,25 @@ const ScrollDrivenDemoTwo = () => {
             <div className="overlap flex-1 max-lg:items-start max-lg:justify-center max-lg:max-w-[36rem] lg:max-xl:max-w-[25cqw]">
               <div className="flex flex-col items-center lg:items-start">
                 <h3
-                  className="animate-text font-serif text-7xl lg:text-9xl w-fit"
+                  className="bottle-animate-text font-serif text-7xl lg:text-9xl w-fit"
                   style={{ animationTimeline: "--slide-1" }}
                 >
                   Abyss
                 </h3>
                 <p
-                  className="animate-text font-serif text-4xl lg:text-5xl mt-2 mb-auto w-3/4"
+                  className="bottle-animate-text font-serif text-4xl lg:text-5xl mt-2 mb-auto w-3/4"
                   style={{ animationTimeline: "--slide-1" }}
                 >
                   $39.90
                 </p>
                 <p
-                  className="max-lg:hidden font-serif text-3xl italic animate-text my-4"
+                  className="max-lg:hidden font-serif text-3xl italic bottle-animate-text my-4"
                   style={{ animationTimeline: "--slide-1" }}
                 >
                   By 2050, there could be more plastic in our oceans than fish.
                 </p>
                 <p
-                  className="max-lg:hidden animate-text text-pr"
+                  className="max-lg:hidden bottle-animate-text text-pr"
                   style={{ animationTimeline: "--slide-1" }}
                 >
                   Plastic pollution injures more than 100,000 marine animals
@@ -180,7 +180,7 @@ const ScrollDrivenDemoTwo = () => {
                 </p>
                 <a
                   href="https://closca.com"
-                  className="animate-text group pointer-events-auto inline-flex gap-4 items-center !text-current mt-6"
+                  className="bottle-animate-text group pointer-events-auto inline-flex gap-4 items-center !text-current mt-6"
                   style={{ animationTimeline: "--slide-1" }}
                 >
                   <span className="font-semibold">Shop Now</span>
@@ -201,26 +201,26 @@ const ScrollDrivenDemoTwo = () => {
               </div>
               <div className="flex flex-col items-center lg:items-start">
                 <h3
-                  className="animate-text font-serif text-7xl lg:text-9xl w-fit"
+                  className="bottle-animate-text font-serif text-7xl lg:text-9xl w-fit"
                   style={{ animationTimeline: "--slide-2" }}
                 >
                   Black
                 </h3>
                 <p
-                  className="animate-text font-serif text-4xl lg:text-5xl mt-2 mb-auto w-3/4"
+                  className="bottle-animate-text font-serif text-4xl lg:text-5xl mt-2 mb-auto w-3/4"
                   style={{ animationTimeline: "--slide-2" }}
                 >
                   $39.90
                 </p>
                 <p
-                  className="max-lg:hidden font-serif text-3xl italic animate-text my-4"
+                  className="max-lg:hidden font-serif text-3xl italic bottle-animate-text my-4"
                   style={{ animationTimeline: "--slide-2" }}
                 >
                   The area affected by desertification is approx 11x India's
                   size.
                 </p>
                 <p
-                  className="max-lg:hidden animate-text text-pretty"
+                  className="max-lg:hidden bottle-animate-text text-pretty"
                   style={{ animationTimeline: "--slide-2" }}
                 >
                   Every minute, over a million plastic bottles are manufactured,
@@ -228,7 +228,7 @@ const ScrollDrivenDemoTwo = () => {
                 </p>
                 <a
                   href="https://closca.com"
-                  className="animate-text group pointer-events-auto inline-flex gap-4 items-center !text-current mt-6"
+                  className="bottle-animate-text group pointer-events-auto inline-flex gap-4 items-center !text-current mt-6"
                   style={{ animationTimeline: "--slide-2" }}
                 >
                   <span className="font-semibold">Shop Now</span>
@@ -249,25 +249,25 @@ const ScrollDrivenDemoTwo = () => {
               </div>
               <div className="flex flex-col items-center lg:items-start">
                 <h3
-                  className="animate-text font-serif text-7xl lg:text-9xl w-fit"
+                  className="bottle-animate-text font-serif text-7xl lg:text-9xl w-fit"
                   style={{ animationTimeline: "--slide-3" }}
                 >
                   White
                 </h3>
                 <p
-                  className="animate-text font-serif text-4xl lg:text-5xl mt-2 mb-auto w-3/4"
+                  className="bottle-animate-text font-serif text-4xl lg:text-5xl mt-2 mb-auto w-3/4"
                   style={{ animationTimeline: "--slide-3" }}
                 >
                   $39.90
                 </p>
                 <p
-                  className="max-lg:hidden font-serif text-3xl italic animate-text my-4"
+                  className="max-lg:hidden font-serif text-3xl italic bottle-animate-text my-4"
                   style={{ animationTimeline: "--slide-3" }}
                 >
                   By 2050, there could be more plastic in our oceans than fish.
                 </p>
                 <p
-                  className="max-lg:hidden animate-text text-pretty"
+                  className="max-lg:hidden bottle-animate-text text-pretty"
                   style={{ animationTimeline: "--slide-3" }}
                 >
                   Every time you fill your bottle, you save 82.8 grams of CO2
@@ -275,7 +275,7 @@ const ScrollDrivenDemoTwo = () => {
                 </p>
                 <a
                   href="https://closca.com"
-                  className="animate-text group pointer-events-auto inline-flex gap-4 items-center !text-current mt-6"
+                  className="bottle-animate-text group pointer-events-auto inline-flex gap-4 items-center !text-current mt-6"
                   style={{ animationTimeline: "--slide-3" }}
                 >
                   <span className="font-semibold">Shop Now</span>

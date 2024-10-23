@@ -3,6 +3,7 @@ import biker from "../../assets/1/biker.jpg";
 import bottle from "../../assets/1/bottle.jpg";
 import helmet from "../../assets/1/helmet.jpg";
 import "./scroll-driven.css"
+// import "./scroll-driven.css"
 
 const ScrollDriven = () => {
   

@@ -6,8 +6,7 @@ import sunglasses from "../../assets/3/sunglasses.jpg";
 import pockets from "../../assets/3/pockets.jpg";
 import lights from "../../assets/3/lights.jpg";
 import "./scroll-driven-demo-three.css";
-import "../../assets/style/shared.css";
-
+// import "../../assets/style/shared.css";
 
 const ScrollDrivenDemoThree = () => {
   return (
@@ -21,23 +20,23 @@ const ScrollDrivenDemoThree = () => {
         }}
       >
         <div
-          className="absolute bg-[#C09E6F] -z-30 inset-0 h-full w-full animate-fade"
+          className="absolute bg-[#C09E6F] -z-30 inset-0 h-full w-full card-card-animate-fade"
           style={{ animationTimeline: " --slide-2" }}
         ></div>
         <div
-          className="absolute bg-[#B4806A] -z-30 inset-0 h-full w-full animate-fade"
+          className="absolute bg-[#B4806A] -z-30 inset-0 h-full w-full card-animate-fade"
           style={{ animationTimeline: "--slide-3" }}
         ></div>
         <div
-          className="absolute bg-[#68432D] -z-30 inset-0 h-full w-full animate-fade"
+          className="absolute bg-[#68432D] -z-30 inset-0 h-full w-full card-animate-fade"
           style={{ animationTimeline: "--slide-4" }}
         ></div>
         <div
-          className="absolute bg-[#3B626E] -z-30 inset-0 h-full w-full animate-fade"
+          className="absolute bg-[#3B626E] -z-30 inset-0 h-full w-full card-animate-fade"
           style={{ animationTimeline: "--slide-5" }}
         ></div>
         <div
-          className="absolute bg-[#2E423D] -z-30 inset-0 h-full w-full animate-fade"
+          className="absolute bg-[#2E423D] -z-30 inset-0 h-full w-full card-animate-fade"
           style={{ animationTimeline: "--slide-6" }}
         ></div>
         <header className="frame relative z-50 mx-7 flex max-lg:flex-col justify-between py-6 gap-2">
@@ -144,7 +143,7 @@ const ScrollDrivenDemoThree = () => {
                 className="h-full gbgbgb max-h-[1000px]"
                 style={{
                   animation:
-                    "first auto linear both, fade-out auto linear both; animation-timeline: --slide-1; animation-composition: add, replace;",
+                    "card-first auto linear both, fade-out auto linear both; animation-timeline: --slide-1; animation-composition: add, replace;",
                 }}
                 src={fashion}
                 alt="fashion"
@@ -153,7 +152,7 @@ const ScrollDrivenDemoThree = () => {
                 className="h-full max-h-[1000px] -z-[1]"
                 style={{
                   animation:
-                    "second auto linear both, first auto linear both, fade-out auto linear both; animation-timeline: --slide-1, --slide-2, --slide-2; animation-composition: add, add, replace;",
+                    "card-second auto linear both, card-first auto linear both, fade-out auto linear both; animation-timeline: --slide-1, --slide-2, --slide-2; animation-composition: add, add, replace;",
                 }}
                 src={art}
                 alt="artwork"
@@ -162,7 +161,7 @@ const ScrollDrivenDemoThree = () => {
                 className="h-full max-h-[1000px] -z-[2]"
                 style={{
                   animation:
-                    "third auto linear both, second auto linear both, first auto linear both, fade-out auto linear both; animation-timeline: --slide-1, --slide-2, --slide-3, --slide-3; animation-composition: add, add, add, replace;",
+                    "card-third auto linear both, card-second auto linear both, card-first auto linear both, fade-out auto linear both; animation-timeline: --slide-1, --slide-2, --slide-3, --slide-3; animation-composition: add, add, add, replace;",
                 }}
                 src={woman}
                 alt="photography"
@@ -171,7 +170,7 @@ const ScrollDrivenDemoThree = () => {
                 className="h-full max-h-[1000px] -z-[3]"
                 style={{
                   animation:
-                    "fourth auto linear both, third auto linear both, second auto linear both, first auto linear both, fade-out auto linear both; animation-timeline: --slide-1, --slide-2, --slide-3, --slide-4, --slide-4; animation-composition: add, add, add, add, replace",
+                    "card-fourth auto linear both, card-third auto linear both, card-second auto linear both, card-first auto linear both, fade-out auto linear both; animation-timeline: --slide-1, --slide-2, --slide-3, --slide-4, --slide-4; animation-composition: add, add, add, add, replace",
                 }}
                 src={sunglasses}
                 alt="photography"
@@ -180,7 +179,7 @@ const ScrollDrivenDemoThree = () => {
                 className="h-full max-h-[1000px] -z-[4]"
                 style={{
                   animation:
-                    "fifth auto linear both, fourth auto linear both, third auto linear both, second auto linear both, first auto linear both, fade-out auto linear both; animation-timeline: --slide-1, --slide-2, --slide-3, --slide-4, --slide-5, --slide-5; animation-composition: add, add, add, add, add, replace",
+                    "card-fifth auto linear both, card-fourth auto linear both, card-third auto linear both, card-second auto linear both, card-first auto linear both, fade-out auto linear both; animation-timeline: --slide-1, --slide-2, --slide-3, --slide-4, --slide-5, --slide-5; animation-composition: add, add, add, add, add, replace",
                 }}
                 src={pockets}
                 alt="photography"
@@ -189,7 +188,7 @@ const ScrollDrivenDemoThree = () => {
                 className="h-full max-h-[1000px] -z-[5]"
                 style={{
                   animation:
-                    "sixth auto linear both, fifth auto linear both, fourth auto linear both, third auto linear both, second auto linear both, first auto linear both; animation-timeline: --slide-1, --slide-2, --slide-3, --slide-4, --slide-5, --slide-6; animation-composition: add;",
+                    "card-sixth  auto linear both, card-fifth auto linear both, card-fourth auto linear both, card-third auto linear both, card-second auto linear both, card-first auto linear both; animation-timeline: --slide-1, --slide-2, --slide-3, --slide-4, --slide-5, --slide-6; animation-composition: add;",
                 }}
                 src={lights}
                 alt="photography"
@@ -199,7 +198,7 @@ const ScrollDrivenDemoThree = () => {
           <div className="[@media(max-aspect-ratio:335/511)]:hidden flex flex-col gap-2 items-center font-medium absolute top-1/2 -translate-y-1/2 left-7">
             <span className="overflow-y-clip">
               <span
-                className="animate-indicator overlap justify-items-center"
+                className="card-animate-indicator overlap justify-items-center"
                 aria-hidden="true"
                 style={{ animationTimeline: "--scroller" }}
               >
@@ -213,7 +212,7 @@ const ScrollDrivenDemoThree = () => {
             </span>
             <div className="bg-white/20">
               <div
-                className="bg-white w-0.5 h-32 animate-progress origin-top"
+                className="bg-white w-0.5 h-32 card-animate-progress origin-top"
                 style={{ animationTimeline: " --scroller" }}
               ></div>
             </div>
@@ -227,11 +226,11 @@ const ScrollDrivenDemoThree = () => {
           </a>
         </div>
         <div
-          className="h-[0.65em] hidden supports-sda:block animate-scroll-pos [clip-path:inset(0.05em_0_0)] overflow-clip text-[min(15.625rem,20vh)]/[1.2] font-serif select-none"
+          className="h-[0.65em] hidden supports-sda:block card-animate-scroll-pos [clip-path:inset(0.05em_0_0)] overflow-clip text-[min(15.625rem,20vh)]/[1.2] font-serif select-none"
           style={{ animationTimeline: "--scroller;" }}
         >
           <div
-            className="flex flex-col whitespace-nowrap items-center opacity-50 w-fit translate-x-[calc(50vw-50%)] animate-captions *:scale-y-[calc(var(--scroll-velocity-abs)*2+1)] *:translate-y-[calc(var(--scroll-velocity)*-100%)]"
+            className="flex flex-col whitespace-nowrap items-center opacity-50 w-fit translate-x-[calc(50vw-50%)] card-animate-captions*:scale-y-[calc(var(--scroll-velocity-abs)*2+1)] *:translate-y-[calc(var(--scroll-velocity)*-100%)]"
             style={{
               animationTimeline:
                 " --scroller; animation-composition: add; transition: --scroll-position-delayed 0.15s linear; --scroll-velocity: calc(var(--scroll-position) - var(--scroll-position-delayed)); --scroll-velocity-abs: max(var(--scroll-velocity), -1*var(--scroll-velocity))",

@@ -1,28 +1,28 @@
-@import "../../assets//style/shared.css";
-/* @config "../tailwind.scroll-driven-demo-three.config.js"; */
-
+@import "../../assets/style/shared.css";
+/* @config "../../../tailwind.scroll-driven-demo-three.config.js"; */
+@config "../../../tailwind.config.js";
 @layer utilities {
-    .animate-text-up {
+    /* .animate-text-up {
         animation: text-up linear both;
-    }
+    } */
 
-    .animate-fade {
+    .card-animate-fade {
         animation: fade linear both;
     }
 
-    .animate-captions {
+    .card-animate-captions {
         animation: captions linear both;
     }
 
-    .animate-indicator {
+    .card-animate-indicator {
         animation: indicator linear both;
     }
 
-    .animate-progress {
+    .card-animate-progress {
         animation: progress linear both;
     }
 
-    .animate-scroll-pos {
+    .card-animate-scroll-pos {
         animation: adjust-pos linear both;
     }
 
@@ -41,7 +41,7 @@
         }
     }
 
-    @keyframes first {
+    @keyframes card-first {
         50% {
             transform: rotate(-5deg);
         }
@@ -50,31 +50,31 @@
         }
     }
 
-    @keyframes second {
+    @keyframes card-second {
         50% {
             transform: rotate(5deg)
         }
     }
 
-    @keyframes third {
+    @keyframes card-third {
         50% {
             transform: rotate(-9deg)
         }
     }
 
-    @keyframes fourth {
+    @keyframes card-fourth {
         50% {
             transform: rotate(9.5deg)
         }
     }
 
-    @keyframes fifth {
+    @keyframes card-fifth {
         50% {
             transform: rotate(9.5deg)
         }
     }
 
-    @keyframes sixth {
+    @keyframes card-sixth {
         50% {
             transform: rotate(9.5deg)
         }
@@ -110,7 +110,7 @@
         }
     }
 
-    @keyframes progress {
+    @keyframes card-animate-progress {
         from {
             transform: scaleY(calc(1/var(--slides)));
         }
