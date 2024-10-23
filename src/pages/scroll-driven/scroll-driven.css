@@ -2,15 +2,15 @@
 @config "../../../tailwind.config.js";
 
 @layer utilities {
-  .animate-grow {
+  .helmet-animate-grow {
     animation: grow linear both;
   }
 
-  .animate-page {
+  .helmet-animate-page {
     animation: page linear both;
   }
 
-  .animate-progress {
+  .helmet-animate-progress {
     animation: progress linear both;
   }
 

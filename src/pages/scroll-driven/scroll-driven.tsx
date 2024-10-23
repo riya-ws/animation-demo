@@ -14,17 +14,17 @@ const ScrollDriven = () => {
       data-slides="3"
     >
       <img
-        className="absolute hidden supports-sda:block -z-20 inset-0 h-full w-full object-cover animate-grow"
+        className="absolute hidden supports-sda:block -z-20 inset-0 h-full w-full object-cover helmet-animate-grow"
         style={{ animationTimeline: "--slide-1" }}
         src={biker}
       />
       <img
-        className="absolute hidden supports-sda:block -z-20 inset-0 h-full w-full object-cover animate-grow"
+        className="absolute hidden supports-sda:block -z-20 inset-0 h-full w-full object-cover helmet-animate-grow"
         style={{ animationTimeline: "--slide-2" }}
         src={bottle}
       />
       <img
-        className="absolute hidden supports-sda:block -z-20 inset-0 h-full w-full object-cover animate-grow"
+        className="absolute hidden supports-sda:block -z-20 inset-0 h-full w-full object-cover helmet-animate-grow"
         style={{ animationTimeline: "--slide-3" }}
         src={helmet}
       />
@@ -122,7 +122,7 @@ const ScrollDriven = () => {
           <nav className="flex font-medium text-sm gap-5">
             <a
               href="#slide-1"
-              className="animate-page !text-white pointer-events-auto"
+              className="helmet-animate-page !text-white pointer-events-auto"
               style={{
                 animationTimeline: "--slide-1",
                 animationRangeStart: "30cqw",
@@ -132,7 +132,7 @@ const ScrollDriven = () => {
             </a>
             <a
               href="#slide-2"
-              className="animate-page !text-white pointer-events-auto"
+              className="helmet-animate-page !text-white pointer-events-auto"
               style={{
                 animationTimeline: "--slide-2",
                 animationRangeStart: "30cqw",
@@ -142,7 +142,7 @@ const ScrollDriven = () => {
             </a>
             <a
               href="#slide-3"
-              className="animate-page !text-white pointer-events-auto"
+              className="helmet-animate-page !text-white pointer-events-auto"
               style={{
                 animationTimeline: "--slide-3",
                 animationRangeStart: "30cqw",
@@ -153,7 +153,7 @@ const ScrollDriven = () => {
           </nav>
           <div className="bg-white/60 mt-2">
             <div
-              className="bg-white h-0.5 animate-progress origin-left"
+              className="bg-white h-0.5 helmet-animate-progress origin-left"
               style={{ scrollTimeline: "--scroller x" }}
             ></div>
           </div>
