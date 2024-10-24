@@ -31,6 +31,9 @@ export default {
       height: {
         large: "37.5rem",
       },
+      screens: {
+        '3xl': '1800px'
+      },
       fontSize: {
         xxs: "10px",
         screens: {
@@ -44,7 +47,7 @@ export default {
           "2xl": "96rem",
           "5xl": "2.75rem",
           "9xl": ["7.5rem", "1"],
-          "3xl": "1800px",
+         
         },
         container: {
           center: true,
@@ -55,6 +58,7 @@ export default {
             lg: "100%",
             xl: "1172px",
             "2xl": "1172px",
+            
           },
         },
       },
