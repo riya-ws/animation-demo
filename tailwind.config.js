@@ -18,6 +18,9 @@ export default {
           750: "#2d2d2d",
         },
       },
+      backgroundImage: {
+        noise: 'url("./src/assets/3/noise.png")'
+      },
       spacing: {
         14: "3.5rem",
       },

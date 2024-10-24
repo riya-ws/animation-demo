@@ -23,9 +23,9 @@ const ScrollDrivenDemoTwo = () => {
 				</a>
 			</div>
 			<nav className="flex items-center gap-10">
-				<a href="/scroll-driven">Demo 1</a>
-				<a href="/scroll-driven-demo-two" aria-current="page">Demo 2</a>
-				<a href="/scroll-driven-demo-three">Demo 3</a>
+				<Link to="/scroll-driven">Demo 1</Link>
+				<Link to="/scroll-driven-demo-two" aria-current="page">Demo 2</Link>
+				<Link to="/scroll-driven-demo-three">Demo 3</Link>
 			</nav>
 		</header>
 		<main className="lg:max-h-[1000px] hidden supports-sda:flex flex-1 py-14 lg:pb-9 relative flex-col">

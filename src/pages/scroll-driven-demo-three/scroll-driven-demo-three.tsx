@@ -6,37 +6,76 @@ import sunglasses from "../../assets/3/sunglasses.jpg";
 import pockets from "../../assets/3/pockets.jpg";
 import lights from "../../assets/3/lights.jpg";
 import "./scroll-driven-demo-three.css";
-// import "../../assets/style/shared.css";
+import { useEffect } from "react";
 
 const ScrollDrivenDemoThree = () => {
+  useEffect(() => {
+    // Add the class to the <html> element
+    const htmlElement = document.documentElement;
+    htmlElement.classList.add(
+      "data-loading",
+      "[--color-bg:#2a2a2a]",
+      "isolate",
+      "before:-z-20",
+      "before:absolute",
+      "before:inset-0",
+      "before:w-full",
+      "before:h-full",
+      "before:bg-noise",
+      "text-white",
+      "antialiased"
+    );
+
+    return () => {
+      htmlElement.classList.remove(
+        "data-loading",
+        "[--color-bg:#2a2a2a]",
+        "isolate",
+        "before:-z-20",
+        "before:absolute",
+        "before:inset-0",
+        "before:w-full",
+        "before:h-full",
+        "before:bg-noise",
+        "text-white",
+        "antialiased"
+      );
+    };
+  }, []);
+
   return (
-    <div>
+    <>
       {" "}
       <div
         className="min-h-screen relative flex flex-col overflow-clip"
-        style={{
-          timelineScope:
-            "--scroller, --slide-1, --slide-2, --slide-3, --slide-4, --slide-5, --slide-6; --slides: 6; --item-aspect: 335/511",
-        }}
+        style={
+          {
+            // Use camelCase for CSS properties and separate each variable with a semicolon
+            animationTimeline:
+              "--scroller, --slide-1, --slide-2, --slide-3, --slide-4, --slide-5, --slide-6",
+            "--slides": 6,
+            "--item-aspect": "335/511",
+          } as any
+        }
       >
         <div
-          className="absolute bg-[#C09E6F] -z-30 inset-0 h-full w-full card-card-animate-fade"
-          style={{ animationTimeline: " --slide-2" }}
+          className="absolute bg-[#C09E6F] -z-30 inset-0 h-full w-full animate-fade"
+          style={{ animationTimeline: "--slide-2" }}
         ></div>
         <div
-          className="absolute bg-[#B4806A] -z-30 inset-0 h-full w-full card-animate-fade"
+          className="absolute bg-[#B4806A] -z-30 inset-0 h-full w-full animate-fade"
           style={{ animationTimeline: "--slide-3" }}
         ></div>
         <div
-          className="absolute bg-[#68432D] -z-30 inset-0 h-full w-full card-animate-fade"
+          className="absolute bg-[#68432D] -z-30 inset-0 h-full w-full animate-fade"
           style={{ animationTimeline: "--slide-4" }}
         ></div>
         <div
-          className="absolute bg-[#3B626E] -z-30 inset-0 h-full w-full card-animate-fade"
+          className="absolute bg-[#3B626E] -z-30 inset-0 h-full w-full animate-fade"
           style={{ animationTimeline: "--slide-5" }}
         ></div>
         <div
-          className="absolute bg-[#2E423D] -z-30 inset-0 h-full w-full card-animate-fade"
+          className="absolute bg-[#2E423D] -z-30 inset-0 h-full w-full animate-fade"
           style={{ animationTimeline: "--slide-6" }}
         ></div>
         <header className="frame relative z-50 mx-7 flex max-lg:flex-col justify-between py-6 gap-2">
@@ -75,65 +114,68 @@ const ScrollDrivenDemoThree = () => {
           <div className="@container-[size] relative w-full">
             <div
               className="absolute inset-0 h-full w-full overflow-y-auto snap-mandatory scroll-smooth snap-x scrollbar-hidden"
-              style={{
-                scrollTimeline:
-                  "--scroller x; --item-width: calc(min(100cqh, 1000px) * var(--item-aspect))",
-              }}
+              style={
+                {
+                  scrollTimeline: "--scroller x",
+                  "--item-width":
+                    "calc(min(100cqh, 1000px) * var(--item-aspect))",
+                } as any
+              }
             >
               <div
                 className="grid grid-flow-col px-[--inset-x] auto-cols-[--item-width] h-full w-fit"
                 style={
                   {
-                    "--inset-x": "calc(50cqw - var(--item-width)/2)",
-                  } as React.CSSProperties
+                    "--inset-x": "calc(50cqw - var(--item-width) / 2)",
+                  } as any
                 }
               >
                 <div
                   role="none"
                   className="snap-center"
                   style={{
-                    viewTimeline:
-                      "--slide-1 x; view-timeline-inset: var(--inset-x)",
+                    viewTimeline: "--slide-1 x",
+                    viewTimelineInset: "var(--inset-x)",
                   }}
                 ></div>
                 <div
                   role="none"
                   className="snap-center"
                   style={{
-                    viewTimeline:
-                      "--slide-2 x; view-timeline-inset: var(--inset-x)",
+                    viewTimeline: "--slide-2 x",
+                    viewTimelineInset: "var(--inset-x)",
                   }}
                 ></div>
                 <div
                   role="none"
                   className="snap-center"
                   style={{
-                    viewTimeline:
-                      "--slide-3 x; view-timeline-inset: var(--inset-x)",
+                    viewTimeline: "--slide-3 x",
+                    viewTimelineInset: "var(--inset-x)",
                   }}
                 ></div>
                 <div
                   role="none"
                   className="snap-center"
                   style={{
-                    viewTimeline:
-                      "--slide-4 x; view-timeline-inset: var(--inset-x)",
+                    viewTimeline: "--slide-4 x",
+                    viewTimelineInset: "var(--inset-x)",
                   }}
                 ></div>
                 <div
                   role="none"
                   className="snap-center"
                   style={{
-                    viewTimeline:
-                      "--slide-5 x; view-timeline-inset: var(--inset-x)",
+                    viewTimeline: "--slide-5 x",
+                    viewTimelineInset: "var(--inset-x)",
                   }}
                 ></div>
                 <div
                   role="none"
                   className="snap-center"
                   style={{
-                    viewTimeline:
-                      "--slide-6 x; view-timeline-inset: var(--inset-x)",
+                    viewTimeline: "--slide-6 x",
+                    viewTimelineInset: "var(--inset-x)",
                   }}
                 ></div>
               </div>
@@ -143,7 +185,9 @@ const ScrollDrivenDemoThree = () => {
                 className="h-full gbgbgb max-h-[1000px]"
                 style={{
                   animation:
-                    "card-first auto linear both, fade-out auto linear both; animation-timeline: --slide-1; animation-composition: add, replace;",
+                    "first auto linear both, fade-out auto linear both",
+                  animationTimeline: "--slide-1",
+                  animationComposition: "add, replace",
                 }}
                 src={fashion}
                 alt="fashion"
@@ -152,7 +196,10 @@ const ScrollDrivenDemoThree = () => {
                 className="h-full max-h-[1000px] -z-[1]"
                 style={{
                   animation:
-                    "card-second auto linear both, card-first auto linear both, fade-out auto linear both; animation-timeline: --slide-1, --slide-2, --slide-2; animation-composition: add, add, replace;",
+                    
+                    "second auto linear both, first auto linear both, fade-out auto linear both",
+                  animationTimeline: "--slide-1, --slide-2, --slide-2",
+                  animationComposition: "add, add, replace",
                 }}
                 src={art}
                 alt="artwork"
@@ -161,34 +208,46 @@ const ScrollDrivenDemoThree = () => {
                 className="h-full max-h-[1000px] -z-[2]"
                 style={{
                   animation:
-                    "card-third auto linear both, card-second auto linear both, card-first auto linear both, fade-out auto linear both; animation-timeline: --slide-1, --slide-2, --slide-3, --slide-3; animation-composition: add, add, add, replace;",
+                    "third auto linear both, second auto linear both, first auto linear both, fade-out auto linear both",
+                  animationTimeline:
+                    "--slide-1, --slide-2, --slide-3, --slide-3",
+                  animationComposition: "add, add, add, replace",
                 }}
                 src={woman}
-                alt="photography"
+                alt="woman"
               />
               <img
                 className="h-full max-h-[1000px] -z-[3]"
                 style={{
                   animation:
-                    "card-fourth auto linear both, card-third auto linear both, card-second auto linear both, card-first auto linear both, fade-out auto linear both; animation-timeline: --slide-1, --slide-2, --slide-3, --slide-4, --slide-4; animation-composition: add, add, add, add, replace",
+                    "fourth auto linear both, third auto linear both, second auto linear both, first auto linear both, fade-out auto linear both",
+                  animationTimeline:
+                    "--slide-1, --slide-2, --slide-3, --slide-4, --slide-4",
+                  animationComposition: "add, add, add, add, replace",
                 }}
                 src={sunglasses}
-                alt="photography"
+                alt="sunglasses"
               />
               <img
                 className="h-full max-h-[1000px] -z-[4]"
                 style={{
                   animation:
-                    "card-fifth auto linear both, card-fourth auto linear both, card-third auto linear both, card-second auto linear both, card-first auto linear both, fade-out auto linear both; animation-timeline: --slide-1, --slide-2, --slide-3, --slide-4, --slide-5, --slide-5; animation-composition: add, add, add, add, add, replace",
+                    "fifth auto linear both, fourth auto linear both, third auto linear both, second auto linear both, first auto linear both, fade-out auto linear both",
+                  animationTimeline:
+                    "--slide-1, --slide-2, --slide-3, --slide-4, --slide-5, --slide-5",
+                  animationComposition: "add, add, add, add, add, replace",
                 }}
                 src={pockets}
-                alt="photography"
+                alt="pockets"
               />
               <img
                 className="h-full max-h-[1000px] -z-[5]"
                 style={{
                   animation:
-                    "card-sixth  auto linear both, card-fifth auto linear both, card-fourth auto linear both, card-third auto linear both, card-second auto linear both, card-first auto linear both; animation-timeline: --slide-1, --slide-2, --slide-3, --slide-4, --slide-5, --slide-6; animation-composition: add;",
+                    "sixth auto linear both, fifth auto linear both, fourth auto linear both, third auto linear both, second auto linear both, first auto linear both",
+                  animationTimeline:
+                    "--slide-1, --slide-2, --slide-3, --slide-4, --slide-5, --slide-6",
+                  animationComposition: "add",
                 }}
                 src={lights}
                 alt="photography"
@@ -198,9 +257,11 @@ const ScrollDrivenDemoThree = () => {
           <div className="[@media(max-aspect-ratio:335/511)]:hidden flex flex-col gap-2 items-center font-medium absolute top-1/2 -translate-y-1/2 left-7">
             <span className="overflow-y-clip">
               <span
-                className="card-animate-indicator overlap justify-items-center"
+                className="animate-indicator overlap justify-items-center"
                 aria-hidden="true"
-                style={{ animationTimeline: "--scroller" }}
+                style={{
+                  animationTimeline: "--scroller",
+                }}
               >
                 <span>01</span>
                 <span className="translate-y-[100%]">02</span>
@@ -212,8 +273,10 @@ const ScrollDrivenDemoThree = () => {
             </span>
             <div className="bg-white/20">
               <div
-                className="bg-white w-0.5 h-32 card-animate-progress origin-top"
-                style={{ animationTimeline: " --scroller" }}
+                className="bg-white w-0.5 h-32 animate-progress origin-top"
+                style={{
+                  animationTimeline: "--scroller",
+                }}
               ></div>
             </div>
             06
@@ -226,15 +289,24 @@ const ScrollDrivenDemoThree = () => {
           </a>
         </div>
         <div
-          className="h-[0.65em] hidden supports-sda:block card-animate-scroll-pos [clip-path:inset(0.05em_0_0)] overflow-clip text-[min(15.625rem,20vh)]/[1.2] font-serif select-none"
-          style={{ animationTimeline: "--scroller;" }}
+          className="h-[0.65em] hidden supports-sda:block animate-scroll-pos [clip-path:inset(0.05em_0_0)] overflow-clip text-[min(15.625rem,20vh)]/[1.2] font-serif select-none"
+          style={{
+            animationTimeline: "--scroller",
+          }}
         >
           <div
-            className="flex flex-col whitespace-nowrap items-center opacity-50 w-fit translate-x-[calc(50vw-50%)] card-animate-captions*:scale-y-[calc(var(--scroll-velocity-abs)*2+1)] *:translate-y-[calc(var(--scroll-velocity)*-100%)]"
-            style={{
-              animationTimeline:
-                " --scroller; animation-composition: add; transition: --scroll-position-delayed 0.15s linear; --scroll-velocity: calc(var(--scroll-position) - var(--scroll-position-delayed)); --scroll-velocity-abs: max(var(--scroll-velocity), -1*var(--scroll-velocity))",
-            }}
+            className="flex flex-col whitespace-nowrap items-center opacity-50 w-fit translate-x-[calc(50vw-50%)] animate-captions *:scale-y-[calc(var(--scroll-velocity-abs)*2+1)] *:translate-y-[calc(var(--scroll-velocity)*-100%)]"
+            style={
+              {
+                animationTimeline: "--scroller",
+                animationComposition: "add",
+                transition: "--scroll-position-delayed 0.15s linear",
+                "--scroll-velocity":
+                  "calc(var(--scroll-position) - var(--scroll-position-delayed))",
+                "--scroll-velocity-abs":
+                  "max(var(--scroll-velocity), -1*var(--scroll-velocity))",
+              } as any
+            }
           >
             <span>Fashion</span>
             <span>Artworks</span>
@@ -252,7 +324,7 @@ const ScrollDrivenDemoThree = () => {
           for browser compatibility tables.
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

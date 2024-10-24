@@ -1,28 +1,152 @@
 @import "../../assets/style/shared.css";
 /* @config "../../../tailwind.scroll-driven-demo-three.config.js"; */
 @config "../../../tailwind.config.js";
-@layer utilities {
-    /* .animate-text-up {
-        animation: text-up linear both;
-    } */
 
-    .card-animate-fade {
+/* @layer utilities {
+  .animate-text-up {
+    animation: text-up linear both;
+  }
+
+  .card-animate-fade {
+    animation: fade linear both;
+  }
+
+  .card-animate-captions {
+    animation: captions linear both;
+  }
+
+  .card-animate-indicator {
+    animation: indicator linear both;
+  }
+
+  .card-animate-progress {
+    animation: progress linear both;
+  }
+
+  .card-animate-scroll-pos {
+    animation: adjust-pos linear both;
+  }
+
+  @keyframes captions {
+    100% {
+      transform: translateY(calc((var(--slides) - 1) / var(--slides) * -100%));
+    }
+  }
+
+  @keyframes fade-out {
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes card-first {
+    50% {
+      transform: rotate(-5deg);
+    }
+    100% {
+      transform: rotate(-22deg) translateX(-120%);
+    }
+  }
+
+  @keyframes card-second {
+    50% {
+      transform: rotate(5deg);
+    }
+  }
+
+  @keyframes card-third {
+    50% {
+      transform: rotate(-9deg);
+    }
+  }
+
+  @keyframes card-fourth {
+    50% {
+      transform: rotate(9.5deg);
+    }
+  }
+
+  @keyframes card-fifth {
+    50% {
+      transform: rotate(9.5deg);
+    }
+  }
+
+  @keyframes card-sixth {
+    50% {
+      transform: rotate(9.5deg);
+    }
+  }
+
+  @keyframes text-up {
+    0% {
+      opacity: 0.5;
+      transform: translateY(105%);
+    }
+    50% {
+      opacity: 1;
+      transform: none;
+    }
+    100% {
+      opacity: 0.5;
+      transform: translateY(-105%);
+    }
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes indicator {
+    100% {
+      transform: translateY(calc((var(--slides) - 1) * -100%));
+    }
+  }
+
+  @keyframes card-animate-progress {
+    from {
+      transform: scaleY(calc(1 / var(--slides)));
+    }
+  }
+
+  @keyframes adjust-pos {
+    to {
+      --scroll-position: 1;
+      --scroll-position-delayed: 1;
+    }
+  }
+} */
+
+@layer utilities {
+    .animate-text-up {
+        animation: text-up linear both;
+    }
+
+    .animate-fade {
         animation: fade linear both;
     }
 
-    .card-animate-captions {
+    .animate-captions {
         animation: captions linear both;
     }
 
-    .card-animate-indicator {
+    .animate-indicator {
         animation: indicator linear both;
     }
 
-    .card-animate-progress {
+    .animate-progress {
         animation: progress linear both;
     }
 
-    .card-animate-scroll-pos {
+    .animate-scroll-pos {
         animation: adjust-pos linear both;
     }
 
@@ -41,7 +165,7 @@
         }
     }
 
-    @keyframes card-first {
+    @keyframes first {
         50% {
             transform: rotate(-5deg);
         }
@@ -50,31 +174,31 @@
         }
     }
 
-    @keyframes card-second {
+    @keyframes second {
         50% {
             transform: rotate(5deg)
         }
     }
 
-    @keyframes card-third {
+    @keyframes third {
         50% {
             transform: rotate(-9deg)
         }
     }
 
-    @keyframes card-fourth {
+    @keyframes fourth {
         50% {
             transform: rotate(9.5deg)
         }
     }
 
-    @keyframes card-fifth {
+    @keyframes fifth {
         50% {
             transform: rotate(9.5deg)
         }
     }
 
-    @keyframes card-sixth {
+    @keyframes sixth {
         50% {
             transform: rotate(9.5deg)
         }
@@ -110,7 +234,7 @@
         }
     }
 
-    @keyframes card-animate-progress {
+    @keyframes progress {
         from {
             transform: scaleY(calc(1/var(--slides)));
         }
