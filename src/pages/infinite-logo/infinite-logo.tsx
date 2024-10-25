@@ -16,8 +16,7 @@ const InfiniteLogo = () => {
 
         const scrollerInner =
           scroller.querySelector<HTMLElement>(".scroller__inner");
-        if (!scrollerInner) return; // Ensure scrollerInner is not null
-
+        if (!scrollerInner) return; 
         const scrollerContent = Array.from(scrollerInner.children);
 
         scrollerContent.forEach((item) => {

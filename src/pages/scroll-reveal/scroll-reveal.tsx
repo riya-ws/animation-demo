@@ -65,7 +65,7 @@ const ScrollReveal = () => {
           ref={scrollContainerRef}
         >
           <div className="flex w-full">
-            <div className="flex flex-col gap-10 items-start w-3/5 max-md:w-full mt-large lg:mt-medium lg:mb-44">
+            <div className="flex flex-col gap-10 items-start w-3/5 max-md:w-full mt-large lg:mt-medium lg:mb-60">
               {stickyRevealData.map((item, index) => (
                 <div
                   key={index}
