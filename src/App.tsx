@@ -24,9 +24,9 @@ function App() {
           <Route path="/sticky-scroll-reveal" element={<ScrollReveal />} />
           <Route path="/infinite-scrolling-card" element={<InfiniteCardScroll />} />
           <Route path="/infinite-logo-slider" element={<InfiniteLogo />} />
-          {/* <Route path="/scroll-driven" element={<ScrollDriven />} />
+          <Route path="/scroll-driven" element={<ScrollDriven />} />
           <Route path="/scroll-driven-demo-two" element={<ScrollDrivenDemoTwo />} />
-          <Route path="/scroll-driven-demo-three" element={<ScrollDrivenDemoThree />} /> */}
+          <Route path="/scroll-driven-demo-three" element={<ScrollDrivenDemoThree />} />
         </Routes>
       </BrowserRouter>
     </>
