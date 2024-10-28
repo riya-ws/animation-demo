@@ -1,13 +1,21 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import abyss from "../../assets/2/abyss.png";
 import black from "../../assets/2/black.png";
 import white from "../../assets/2/white.png";
 import beach from "../../assets/2/beach.jpg";
 import savanna from "../../assets/2/savanna.jpg";
 import glacier from "../../assets/2/glacier.jpg";
-import "./scroll-driven-demo-two.css";
+// import "./scroll-driven-demo-two.css";
+import { useEffect } from "react";
 
 const ScrollDrivenDemoTwo = () => {
+	const location= useLocation()
+
+	useEffect(() => {
+	  if (location.pathname === "/scroll-driven-demo-two") {
+		import("./scroll-driven-demo-two.css");
+	  }
+	}, [location]);
   return (
     <>
      	<div className="@container min-h-screen relative isolate flex flex-col supports-sda:pointer-events-none overflow-clip" style={{ timelineScope: "--scroller, --slide-1, --slide-2, --slide-3" }}>

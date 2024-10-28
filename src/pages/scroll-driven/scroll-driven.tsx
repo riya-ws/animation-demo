@@ -1,11 +1,18 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import biker from "../../assets/1/biker.jpg";
 import bottle from "../../assets/1/bottle.jpg";
 import helmet from "../../assets/1/helmet.jpg";
-import "./scroll-driven.css"
 // import "./scroll-driven.css"
+import { useEffect } from "react";
 
 const ScrollDriven = () => {
+  const location= useLocation()
+
+  useEffect(() => {
+    if (location.pathname === "/scroll-driven") {
+      import("./scroll-driven.css");
+    }
+  }, [location]);
   
   return (
     <div
@@ -241,6 +248,7 @@ const ScrollDriven = () => {
         for browser compatibility tables.
       </div>
     </div>
+   
   );
 };
 

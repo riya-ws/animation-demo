@@ -1,16 +1,22 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import fashion from "../../assets/3/fashion.jpg";
 import art from "../../assets/3/art.jpg";
 import woman from "../../assets/3/woman.jpg";
 import sunglasses from "../../assets/3/sunglasses.jpg";
 import pockets from "../../assets/3/pockets.jpg";
 import lights from "../../assets/3/lights.jpg";
-import "./scroll-driven-demo-three.css";
+// import "./scroll-driven-demo-three.css";
 import { useEffect } from "react";
 
 const ScrollDrivenDemoThree = () => {
+  const location= useLocation()
+
+	useEffect(() => {
+	  if (location.pathname === "/scroll-driven-demo-three") {
+		import("./scroll-driven-demo-three.css");
+	  }
+	}, [location]);
   useEffect(() => {
-    // Add the class to the <html> element
     const htmlElement = document.documentElement;
     htmlElement.classList.add(
       "data-loading",
