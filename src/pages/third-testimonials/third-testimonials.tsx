@@ -1,15 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 import { Avatar, GradientStar } from "../../locals/icon";
 import { tempTestimonials } from "../../utils/constant";
-import "./third-testimonial.css"
+import "./third-testimonial.css";
 
 const ThirdTestimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [liWidth, setLiWidth] = useState(0);
+  const [testimonials, setTestimonials] = useState(tempTestimonials);
   const listRef = useRef<HTMLUListElement>(null);
   const scalePattern = [0.96, 0.84, 0.64, 0.36];
-
-  const [testimonials, setTestimonials] = useState(tempTestimonials);
+  const cardWidth = 496;
+  const containerGap = 24;
+  const opinionTotal = 5;
+  const opinionOffset = 2;
 
   useEffect(() => {
     if (listRef.current) {
@@ -73,8 +76,8 @@ const ThirdTestimonials = () => {
     }
   }, [currentIndex]);
   return (
-    <div className="main-testimonial my-16">
-      <div className="testimonial-container">
+    <div className="main-testimonial">
+      <div className="testimonial-container  my-16">
         <div className="testimonial-wrapper flex overflow-hidden">
           <div className="title-section space-y-3 ">
             <div className="flex">
@@ -116,7 +119,15 @@ const ThirdTestimonials = () => {
             </button>
           </div>
         </div>
-        <div className="w-[496px] flex gap-6 ring-offset-2">
+        <div
+          className="main-card-wrapper"
+          style={{
+            '--card-width': `${cardWidth}px`,
+            '--container-gap': `${containerGap}px`,
+            '--opinion-total': opinionTotal,
+            '--opinion-offset': opinionOffset,
+          } as React.CSSProperties}
+        >
           <ul
             className="flex transform translate-x-0 gap-5 card-container"
             style={getUlStyle()}
@@ -136,10 +147,10 @@ const ThirdTestimonials = () => {
                       <Avatar />
                     </div>
                     <div className="infos">
-                      <p className="name text-2xl font-bold">
+                      <p className="text-2xl font-bold">
                         {testimonial.name}
                       </p>
-                      <p className="desc text-lg font-bold">
+                      <p className="text-lg font-bold">
                         {testimonial.desc}
                       </p>
                     </div>
