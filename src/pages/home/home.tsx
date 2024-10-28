@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import { SliderDemoData } from "../../utils/constant";
+import Loading from "../../components/loading";
 
 const Home = () => {
   return (
     <div className="my-5 flex flex-col gap-6">
+      {/* <Loading /> */}
       {SliderDemoData.map((item, index) => {
         return (
           <div key={index} className="flex flex-col items-center">
