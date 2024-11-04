@@ -1,8 +1,8 @@
 import containerQueries from "@tailwindcss/container-queries";
 
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+module.exports = {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       fontFamily: {
@@ -50,7 +50,6 @@ export default {
           "2xl": "96rem",
           "5xl": "2.75rem",
           "9xl": ["7.5rem", "1"],
-         
         },
         container: {
           center: true,
@@ -61,7 +60,6 @@ export default {
             lg: "100%",
             xl: "1172px",
             "2xl": "1172px",
-            
           },
         },
       },

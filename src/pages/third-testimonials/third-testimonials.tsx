@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Avatar, GradientStar } from "../../locals/icon";
-import { tempTestimonials } from "../../utils/constant";
 import "./third-testimonial.css";
+import { tempTestimonials } from "../../utils/constant";
 
 const ThirdTestimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -34,7 +34,6 @@ const ThirdTestimonials = () => {
   };
   const getUlStyle = () => {
     return {
-      // zIndex: -1,
       transform: `translateX(-${currentIndex * 496}px)`,
     };
   };
@@ -76,108 +75,108 @@ const ThirdTestimonials = () => {
     }
   }, [currentIndex]);
   return (
-    <div className="main-testimonial">
-      <div className="testimonial-container  my-16">
-        <div className="testimonial-wrapper flex overflow-hidden">
-          <div className="title-section space-y-3 ">
-            <div className="flex">
-              <GradientStar />
-              <GradientStar />
-              <GradientStar />
-              <GradientStar />
-              <GradientStar />
+    <>
+      <div className="main-testimonial">
+        <div className="testimonial-container my-16">
+          <div className="testimonial-wrapper flex overflow-hidden">
+            <div className="title-section space-y-3 ">
+              <div className="flex">
+                <GradientStar />
+                <GradientStar />
+                <GradientStar />
+                <GradientStar />
+                <GradientStar />
+              </div>
+              <h1 className="text-4xl font-bold whitespace-pre-line max-w-md">
+                The Perfect Match
+              </h1>
+              <p className="text-lg font-medium max-w-96">
+                Over one million students have a{" "}
+                <span className="font-semibold">
+                  {" "}
+                  5-star review to the tutor{" "}
+                </span>
+              </p>
             </div>
-            <h1 className="text-4xl font-bold whitespace-pre-line max-w-md">
-              The Perfect Match
-            </h1>
-            <p className="text-lg font-medium max-w-96">
-              Over one million students have a{" "}
-              <span className="font-semibold">
-                {" "}
-                5-star review to the tutor{" "}
-              </span>
-            </p>
-          </div>
-          <div className="arrows display flex gap-5 justify-between w-24">
-            <button
-              className={`text-3xl bg-[#f7f7f7] rounded-3xl flex justify-center items-center w-14 h-14  ${
-                currentIndex == 0 && "bg-red-500"
-              } `}
-              onClick={prevTestimonial}
-              disabled={currentIndex == 0}
-            >
-              ←
-            </button>
-            <button
-              className={`text-3xl bg-[#f7f7f7] rounded-3xl flex justify-center items-center w-14 h-14 next-card ${
-                currentIndex == 4 && "bg-red-500"
-              }`}
-              onClick={nextTestimonial}
-              disabled={currentIndex == 4}
-            >
-              →
-            </button>
-          </div>
-        </div>
-        <div
-          className="main-card-wrapper"
-          style={{
-            '--card-width': `${cardWidth}px`,
-            '--container-gap': `${containerGap}px`,
-            '--opinion-total': opinionTotal,
-            '--opinion-offset': opinionOffset,
-          } as React.CSSProperties}
-        >
-          <ul
-            className="flex transform translate-x-0 gap-5 card-container"
-            style={getUlStyle()}
-            ref={listRef}
-          >
-            {testimonials.map((testimonial, index: number) => (
-              <li
-                key={index}
-                className={`testimonial-card rounded-[35px] bg-[${testimonial.bgColor}]`}
-                style={{
-                  ...(testimonial.style ? testimonial.style : {}),
-                }}
+            <div className="arrows display flex gap-5 justify-between w-24">
+              <button
+                className={`text-3xl bg-[#f7f7f7] rounded-3xl flex justify-center items-center w-14 h-14 prev-button ${
+                  currentIndex == 0 && "bg-red-500"
+                } `}
+                onClick={prevTestimonial}
+                disabled={currentIndex == 0}
               >
-                <div className="review text-left space-y-7">
-                  <div className="details flex items-center gap-1.5">
-                    <div className="avatar">
-                      <Avatar />
+                ←
+              </button>
+              <button
+                className={`text-3xl bg-[#f7f7f7] rounded-3xl flex justify-center items-center w-14 h-14 next-button ${
+                  currentIndex == 4 && "bg-red-500"
+                }`}
+                onClick={nextTestimonial}
+                disabled={currentIndex == 4}
+              >
+                →
+              </button>
+            </div>
+          </div>
+          <div
+            className="main-card-wrapper"
+            style={
+              {
+                "--card-width": `${cardWidth}px`,
+                "--container-gap": `${containerGap}px`,
+                "--opinion-total": opinionTotal,
+                "--opinion-offset": opinionOffset,
+              } as React.CSSProperties
+            }
+          >
+            <ul
+              className="flex transform translate-x-0 gap-5 card-container"
+              style={getUlStyle()}
+              ref={listRef}
+            >
+              {testimonials.map((testimonial: any, index: number) => (
+                <li
+                  key={index}
+                  className={`testimonial-card rounded-[35px] bg-[${testimonial.bgColor}]`}
+                  style={{
+                    ...(testimonial.style ? testimonial.style : {}),
+                  }}
+                >
+                  <div className="review text-left space-y-7">
+                    <div className="details flex items-center gap-1.5">
+                      <div className="avatar">
+                        <Avatar />
+                      </div>
+                      <div className="infos">
+                        <p className="text-2xl font-bold">{testimonial.name}</p>
+                        <p className="text-lg font-bold">{testimonial.desc}</p>
+                      </div>
                     </div>
-                    <div className="infos">
-                      <p className="text-2xl font-bold">
-                        {testimonial.name}
-                      </p>
-                      <p className="text-lg font-bold">
-                        {testimonial.desc}
-                      </p>
+                    <p className="comment text-3xl font-semibold ">
+                      {testimonial.comment}
+                    </p>
+                    <div className="rating-container w-[60%]">
+                      <div className="rating text-black text-lg bg-white rounded-2xl p-2.5">
+                        <p className="flex items-center gap-4">
+                          {testimonial.rating}{" "}
+                          <div className="flex gap-2">
+                            <GradientStar />
+                            <GradientStar />
+                            <GradientStar />
+                            <GradientStar />
+                          </div>
+                        </p>
+                      </div>
                     </div>
                   </div>
-                  <p className="comment text-3xl font-semibold ">
-                    {testimonial.comment}
-                  </p>
-                  <div className="rating-container w-[60%]">
-                    <div className="rating text-black text-lg bg-white rounded-2xl p-2.5">
-                      <p className="flex items-center gap-4">
-                        {testimonial.rating}{" "}
-                        <div className="flex gap-2">
-                          <GradientStar />
-                          <GradientStar />
-                          <GradientStar />
-                          <GradientStar />
-                        </div>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ul>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
