@@ -119,61 +119,61 @@ const ThirdTestimonials = () => {
               </button>
             </div>
           </div>
-          <div
-            className="main-card-wrapper"
-            style={
-              {
-                "--card-width": `${cardWidth}px`,
-                "--container-gap": `${containerGap}px`,
-                "--opinion-total": opinionTotal,
-                "--opinion-offset": opinionOffset,
-              } as React.CSSProperties
-            }
+        <div
+          className="main-card-wrapper"
+          style={
+            {
+              "--card-width": `${cardWidth}px`,
+              "--container-gap": `${containerGap}px`,
+              "--opinion-total": opinionTotal,
+              "--opinion-offset": opinionOffset,
+            } as React.CSSProperties
+          }
+        >
+          <ul
+            className="flex transform translate-x-0 gap-5 card-container"
+            style={getUlStyle()}
+            ref={listRef}
           >
-            <ul
-              className="flex transform translate-x-0 gap-5 card-container"
-              style={getUlStyle()}
-              ref={listRef}
-            >
-              {testimonials.map((testimonial: any, index: number) => (
-                <li
-                  key={index}
-                  className={`testimonial-card rounded-[35px] bg-[${testimonial.bgColor}]`}
-                  style={{
-                    ...(testimonial.style ? testimonial.style : {}),
-                  }}
-                >
-                  <div className="review text-left space-y-7">
-                    <div className="details flex items-center gap-1.5">
-                      <div className="avatar">
-                        <Avatar />
-                      </div>
-                      <div className="infos">
-                        <p className="text-2xl font-bold">{testimonial.name}</p>
-                        <p className="text-lg font-bold">{testimonial.desc}</p>
-                      </div>
+            {testimonials.map((testimonial: any, index: number) => (
+              <li
+                key={index}
+                className={`testimonial-card rounded-[35px] bg-[${testimonial.bgColor}]`}
+                style={{
+                  ...(testimonial.style ? testimonial.style : {}),
+                }}
+              >
+                <div className="review text-left space-y-7">
+                  <div className="details flex items-center gap-1.5">
+                    <div className="avatar">
+                      <Avatar />
                     </div>
-                    <p className="comment text-3xl font-semibold ">
-                      {testimonial.comment}
-                    </p>
-                    <div className="rating-container w-[60%]">
-                      <div className="rating text-black text-lg bg-white rounded-2xl p-2.5">
-                        <p className="flex items-center gap-4">
-                          {testimonial.rating}{" "}
-                          <div className="flex gap-2">
-                            <GradientStar />
-                            <GradientStar />
-                            <GradientStar />
-                            <GradientStar />
-                          </div>
-                        </p>
-                      </div>
+                    <div className="infos">
+                      <p className="text-2xl font-bold">{testimonial.name}</p>
+                      <p className="text-lg font-bold">{testimonial.desc}</p>
                     </div>
                   </div>
-                </li>
-              ))}
-            </ul>
-          </div>
+                  <p className="comment text-3xl font-semibold ">
+                    {testimonial.comment}
+                  </p>
+                  <div className="rating-container w-[60%]">
+                    <div className="rating text-black text-lg bg-white rounded-2xl p-2.5">
+                      <p className="flex items-center gap-4">
+                        {testimonial.rating}{" "}
+                        <div className="flex gap-2">
+                          <GradientStar />
+                          <GradientStar />
+                          <GradientStar />
+                          <GradientStar />
+                        </div>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
         </div>
       </div>
     </>

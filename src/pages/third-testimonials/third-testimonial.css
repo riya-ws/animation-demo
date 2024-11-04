@@ -24,7 +24,7 @@
       ) - ((var(--card-width) + var(--container-gap)) * 1) / 2
   );
   transform: translateX(var(--translate-offset, 0px));
-  /* transition: transform 0.1s ease-out; */
+  transition: all 0.1s ease-out;
 }
 
 .testimonial-wrapper {
@@ -37,14 +37,15 @@
   flex-shrink: 0;
 }
 .card-container {
-  transition: 0.3s;
+  /* transition: 0.3s; */
   height: 600px;
-  transition: transform 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .testimonial-list {
   display: flex;
-  transition: 0.5s ease-out;
+  transition: all 0.1s ease-out;
+  transition-delay: 1s, 250ms;
   width: 496px;
   gap: 24px;
 }
@@ -53,9 +54,10 @@
   height: 600px;
   padding: 32px;
   border-radius: 40px;
-  -webkit-transition: 0.3s ease-out;
-  /* transition: 0.3s ease-out; */
-  transition: transform 0.5s ease-in-out, z-index 0.5s ease;
+  -webkit-transition: all 0.1s ease-out;
+  transition-delay: 5s, 500ms;
+  transition: all 0.1s ease-out;
+  transition: transform 0.5s ease-in-out, z-index 0.5s ease-in-out;
 }
 .avatar {
   width: 50px;
@@ -74,10 +76,10 @@
 .card-wrapper-3,
 .card-wrapper-4,
 .card-wrapper-5 {
-  z-index: 0;
+  z-index: -1;
   transform: translateX(calc(-496px * var(--card-index)));
 }
 .prev-button,
 .next-button {
-  transition: 0.15s all ease-out;
+  transition: all 0.15s ease-out;
 }
