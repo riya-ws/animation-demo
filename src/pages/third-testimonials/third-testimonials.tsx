@@ -4,7 +4,19 @@ import "./third-testimonial.css";
 import { tempTestimonials } from "../../utils/constant";
 
 const ThirdTestimonials = () => {
-  // const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [testimonials, setTestimonials] = useState(tempTestimonials);
+  // const nextTestimonial = () => {
+  //   setCurrentIndex((prevIndex) => prevIndex + 1);
+  // };
+
+  // const prevTestimonial = () => {
+  //   setCurrentIndex((prevIndex) =>
+  //     prevIndex === 0 ? prevIndex : prevIndex - 1
+  //   );
+  // };
+
+  
   // const [liWidth, setLiWidth] = useState(0);
   // const [testimonials, setTestimonials] = useState(tempTestimonials);
   // const listRef = useRef<HTMLUListElement>(null);
@@ -23,15 +35,6 @@ const ThirdTestimonials = () => {
   //   }
   // }, [listRef]);
 
-  // const nextTestimonial = () => {
-  //   setCurrentIndex((prevIndex) => prevIndex + 1);
-  // };
-
-  // const prevTestimonial = () => {
-  //   setCurrentIndex((prevIndex) =>
-  //     prevIndex === 0 ? prevIndex : prevIndex - 1
-  //   );
-  // };
   // const getUlStyle = () => {
   //   return {
   //     transform: `translateX(-${currentIndex * 496}px)`,
@@ -74,7 +77,6 @@ const ThirdTestimonials = () => {
   //     );
   //   }
   // }, [currentIndex]);
-  const [testimonials, setTestimonials] = useState(tempTestimonials);
   return (
     <>
       {/* <div className="main-testimonial">
@@ -290,14 +292,26 @@ const ThirdTestimonials = () => {
               <b> 5 star review to their tutor</b>
             </p>
             <div className="button-controls flex gap-7">
-              <span className="prev-button">←</span>
-              <span className="next-button">→</span>
+              <span
+                className="prev-button"
+                // onClick={prevTestimonial}
+              >
+                ←
+              </span>
+              <span
+                className="next-button"
+                // onClick={nextTestimonial}
+              >
+                →
+              </span>
             </div>
           </div>
           <div className="slider-content">
             <ul className="card-list">
               {testimonials.map((testimonial: any, index: number) => (
-                <li>
+                <li
+                  className={`bg-[${testimonial.bgColor}] w-[496px] rounded-[35px]`}
+                >
                   <div className="card-testimonial">
                     <div className="testimonial-detail">
                       <div className="testimonial-avatar">

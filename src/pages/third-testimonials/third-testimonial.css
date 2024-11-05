@@ -127,6 +127,7 @@
   -webkit-border-radius: 24px;
   border-radius: 24px;
   background-color: #f7f7f7;
+  font-size: 30px;
   color: var(--base-color-black);
   -webkit-transition: 0.15s all ease-in-out;
   transition: 0.15s all ease-in-out;
@@ -145,6 +146,7 @@
   height: 56px;
   -webkit-border-radius: 24px;
   border-radius: 24px;
+  font-size: 30px;
   background-color: #f7f7f7;
   color: var(--base-color-black);
   -webkit-transition: 0.15s all ease-in-out;
@@ -203,15 +205,15 @@
   margin-bottom: 24px;
 }
 .testimonial-avatar {
-  width: var(--base-size-x8);
-  height: var(--base-size-x8);
+  width: 64px;
+  height: 64px;
   -webkit-border-radius: 100%;
   border-radius: 100%;
   background-repeat: no-repeat;
   background-position: center;
   -webkit-background-size: cover;
   background-size: cover;
-  background-color: var(--base-color-grey-light);
+  background-color: #f7f7f7;
 }
 .testimonial-infos {
   color: #121212;
