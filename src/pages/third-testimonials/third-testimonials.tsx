@@ -4,79 +4,80 @@ import "./third-testimonial.css";
 import { tempTestimonials } from "../../utils/constant";
 
 const ThirdTestimonials = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [liWidth, setLiWidth] = useState(0);
+  // const [currentIndex, setCurrentIndex] = useState(0);
+  // const [liWidth, setLiWidth] = useState(0);
+  // const [testimonials, setTestimonials] = useState(tempTestimonials);
+  // const listRef = useRef<HTMLUListElement>(null);
+  // const scalePattern = [0.96, 0.84, 0.64, 0.36];
+  // const cardWidth = 496;
+  // const containerGap = 24;
+  // const opinionTotal = 5;
+  // const opinionOffset = 2;
+
+  // useEffect(() => {
+  //   if (listRef.current) {
+  //     const liElement = listRef.current.querySelector("li");
+  //     if (liElement) {
+  //       setLiWidth(liElement.offsetWidth);
+  //     }
+  //   }
+  // }, [listRef]);
+
+  // const nextTestimonial = () => {
+  //   setCurrentIndex((prevIndex) => prevIndex + 1);
+  // };
+
+  // const prevTestimonial = () => {
+  //   setCurrentIndex((prevIndex) =>
+  //     prevIndex === 0 ? prevIndex : prevIndex - 1
+  //   );
+  // };
+  // const getUlStyle = () => {
+  //   return {
+  //     transform: `translateX(-${currentIndex * 496}px)`,
+  //   };
+  // };
+  // useEffect(() => {
+  //   if (currentIndex !== undefined) {
+  //     const list = [...testimonials];
+  //     let cardWidth = 496;
+
+  //     const tempList: any = [];
+
+  //     list.forEach((item: any, index: number) => {
+  //       let obj = { ...item };
+  //       let scale = 1;
+  //       if (index < currentIndex) {
+  //         scale = scalePattern[index] || 0;
+  //       }
+  //       scale = Math.max(scale, 0);
+  //       if (index + 1 <= currentIndex) {
+  //         obj = {
+  //           ...item,
+  //           style: {
+  //             transform: `translateX(${cardWidth}px) scale(${scale})`,
+  //             zIndex: "-1",
+  //           },
+  //         };
+  //         tempList.unshift(obj);
+  //         cardWidth += 496;
+  //       } else {
+  //         obj.style = { zIndex: obj.style?.zIndex || "initial" };
+  //         tempList.push(obj);
+  //       }
+  //     });
+  //     setTestimonials(
+  //       tempList.map((item: any, index: number) => {
+  //         item.bgColor = (index + 1) % 2 == 0 ? "#FFE192" : "#D7F1DF";
+  //         return item;
+  //       })
+  //     );
+  //   }
+  // }, [currentIndex]);
   const [testimonials, setTestimonials] = useState(tempTestimonials);
-  const listRef = useRef<HTMLUListElement>(null);
-  const scalePattern = [0.96, 0.84, 0.64, 0.36];
-  const cardWidth = 496;
-  const containerGap = 24;
-  const opinionTotal = 5;
-  const opinionOffset = 2;
-
-  useEffect(() => {
-    if (listRef.current) {
-      const liElement = listRef.current.querySelector("li");
-      if (liElement) {
-        setLiWidth(liElement.offsetWidth);
-      }
-    }
-  }, [listRef]);
-
-  const nextTestimonial = () => {
-    setCurrentIndex((prevIndex) => prevIndex + 1);
-  };
-
-  const prevTestimonial = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? prevIndex : prevIndex - 1
-    );
-  };
-  const getUlStyle = () => {
-    return {
-      transform: `translateX(-${currentIndex * 496}px)`,
-    };
-  };
-  useEffect(() => {
-    if (currentIndex !== undefined) {
-      const list = [...testimonials];
-      let cardWidth = 496;
-
-      const tempList: any = [];
-
-      list.forEach((item: any, index: number) => {
-        let obj = { ...item };
-        let scale = 1;
-        if (index < currentIndex) {
-          scale = scalePattern[index] || 0;
-        }
-        scale = Math.max(scale, 0);
-        if (index + 1 <= currentIndex) {
-          obj = {
-            ...item,
-            style: {
-              transform: `translateX(${cardWidth}px) scale(${scale})`,
-              zIndex: "-1",
-            },
-          };
-          tempList.unshift(obj);
-          cardWidth += 496;
-        } else {
-          obj.style = { zIndex: obj.style?.zIndex || "initial" };
-          tempList.push(obj);
-        }
-      });
-      setTestimonials(
-        tempList.map((item: any, index: number) => {
-          item.bgColor = (index + 1) % 2 == 0 ? "#FFE192" : "#D7F1DF";
-          return item;
-        })
-      );
-    }
-  }, [currentIndex]);
   return (
     <>
-      <div className="main-testimonial">
+      {/* <div className="main-testimonial">
         <div className="testimonial-container my-16">
           <div className="testimonial-wrapper flex overflow-hidden">
             <div className="title-section space-y-3 ">
@@ -119,61 +120,213 @@ const ThirdTestimonials = () => {
               </button>
             </div>
           </div>
-        <div
-          className="main-card-wrapper"
-          style={
-            {
-              "--card-width": `${cardWidth}px`,
-              "--container-gap": `${containerGap}px`,
-              "--opinion-total": opinionTotal,
-              "--opinion-offset": opinionOffset,
-            } as React.CSSProperties
-          }
-        >
-          <ul
-            className="flex transform translate-x-0 gap-5 card-container"
-            style={getUlStyle()}
-            ref={listRef}
+          <div
+            className="main-card-wrapper"
+            style={
+              {
+                "--card-width": `${cardWidth}px`,
+                "--container-gap": `${containerGap}px`,
+                "--opinion-total": opinionTotal,
+                "--opinion-offset": opinionOffset,
+              } as React.CSSProperties
+            }
           >
-            {testimonials.map((testimonial: any, index: number) => (
-              <li
-                key={index}
-                className={`testimonial-card rounded-[35px] bg-[${testimonial.bgColor}]`}
-                style={{
-                  ...(testimonial.style ? testimonial.style : {}),
-                }}
-              >
-                <div className="review text-left space-y-7">
-                  <div className="details flex items-center gap-1.5">
-                    <div className="avatar">
-                      <Avatar />
+            <ul
+              className="flex transform translate-x-0 gap-5 card-container"
+              style={getUlStyle()}
+              ref={listRef}
+            >
+              {testimonials.map((testimonial: any, index: number) => (
+                <li
+                  key={index}
+                  className={`testimonial-card rounded-[35px] bg-[${testimonial.bgColor}]`}
+                  style={{
+                    ...(testimonial.style ? testimonial.style : {}),
+                  }}
+                >
+                  <div className="review text-left space-y-7">
+                    <div className="details flex items-center gap-1.5">
+                      <div className="avatar">
+                        <Avatar />
+                      </div>
+                      <div className="infos">
+                        <p className="text-2xl font-bold">{testimonial.name}</p>
+                        <p className="text-lg font-bold">{testimonial.desc}</p>
+                      </div>
                     </div>
-                    <div className="infos">
-                      <p className="text-2xl font-bold">{testimonial.name}</p>
-                      <p className="text-lg font-bold">{testimonial.desc}</p>
+                    <p className="comment text-3xl font-semibold ">
+                      {testimonial.comment}
+                    </p>
+                    <div className="rating-container w-[60%]">
+                      <div className="rating text-black text-lg bg-white rounded-2xl p-2.5">
+                        <p className="flex items-center gap-4">
+                          {testimonial.rating}{" "}
+                          <div className="flex gap-2">
+                            <GradientStar />
+                            <GradientStar />
+                            <GradientStar />
+                            <GradientStar />
+                          </div>
+                        </p>
+                      </div>
                     </div>
                   </div>
-                  <p className="comment text-3xl font-semibold ">
-                    {testimonial.comment}
-                  </p>
-                  <div className="rating-container w-[60%]">
-                    <div className="rating text-black text-lg bg-white rounded-2xl p-2.5">
-                      <p className="flex items-center gap-4">
-                        {testimonial.rating}{" "}
-                        <div className="flex gap-2">
-                          <GradientStar />
-                          <GradientStar />
-                          <GradientStar />
-                          <GradientStar />
-                        </div>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ul>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
+      </div> */}
+      {/* <div className="main-testimonial">
+        <div className="testimonial-container my-16">
+          <div className="testimonial-wrapper flex overflow-hidden">
+            <div className="flex flex-col gap-4">
+              <span className="flex">
+                <GradientStar />
+                <GradientStar />
+                <GradientStar />
+                <GradientStar />
+                <GradientStar />
+              </span>
+              <h1 className="text-5xl font-semibold">The Perfect Match</h1>
+              <p className="max-w-80">
+                Over one million students have given a{" "}
+                <b> 5 star review to their tutor</b>
+              </p>
+              <div className="arrows display flex gap-5 justify-between w-24">
+                <button
+                  className={`text-3xl bg-[#f7f7f7] rounded-3xl flex justify-center items-center w-10 h-10 prev-button ${
+                    currentIndex == 0 && "bg-red-500"
+                  } `}
+                  onClick={prevTestimonial}
+                  disabled={currentIndex == 0}
+                >
+                  ←
+                </button>
+                <button
+                  className={`text-3xl bg-[#f7f7f7] rounded-3xl flex justify-center items-center w-10 h-10 next-button ${
+                    currentIndex == 4 && "bg-red-500"
+                  }`}
+                  onClick={nextTestimonial}
+                  disabled={currentIndex == 4}
+                >
+                  →
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            className="main-card-wrapper"
+            style={
+              {
+                "--card-width": `${cardWidth}px`,
+                "--container-gap": `${containerGap}px`,
+                "--opinion-total": opinionTotal,
+                "--opinion-offset": opinionOffset,
+              } as React.CSSProperties
+            }
+          >
+            <ul
+              style={getUlStyle()}
+              ref={listRef}
+              className="flex transform translate-x-0 gap-5 card-container"
+            >
+              {testimonials.map((testimonial: any, index: number) => (
+                <li
+                  key={index}
+                  style={{
+                    ...(testimonial.style ? testimonial.style : {}),
+                  }}
+                  className={`testimonial-card rounded-[35px] bg-[${testimonial.bgColor}]`}
+                >
+                  <div className="review text-left space-y-7">
+                    <div className="details flex items-center gap-1.5">
+                      <div className="avatar">
+                        <Avatar />
+                      </div>
+                      <div className="infos">
+                        <p className="text-2xl font-bold">{testimonial.name}</p>
+                        <p className="text-lg font-bold">{testimonial.desc}</p>
+                      </div>
+                    </div>
+                    <p className="comment text-3xl font-semibold ">
+                      {testimonial.comment}
+                    </p>
+                    <div className="rating-container w-[60%]">
+                      <div className="rating text-black text-lg bg-white rounded-2xl p-2.5">
+                        <p className="flex items-center gap-4">
+                          {testimonial.rating}{" "}
+                          <div className="flex gap-2">
+                            <GradientStar />
+                            <GradientStar />
+                            <GradientStar />
+                            <GradientStar />
+                          </div>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div> */}
+      <div className="main-testimonial">
+        <div className="testimonial-container">
+          <div className="match-wrapper">
+            <div className="flex gap-2">
+              <GradientStar />
+              <GradientStar />
+              <GradientStar />
+              <GradientStar />
+              <GradientStar />
+            </div>
+            <h1 className="max-w-sm font-bold my-6 text-4xl whitespace-pre-line">
+              The Perfect Match
+            </h1>
+            <p className="text-lg max-w-80">
+              Over one million students have given a
+              <b> 5 star review to their tutor</b>
+            </p>
+            <div className="button-controls flex gap-7">
+              <span className="prev-button">←</span>
+              <span className="next-button">→</span>
+            </div>
+          </div>
+          <div className="slider-content">
+            <ul className="card-list">
+              {testimonials.map((testimonial: any, index: number) => (
+                <li>
+                  <div className="card-testimonial">
+                    <div className="testimonial-detail">
+                      <div className="testimonial-avatar">
+                        <Avatar />
+                      </div>
+                      <div className="testimonial-infos">
+                        <p className="testimonial-name">{testimonial.name}</p>
+                        <p className="testimonial-desc">{testimonial.desc}</p>
+                      </div>
+                    </div>
+                    <p className="testimonial-comment">{testimonial.comment}</p>
+                    <div className="rating-container w-[60%]">
+                      <div className="testimonial-rating">
+                        <p className="testimonial-para">
+                          {testimonial.rating}{" "}
+                          <div className="testimonial-star">
+                            <GradientStar />
+                            <GradientStar />
+                            <GradientStar />
+                            <GradientStar />
+                          </div>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </>
