@@ -10,6 +10,11 @@ import {
   Jtbc,
   Kasa,
 } from "../locals/icon";
+import nightView from "../assets/night-view.jpeg"
+import nature from "../assets/nature.jpeg"
+import forest from "../assets/forest.jpeg"
+import snow from "../assets/snow.jpeg"
+
 
 export const SliderDemoData = [
   {
@@ -46,6 +51,11 @@ export const SliderDemoData = [
     description: "Carousals with scroll driven animation",
     path:"/scroll-driven"
 
+  },
+  {
+    title: "Demo 7",
+    description: "Expanding flex card",
+    path:"/flex-card"
   },
 ];
 
@@ -198,5 +208,32 @@ export const InfiniteLogoData = [
   },
   {
     icon: <Elevend />,
+  },
+];
+
+export const FlexCardData = [
+  {
+    img: nightView,
+    iconClass: "fa-solid fa-person-walking",
+    title: "Las Vegas",
+    description: "Lorem ipsum dolor sit amet.",
+  },
+  {
+    img: nature,
+    iconClass: "fa-solid fa-snowflake",
+    title: "Switzerland",
+    description: "Lorem ipsum dolor sit amet.",
+  },
+  {
+    img: forest,
+    iconClass: "fa-solid fa-tree",
+    title: "Amazon Rainforest",
+    description: "Lorem ipsum dolor sit amet.",
+  },
+  {
+    img: snow,
+    iconClass: "fa-solid fa-droplet",
+    title: "Siberia",
+    description: "Lorem ipsum dolor sit amet.",
   },
 ];

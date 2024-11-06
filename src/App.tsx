@@ -19,6 +19,7 @@ const ScrollDrivenDemoThree = lazy(
   () => import("./pages/scroll-driven-demo-three/scroll-driven-demo-three")
 );
 const ScrollReveal = lazy(() => import("./pages/scroll-reveal/scroll-reveal"));
+const FlexCard = lazy(() => import("./pages/flex-card/flex-card"));
 
 const App = () => {
   return (
@@ -47,6 +48,7 @@ const App = () => {
               path="/scroll-driven-demo-three"
               element={<ScrollDrivenDemoThree />}
             />
+            <Route path="/flex-card" element={<FlexCard />} />
           </Routes>
         </Suspense>
       </BrowserRouter>

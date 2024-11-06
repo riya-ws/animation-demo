@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { SliderDemoData } from "../../utils/constant";
-import Loading from "../../components/loading";
 
 const Home = () => {
   return (
