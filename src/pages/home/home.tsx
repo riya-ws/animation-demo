@@ -3,7 +3,7 @@ import { SliderDemoData } from "../../utils/constant";
 
 const Home = () => {
   return (
-    <div className="my-5 flex flex-col gap-6">
+    <div className="my-5 flex flex-col gap-6 max-md:px-3">
       {/* <Loading /> */}
       {SliderDemoData.map((item, index) => {
         return (
@@ -11,7 +11,7 @@ const Home = () => {
             <h1 className="text-2xl font-medium">{item.title}</h1>
             <Link
               to={item.path}
-              className="text-lg font-medium hover:text-blue-600 hover:underline"
+              className="text-lg font-medium hover:text-blue-600 hover:underline text-center"
             >
               {item.description}
             </Link>

@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { Avatar, GradientStar } from "../../locals/icon";
 import "./third-testimonial.css";
-import { tempTestimonials } from "../../utils/constant";
+import { TempTestimonials } from "../../utils/constant";
 
 const ThirdTestimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [liWidth, setLiWidth] = useState(0);
-  const [testimonials, setTestimonials] = useState(tempTestimonials);
+  const [testimonials, setTestimonials] = useState(TempTestimonials);
   const listRef = useRef<HTMLUListElement>(null);
   const scalePattern = [0.96, 0.84, 0.64, 0.36];
   const cardWidth = 496;
@@ -176,7 +176,6 @@ const ThirdTestimonials = () => {
           </div>
         </div>
       </div>
-     
     </>
   );
 };

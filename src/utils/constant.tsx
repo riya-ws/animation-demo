@@ -56,9 +56,14 @@ export const SliderDemoData = [
     description: "Drag cards to scroll, click on a card to rotate it",
     path: "/card-rotation",
   },
+  {
+    title: "Demo 9",
+    description: "spot agency what we are doing section",
+    path: "/spot-agency-doing",
+  },
 ];
 
-export const workData = [
+export const WorkData = [
   {
     title: "Create Your Account",
     description:
@@ -91,7 +96,7 @@ export const workData = [
   },
 ];
 
-export const tempTestimonials = [
+export const TempTestimonials = [
   {
     id: 1,
     name: "Melina",
@@ -276,5 +281,157 @@ export const RotationCards = [
         <Fish />
       </div>
     ),
+  },
+];
+
+export const AgencyDoingData = [
+  {
+    title: " Digital design",
+    description:
+      "Product research, design and development of digital products of companies and services. We believe that design is a storytelling exercise that carries both logic and aesthetics. That's why we are forever balancing and doing it with gusto.",
+    bgColor: "#caff33",
+    button: [
+      {
+        text: "Websites",
+      },
+      {
+        text: "CRM",
+      },
+      {
+        text: "Dashboards",
+      },
+      {
+        text: "Online stores",
+      },
+      {
+        text: "Prototyping",
+      },
+      {
+        text: "Castdev",
+      },
+      {
+        text: "Web and mobile applications",
+      },
+      {
+        text: "Benchmarking",
+      },
+      {
+        text: "Business research",
+      },
+      {
+        text: " b2b design",
+      },
+    ],
+  },
+  {
+    title: "Branding and printing",
+    description:
+      "Our goal is to increase the impact and recognition of your brand. Exclusive logos, brand identities and layouts will emphasise the uniqueness and value of your brand.",
+    bgColor: "#ff621f",
+    button: [
+      {
+        text: "Naming",
+      },
+      {
+        text: "Identity",
+      },
+      {
+        text: "Brandbook",
+      },
+      {
+        text: "Creative strategies",
+      },
+      {
+        text: "Social media",
+      },
+      {
+        text: "Merch",
+      },
+      {
+        text: "Communication design",
+      },
+      {
+        text: "Collaborations",
+      },
+      {
+        text: "Package",
+      },
+      {
+        text: "Art supervision",
+      },
+    ],
+  },
+  {
+    title: "Consulting",
+    description:
+      "Consultancy, design audits and advice tailored to your request to help your team or business.",
+    bgColor: "#bba9ff",
+    button: [
+      {
+        text: "Creative strategies",
+      },
+      {
+        text: "Collaboration ideas",
+      },
+      {
+        text: "Website design audit",
+      },
+      {
+        text: "Interface design audit",
+      },
+      {
+        text: "Corporate identity audit",
+      },
+      {
+        text: "Brand consultancy",
+      },
+      {
+        text: "Design sprints",
+      },
+      {
+        text: "Product support",
+      },
+      {
+        text: "Start-up assistance",
+      },
+    ],
+  },
+  {
+    title: "Design outsourcing",
+    description:
+      "We are developing this service with heart ... Coming soon Design outsourcing is a cool way to speed up the design and development process for your business or part of a product, when you may be short on resource but have a big desire to launch quicker... ",
+    bgColor: "#fffff",
+    button: [
+      {
+        text: "Websites",
+      },
+      {
+        text: "CRM",
+      },
+      {
+        text: "Dashboards",
+      },
+      {
+        text: "Online stores",
+      },
+      {
+        text: "Prototyping",
+      },
+      {
+        text: "Castdev",
+      },
+      {
+        text: "Web and mobile applications",
+      },
+      {
+        text: "Benchmarking",
+      },
+      {
+        text: "Business research",
+      },
+      {
+        text: " b2b design",
+      },
+    ],
   },
 ];

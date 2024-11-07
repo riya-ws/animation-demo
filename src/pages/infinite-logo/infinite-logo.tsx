@@ -16,7 +16,7 @@ const InfiniteLogo = () => {
 
         const scrollerInner =
           scroller.querySelector<HTMLElement>(".scroller__inner");
-        if (!scrollerInner) return; 
+        if (!scrollerInner) return;
         const scrollerContent = Array.from(scrollerInner.children);
 
         scrollerContent.forEach((item) => {
@@ -33,10 +33,8 @@ const InfiniteLogo = () => {
         <div className="scroller" data-speed="fast">
           <ul className="tag-list scroller__inner">
             <li className="flex gap-16">
-              {InfiniteLogoData.map((item,index)=>{
-                return(
-                  <div key={index}>{item.icon}</div>
-                )
+              {InfiniteLogoData.map((item, index) => {
+                return <div key={index}>{item.icon}</div>;
               })}
             </li>
           </ul>

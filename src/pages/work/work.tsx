@@ -1,6 +1,6 @@
 import { useEffect, useState, CSSProperties } from "react";
-import { workData } from "../../utils/constant";
-import "./work-slider.css"
+import { WorkData } from "../../utils/constant";
+import "./work-slider.css";
 
 const Work = () => {
   const [activeIndex, setActiveIndex] = useState<number>(-1);
@@ -52,7 +52,7 @@ const Work = () => {
         Experience personalised insights and effortless financial management.
       </p>
       <div className="flex flex-col mt-16">
-        {workData.map((item, index: number) => {
+        {WorkData.map((item, index: number) => {
           const isActive = activeIndex === index;
           const scaleVal = isActive ? 1.0 : 0.8;
           const translateY = isActive ? `-20px` : `0`;

@@ -1,6 +1,9 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+const SpotagencyDoing = lazy(
+  () => import("./pages/spotagency-doing/spotagency-doing")
+);
 const Rotation = lazy(() => import("./pages/card-rotation/rotation"));
 const Loading = lazy(() => import("./components/loading"));
 const Home = lazy(() => import("./pages/home/home"));
@@ -51,6 +54,7 @@ const App = () => {
             />
             <Route path="/flex-card" element={<FlexCard />} />
             <Route path="/card-rotation" element={<Rotation />} />
+            <Route path="/spot-agency-doing" element={<SpotagencyDoing />} />
           </Routes>
         </Suspense>
       </BrowserRouter>
