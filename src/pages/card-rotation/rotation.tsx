@@ -55,7 +55,7 @@ const Rotation = () => {
     <div>
       {" "}
       <div
-        className="h-full w-full flex items-center  xl:max-w-2xl relative"
+        className="h-full w-full flex items-center xl:max-w-2xl relative"
         onMouseDown={handleMouseDown}
         onMouseUp={() =>
           setDragStart((prev) => ({ ...prev, isDragging: false }))
@@ -72,20 +72,43 @@ const Rotation = () => {
           }}
           ref={containerRef}
         >
-          {RotationCards.map((card) => (
-            <div
-              className={`card relative inline-block items-center justify-center h-40 w-40 bg-slate-800 m-10 rounded-md cursor-pointer ${
-                selectedCard === card.id ? "bg-slate-700 scale-110" : ""
-              }`}
-              key={card.id}
-              ref={(el) => cardRefs.current.push(el)}
-              onMouseUp={(e) => handleCardMouseUp(e, card.id)}
-            >
-              <div className="h-full w-full flex items-center justify-center">
-                {card.icon}
+          {RotationCards.map((card) => {
+            const isSelected = selectedCard === card.id;
+            const custom = selectedCard ? selectedCard - card.id : 0;
+
+            const style = isSelected
+              ? {
+                  transform: "rotateY(180deg) scale(1.1)",
+                  transition: "transform 0.35s",
+                  zIndex: 10,
+                  boxShadow:
+                    "rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px",
+                }
+              : {
+                  transform: `rotateY(${custom * 15}deg) scale(${
+                    1 - Math.abs(custom * 0.15)
+                  }) translateX(${custom ? custom * 50 : 0}px)`,
+                  opacity: 1 - Math.abs(custom * 0.15),
+                  zIndex: 10 - Math.abs(custom),
+                  boxShadow:
+                    "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px",
+                  transition: "transform 0.35s, opacity 0.35s",
+                };
+
+            return (
+              <div
+                className="card relative inline-block items-center justify-center h-40 w-40 bg-slate-800 m-10 rounded-md cursor-pointer"
+                key={card.id}
+                ref={(el) => cardRefs.current.push(el)}
+                onMouseUp={(e) => handleCardMouseUp(e, card.id)}
+                style={style}
+              >
+                <div className="h-full w-full flex items-center justify-center">
+                  {card.icon}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>
