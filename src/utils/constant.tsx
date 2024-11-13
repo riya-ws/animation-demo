@@ -400,7 +400,7 @@ export const AgencyDoingData = [
     title: "Design outsourcing",
     description:
       "We are developing this service with heart ... Coming soon Design outsourcing is a cool way to speed up the design and development process for your business or part of a product, when you may be short on resource but have a big desire to launch quicker... ",
-    bgColor: "#fffff",
+    bgColor: "#ffffff",
     button: [
       {
         text: "Websites",

@@ -1,7 +1,14 @@
+import { useState } from "react";
 import { SpotLock, TopArrow } from "../../locals/icon";
 import { AgencyDoingData } from "../../utils/constant";
 
 const SpotagencyDoing = () => {
+  const [activeCardIndex, setActiveCardIndex] = useState(null);
+
+  const handleCardClick = (index: any) => {
+    setActiveCardIndex(index === activeCardIndex ? null : index); // Toggle active state
+  };
+
   return (
     <>
       <div className="container mx-auto">
@@ -12,10 +19,22 @@ const SpotagencyDoing = () => {
           <div
             key={dataIndex}
             className="flex justify-between w-full p-5 rounded-3xl"
-            style={{ backgroundColor: dataItem.bgColor
-              // marginTop: dataIndex !== 0 ? '-40px' : '0'
-              // zIndex: AgencyDoingData.length - dataIndex,
-             }}
+            style={{
+              backgroundColor: dataItem.bgColor,
+              transform:
+                dataIndex === activeCardIndex
+                  ? "translate(0px, -360px)"
+                  : dataIndex === activeCardIndex + 1
+                  ? "translate(0px, -720px)"
+                  : dataIndex === activeCardIndex + 2
+                  ? "translate(0px, -1180px)"
+                  : dataIndex === activeCardIndex + 3
+                  ? "translate(0px, -1780px)"
+                  : "",
+              height: dataIndex === activeCardIndex ? "100%" : "auto",
+              transition: "transform 0.5s ease, height 0.5s ease",
+            }}
+            onClick={() => handleCardClick(dataIndex)}
           >
             <div className="w-[30%]">
               <h2 className="text-[40px] font-medium text-black max-w-60">
@@ -42,7 +61,24 @@ const SpotagencyDoing = () => {
                 <div className="flex cursor-pointer">
                   <div className="bg-white text-[17px] font-normal p-3 rounded-3xl flex justify-center items-center gap-3">
                     See more
-                    <TopArrow width={12} height={12} />
+                    <TopArrow
+                      width={12}
+                      height={12}
+                      // style={{
+                      //   transition: "transform 0.5s ease",
+                      //   transform:
+                      //     dataIndex === activeCardIndex
+                      //       ? "rotate(180deg)"
+                      //       : "rotate(0deg)",
+                      // }}
+                      // style={{
+                      //   transition: "transform 0.5s ease",
+                      //   transform:
+                      //     dataIndex === activeCardIndex
+                      //       ? "rotate(180deg)"
+                      //       : "rotate(0deg)",
+                      // }}  
+                    />
                   </div>
                 </div>
               )}
@@ -52,7 +88,17 @@ const SpotagencyDoing = () => {
               {dataIndex === AgencyDoingData.length - 1 ? (
                 <SpotLock />
               ) : (
-                <TopArrow width={46} height={46} />
+                <TopArrow
+                  width={46}
+                  height={46}
+                  // style={{
+                  //   transition: "transform 0.5s ease",
+                  //   transform:
+                  //     dataIndex === activeCardIndex
+                  //       ? "rotate(180deg)"
+                  //       : "rotate(0deg)",
+                  // }}
+                />
               )}
             </div>
           </div>

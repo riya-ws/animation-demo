@@ -19,7 +19,7 @@ module.exports = {
         },
       },
       backgroundImage: {
-        noise: 'url("./src/assets/3/noise.png")'
+        noise: 'url("./src/assets/3/noise.png")',
       },
       spacing: {
         14: "3.5rem",
@@ -34,8 +34,11 @@ module.exports = {
       height: {
         large: "37.5rem",
       },
+      rotate: {
+        "-90": "-90deg", // Custom rotation
+      },
       screens: {
-        '3xl': '1800px'
+        "3xl": "1800px",
       },
       fontSize: {
         xxs: "10px",
