@@ -3,35 +3,29 @@ import { SpotLock, TopArrow } from "../../locals/icon";
 import { AgencyDoingData } from "../../utils/constant";
 const SpotagencyDoing = () => {
   const [activeCardIndex, setActiveCardIndex] = useState(null);
-  // const [animateArrow, setAnimateArrow] = useState(false);
 
   const handleCardClick = (index: any) => {
-    setActiveCardIndex((prev) => (prev === index ? null : index)); // Toggle card open/close
+    setActiveCardIndex((prev) => (prev === index ? null : index));
   };
-  // useEffect(() => {
-  //   if (dataIndex !== AgencyDoingData.length - 1) {
-  //     setAnimateArrow(true);
-  //   }
-  // }, [dataIndex]);
+
   return (
     <>
-      <div className="container mx-auto">
+      <div className="container mx-auto max-xl:px-5">
         <h1 className="text-center text-6xl font-medium my-10">
           What we are doing
         </h1>
         {AgencyDoingData.map((dataItem, dataIndex) => (
           <div
             key={dataIndex}
-            className={`flex flex-col md:flex-row justify-between w-full p-16 rounded-3xl transition-transform duration-300 ease-in-out  ${
+            className={`flex flex-col md:flex-row justify-between w-full p-16 max-lg:p-10 rounded-3xl transition-all duration-500 ease-in-out ${
               activeCardIndex === dataIndex
                 ? "h-auto"
-                : "h-[170px] overflow-hidden "
+                : "h-[170px] overflow-hidden max-md:h-[330px]"
             }`}
             style={{
               backgroundColor: dataItem.bgColor,
-              // zIndex: AgencyDoingData.length - dataIndex, // Higher index for cards at the top
-              marginTop: dataIndex === 0 ? 0 : "-40px", // Adjust overlap amount
-              position: "relative", // To allow stacking
+              marginTop: dataIndex === 0 ? 0 : "-40px",
+              position: "relative",
             }}
             onClick={() => handleCardClick(dataIndex)}
           >
@@ -68,9 +62,13 @@ const SpotagencyDoing = () => {
               {dataIndex === AgencyDoingData.length - 1 ? (
                 <SpotLock />
               ) : (
-                // <div className={animateArrow ? "arrow-up-animation" : ""}>
-                <TopArrow width={46} height={46} />
-                // </div>
+                <TopArrow
+                  width={46}
+                  height={46}
+                  className={`transition-transform duration-1000 ${
+                    activeCardIndex === dataIndex ? "rotate-[-80deg]" : ""
+                  }`}
+                />
               )}
             </div>
           </div>

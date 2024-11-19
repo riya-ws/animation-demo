@@ -362,8 +362,12 @@ export const Elevend = () => {
     </svg>
   );
 };
-
-export const TopArrow = ({ width = 12, height = 12 }) => {
+interface TopArrowProps {
+  width?: number;
+  height?: number;
+  className?: string;  // Add className to the props
+}
+export const TopArrow: React.FC<TopArrowProps> = ({ width = 46, height = 46, className = "" }) => {
   return (
     // <svg
     //   xmlns="http://www.w3.org/2000/svg"
@@ -383,6 +387,7 @@ export const TopArrow = ({ width = 12, height = 12 }) => {
       width={width}
       height={height}
       fill="none"
+      className={className}  
     >
       {" "}
       <path
