@@ -14,6 +14,11 @@ import nightView from "../assets/night-view.jpeg";
 import nature from "../assets/nature.jpeg";
 import forest from "../assets/forest.jpeg";
 import snow from "../assets/snow.jpeg";
+import homeIntegration from "../assets/data-integration/28-call-home.webp"
+import youtubeIntegration from "../assets/data-integration/17-yt-home.webp"
+import kocHomeIntegration from "../assets/data-integration/18-koc-home.webp"
+import pendoHomeIntegration from "../assets/data-integration/19-pendo-home.webp"
+
 
 export const SliderDemoData = [
   {
@@ -60,6 +65,11 @@ export const SliderDemoData = [
     title: "Demo 9",
     description: "spot agency what we are doing section",
     path: "/spot-agency-doing",
+  },
+  {
+    title: "Demo 10",
+    description: "Painless data integration section",
+    path: "/painless-data-integration",
   },
 ];
 
@@ -435,3 +445,18 @@ export const AgencyDoingData = [
     ],
   },
 ];
+
+export const DataIntegration =[
+    {
+      img: "homeIntegration",
+    }, 
+    {
+      img: "youtubeIntegration",
+    }, 
+    {
+      img: "kocHomeIntegration",
+    }, 
+    {
+      img: "pendoHomeIntegration",
+    }, 
+]
