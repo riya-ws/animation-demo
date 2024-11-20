@@ -40,15 +40,7 @@ module.exports = {
       screens: {
         "3xl": "1800px",
       },
-      keyframes: {
-        smoothAppear: {
-          "0%": { bottom: "-100%", opacity: 0 },
-          "100%": { bottom: "20px", opacity: 1 },
-        },
-      },
-      animation: {
-        "smooth-appear": "smoothAppear 1s ease forwards",
-      },
+
       fontSize: {
         xxs: "10px",
         screens: {

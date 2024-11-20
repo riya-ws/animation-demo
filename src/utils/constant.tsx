@@ -364,7 +364,7 @@ export const AgencyDoingData = [
   {
     title: "Consulting",
     description:
-      "Consultancy, design audits and advice tailored to your request to help your team or business.",
+      "Consultancy, design audits and advice tailored to your request to help your team or business. That's why we are forever balancing and doing it with gusto.",
     bgColor: "#bba9ff",
     button: [
       {
