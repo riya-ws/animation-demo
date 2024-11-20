@@ -35,7 +35,7 @@ module.exports = {
         large: "37.5rem",
       },
       rotate: {
-        "-90": "-90deg", // Custom rotation
+        "-90": "-90deg", 
       },
       screens: {
         "3xl": "1800px",

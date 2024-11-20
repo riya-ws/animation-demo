@@ -17,7 +17,7 @@ const SpotagencyDoing = () => {
         {AgencyDoingData.map((dataItem, dataIndex) => (
              <div
              key={dataIndex}
-             className={`flex flex-col md:flex-row justify-between w-full p-16 max-xl:p-10 rounded-3xl ease-linear  transition-all duration-[1500ms] overflow-hidden ${
+             className={`flex flex-col md:flex-row justify-between w-full p-16 max-xl:p-7 max-sm:p-5 rounded-3xl ease-linear  transition-all duration-[1500ms] overflow-hidden ${
                dataIndex === AgencyDoingData.length - 1
                  ? "max-h-[400px] max-md:max-h-[700px]" 
                  : activeCardIndex === dataIndex
@@ -51,7 +51,7 @@ const SpotagencyDoing = () => {
                 </div>
               )}
               {dataIndex !== AgencyDoingData.length - 1 && (
-                <div className="flex cursor-pointer mt-8">
+                <div className="flex cursor-pointer mt-8 mb-5">
                   <div className="bg-white text-[17px] font-normal p-3 rounded-3xl flex justify-center items-center gap-3">
                     See more
                     <TopArrow width={12} height={12} />
