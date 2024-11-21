@@ -14,11 +14,27 @@ import nightView from "../assets/night-view.jpeg";
 import nature from "../assets/nature.jpeg";
 import forest from "../assets/forest.jpeg";
 import snow from "../assets/snow.jpeg";
-import homeIntegration from "../assets/data-integration/28-call-home.webp"
-import youtubeIntegration from "../assets/data-integration/17-yt-home.webp"
-import kocHomeIntegration from "../assets/data-integration/18-koc-home.webp"
-import pendoHomeIntegration from "../assets/data-integration/19-pendo-home.webp"
-
+import homeIntegration from "../assets/data-integration/41-ana-home.webp";
+import youtubeIntegration from "../assets/data-integration/17-yt-home.webp";
+import kocHomeIntegration from "../assets/data-integration/18-koc-home.webp";
+import pendoHomeIntegration from "../assets/data-integration/19-pendo-home.webp";
+import breontoIntegration from "../assets/data-integration/23-bronto-home.webp";
+import salesForceIntegration from "../assets/data-integration/33-salesforce-home.webp";
+import pipeHomeIntegration from "../assets/data-integration/34-pipe-home.webp";
+import tigerHomeIntegration from "../assets/data-integration/45-tiger-home.webp";
+import readHomeIntegration from "../assets/data-integration/46-red-home.webp";
+import sfHomeIntegration from "../assets/data-integration/54-sf-home.webp";
+import vertHomeIntegration from "../assets/data-integration/55-vert-home.webp";
+import fireHomeIntegration from "../assets/data-integration/56-fire-home.webp";
+import arnHomeIntegration from "../assets/data-integration/58-arm-home.webp";
+import mariaHomeIntegration from "../assets/data-integration/59-maria-home.webp";
+import klavHomeIntegration from "../assets/data-integration/36-klav-home.png";
+import zenHomeIntegration from "../assets/data-integration/37-zen-home.png";
+import yotpoHomeIntegration from "../assets/data-integration/20-yotpo-home.webp";
+import sprinkHomeIntegration from "../assets/data-integration/21-sprinklr-home.webp";
+import mixHomeIntegration from "../assets/data-integration/24-mix-home.webp";
+import rdsPostHomeIntegration from "../assets/data-integration/60-rds-post-home.webp";
+import faceHomeIntegration from "../assets/data-integration/26-face-home.webp";
 
 export const SliderDemoData = [
   {
@@ -446,17 +462,85 @@ export const AgencyDoingData = [
   },
 ];
 
-export const DataIntegration =[
-    {
-      img: "homeIntegration",
-    }, 
-    {
-      img: "youtubeIntegration",
-    }, 
-    {
-      img: "kocHomeIntegration",
-    }, 
-    {
-      img: "pendoHomeIntegration",
-    }, 
-]
+export const DataIntegrationData = [
+  {
+    image: homeIntegration,
+  },
+  {
+    image: youtubeIntegration,
+  },
+  {
+    image: kocHomeIntegration,
+  },
+  {
+    image: pendoHomeIntegration,
+  },
+  {
+    image: breontoIntegration,
+  },
+  {
+    image: salesForceIntegration,
+  },
+  {
+    image: pipeHomeIntegration,
+  },
+ 
+  {
+    image: tigerHomeIntegration,
+  },
+  {
+    image: readHomeIntegration,
+  },
+  {
+    image: sfHomeIntegration,
+  },
+  {
+    image: vertHomeIntegration,
+  },
+  {
+    image: fireHomeIntegration,
+  },
+  {
+    image: arnHomeIntegration,
+  },
+  {
+    image: mariaHomeIntegration,
+  },
+  {
+    image: rdsPostHomeIntegration,
+  },
+  {
+    image: homeIntegration,
+  },
+  {
+    image: youtubeIntegration,
+  },
+  {
+    image: kocHomeIntegration,
+  },
+  {
+    image: klavHomeIntegration,
+  },
+  {
+    image: breontoIntegration,
+  },
+  {
+    image: zenHomeIntegration,
+  },
+  {
+    image: pipeHomeIntegration,
+  },
+  {
+    image: yotpoHomeIntegration,
+  },
+  {
+    image: sprinkHomeIntegration,
+  },
+  {
+    image: mixHomeIntegration,
+  },
+  {
+    image: faceHomeIntegration,
+  },
+ 
+];

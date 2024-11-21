@@ -76,7 +76,7 @@ const Work = () => {
             willChange: "transform",
             zIndex: 1,
           };
-          const topValue = 40 + index * 5;
+          // const topValue = 40 + index * 5;
 
           return (
             <div
@@ -87,8 +87,8 @@ const Work = () => {
                 flexDirection,
                 transform: `scale(${scaleVal}) translateY(${translateY})`,
                 transition: "transform 0.3s ease, opacity 0.3s ease",
-                opacity: isActive ? 1 : 0.8,
-                top: `${topValue}px`,
+                opacity: isActive ? 0.6 : 1.2,
+                // top: `${topValue}px`,
               }}
               data-index={index}
             >

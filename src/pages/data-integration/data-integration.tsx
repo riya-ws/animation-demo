@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import homeIntegration from "../../assets/data-integration/17-yt-home.webp";
+import youtubeIntegration from "../../assets/data-integration/19-pendo-home.webp";
+import { DataIntegrationData } from "../../utils/constant";
 
 const DataIntegration = () => {
   const [activeButton, setActiveButton] = useState("Database");
@@ -33,26 +35,20 @@ const DataIntegration = () => {
                       <div className="rounded-full border w-3 h-3 border-[#6234f7]"></div>
                     </>
                   )}
-                  
                 </>
               ))}
             </div>
           </div>
         </div>
-        {/* <div className="flex gap-3">
-          {DataIntegration.map((item, index) => (
+        <div className="flex gap-3">
+          {DataIntegrationData.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-full w-16 h-16 flex justify-center items-center"
+              className="bg-white rounded-full w-20 h-16 flex justify-center items-center"
             >
-              <img src={item.img} alt="homeIntegration" />
+              <img src={item.image} alt={`Integration ${index}`} />
             </div>
           ))}
-        </div> */}
-        <div className="flex gap-3">
-          <div className="bg-white rounded-full w-16 h-16 flex justify-center items-center">
-            <img src={homeIntegration} alt="homeIntegration" />
-          </div>
         </div>
       </div>
     </>
