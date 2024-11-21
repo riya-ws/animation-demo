@@ -1,0 +1,54 @@
+/* @keyframes infinite-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+} */
+/* @keyframes infinite-scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+.animate-infinite-scroll-integration {
+  display: flex;
+  animation: infinite-scroll 32s linear infinite;
+  will-change: transform;
+} */
+.data-integration.scroller {
+  overflow: hidden;
+}
+
+.scroller__inner_integration {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 1s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+
+.data-integration.scroller[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+.data-integration.scroller[data-direction="left"] {
+  --_animation-direction: forwards;
+}
+
+.data-integration.scroller[data-speed="fast"] {
+  --_animation-duration: 50s;
+}
+
+.data-integration.scroller[data-speed="slow"] {
+  --_animation-duration: 60s;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}

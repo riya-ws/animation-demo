@@ -13,14 +13,14 @@ module.exports = {
       colors: {
         primary: "#000000",
         secondary: "#FFFFFF",
-        darkBlue:{
+        darkBlue: {
           700: "#1d024f",
         },
         neutral: {
           750: "#2d2d2d",
         },
       },
-     
+
       backgroundImage: {
         noise: 'url("./src/assets/3/noise.png")',
       },
@@ -38,7 +38,7 @@ module.exports = {
         large: "37.5rem",
       },
       rotate: {
-        "-90": "-90deg", 
+        "-90": "-90deg",
       },
       screens: {
         "3xl": "1800px",

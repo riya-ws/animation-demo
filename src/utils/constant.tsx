@@ -465,82 +465,107 @@ export const AgencyDoingData = [
 export const DataIntegrationData = [
   {
     image: homeIntegration,
+    category: "Database",
   },
   {
     image: youtubeIntegration,
+    category: "Database",
   },
   {
     image: kocHomeIntegration,
+    category: "Database",
   },
   {
     image: pendoHomeIntegration,
+    category: "Database",
   },
   {
     image: breontoIntegration,
+    category: "Database",
   },
   {
     image: salesForceIntegration,
+    category: "Marketing",
   },
   {
     image: pipeHomeIntegration,
+    category: "Marketing",
   },
- 
+
   {
     image: tigerHomeIntegration,
+    category: "Marketing",
   },
   {
     image: readHomeIntegration,
+    category: "Marketing",
   },
   {
     image: sfHomeIntegration,
+    category: "Marketing",
   },
   {
     image: vertHomeIntegration,
+    category: "Marketing",
   },
   {
     image: fireHomeIntegration,
+    category: "Marketing",
   },
   {
     image: arnHomeIntegration,
+    category: "CRM",
   },
   {
     image: mariaHomeIntegration,
+    category: "CRM",
   },
   {
     image: rdsPostHomeIntegration,
+    category: "CRM",
   },
   {
     image: homeIntegration,
+    category: "CRM",
   },
   {
     image: youtubeIntegration,
+    category: "CRM",
   },
   {
     image: kocHomeIntegration,
+    category: "CRM",
   },
   {
     image: klavHomeIntegration,
+    category: "CRM",
   },
   {
     image: breontoIntegration,
+    category: "Analytics",
   },
   {
     image: zenHomeIntegration,
+    category: "Analytics",
   },
   {
     image: pipeHomeIntegration,
+    category: "Analytics",
   },
   {
     image: yotpoHomeIntegration,
+    category: "Analytics",
   },
   {
     image: sprinkHomeIntegration,
+    category: "Analytics",
   },
   {
     image: mixHomeIntegration,
+    category: "Analytics",
   },
   {
     image: faceHomeIntegration,
+    category: "Analytics",
   },
- 
 ];
