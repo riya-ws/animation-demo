@@ -12,15 +12,15 @@ const DataIntegration = () => {
       <div className="bg-darkBlue-700 h-screen">
         <div className="container mx-auto">
           <div className="flex justify-center flex-col items-center gap-10 py-16">
-            <h1 className=" text-white text-5xl font-bold">
+            <h1 className=" text-white text-5xl max-md:text-3xl font-bold text-center">
               Painless data integration
             </h1>
-            <div className="flex gap-0.5 justify-center items-center">
+            <div className="flex gap-0.5 max-md:flex-col justify-center items-center w-full max-md:px-5">
               {buttons.map((button, index) => (
                 <>
                   <button
                     key={button}
-                    className={`text-white text-base font-medium px-4 py-4 border border-[#6234f7] rounded-xl ${
+                    className={`text-white text-base font-medium px-4 py-4 border border-[#6234f7] rounded-xl max-md:w-full ${
                       activeButton === button ? " bg-[#ffd300]" : "bg-[#1d024f]"
                     }`}
                     onClick={() => setActiveButton(button)}
@@ -30,7 +30,7 @@ const DataIntegration = () => {
                   {index < buttons.length - 1 && (
                     <>
                       <div className="rounded-full border w-3 h-3 border-[#6234f7]"></div>
-                      <div className="w-28 h-[1px] border border-dashed border-[#6234f7]"></div>
+                      <div className="w-28 max-lg:w-16 h-[1px] border border-dashed border-[#6234f7]"></div>
                       <div className="rounded-full border w-3 h-3 border-[#6234f7]"></div>
                     </>
                   )}
@@ -65,7 +65,7 @@ const DataIntegration = () => {
             ))}
           </div>
         </div>
-        <div className="flex justify-center items-center w-full mt-10">
+        <div className="flex justify-center items-center w-full py-10 bg-darkBlue-700">
           <div className="bg-transparent flex justify-center items-center gap-4 py-4 px-4 border rounded-2xl border-[#6234f7] outline-none ">
             <SearchIntegration />
             <input
