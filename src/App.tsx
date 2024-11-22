@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import DataIntegration from "./pages/data-integration/data-integration";
+import Rivery from "./pages/rivery/rivery";
 const SpotagencyDoing = lazy(
   () => import("./pages/spotagency-doing/spotagency-doing")
 );
@@ -56,7 +57,14 @@ const App = () => {
             <Route path="/flex-card" element={<FlexCard />} />
             <Route path="/card-rotation" element={<Rotation />} />
             <Route path="/spot-agency-doing" element={<SpotagencyDoing />} />
-            <Route path="painless-data-integration" element={<DataIntegration />} />
+            <Route
+              path="painless-data-integration"
+              element={<DataIntegration />}
+            />
+            <Route
+              path="/rivery"
+              element={<Rivery />}
+            />
           </Routes>
         </Suspense>
       </BrowserRouter>

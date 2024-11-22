@@ -87,6 +87,11 @@ export const SliderDemoData = [
     description: "Painless data integration section",
     path: "/painless-data-integration",
   },
+  {
+    title: "Demo 11",
+    description: "Made by data pros for data pros",
+    path: "/rivery",
+  },
 ];
 
 export const WorkData = [
