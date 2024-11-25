@@ -574,3 +574,23 @@ export const DataIntegrationData = [
     category: "Analytics",
   },
 ];
+export const RiveryCardsData = [
+  {
+    id: 1,
+    title: "Data Leaders",
+    person: "Ranajay Nandy",
+    bgColor: "bg-[#32046d]",
+  },
+  {
+    id: 2,
+    title: "Data Engineers",
+    person: "Romilly Hills",
+    bgColor: "bg-[#6234f7]",
+  },
+  {
+    id: 3,
+    title: "Data Analysts",
+    person: "David Piazza",
+    bgColor: "bg-[#ffd300]",
+  },
+];
