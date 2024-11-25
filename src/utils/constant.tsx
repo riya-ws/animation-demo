@@ -9,6 +9,7 @@ import {
   Hmall,
   Jtbc,
   Kasa,
+  TextRiverIcon,
 } from "../locals/icon";
 import nightView from "../assets/night-view.jpeg";
 import nature from "../assets/nature.jpeg";
@@ -93,7 +94,6 @@ export const SliderDemoData = [
     path: "/rivery",
   },
 ];
-
 export const WorkData = [
   {
     title: "Create Your Account",
@@ -126,7 +126,6 @@ export const WorkData = [
     image: workSection,
   },
 ];
-
 export const TempTestimonials = [
   {
     id: 1,
@@ -215,7 +214,6 @@ export const stickyRevealData = [
     content: "Running out of content",
   },
 ];
-
 export const InfiniteLogoData = [
   {
     icon: <Kasa />,
@@ -245,7 +243,6 @@ export const InfiniteLogoData = [
     icon: <Elevend />,
   },
 ];
-
 export const FlexCardData = [
   {
     img: nightView,
@@ -314,7 +311,6 @@ export const RotationCards = [
     ),
   },
 ];
-
 export const AgencyDoingData = [
   {
     title: " Digital design",
@@ -466,7 +462,6 @@ export const AgencyDoingData = [
     ],
   },
 ];
-
 export const DataIntegrationData = [
   {
     image: homeIntegration,
@@ -580,17 +575,80 @@ export const RiveryCardsData = [
     title: "Data Leaders",
     person: "Ranajay Nandy",
     bgColor: "bg-[#32046d]",
+    position: "Leaders",
+    extraSubDescription: (
+      <div className={`p-4 rounded-3xl flex gap-4 bg-[#ffd300]`}>
+        <TextRiverIcon width={46} height={46} />
+        <p className="text-base font-medium">
+          Rivery’s{" "}
+          <span className="text-[#6234f7]">out-of-the-box starter kits</span>{" "}
+          are amazing. They helped us build our initial data pipelines really
+          fast and meet our objectives right out of the gate.
+        </p>
+      </div>
+    ),
+    leaders: [
+      {
+        para: "Cut hours of dev, maintenance, and upkeep with automated and pre-built solutions.",
+        description:
+          "Gain total control over your spend with full visibility into your team’s consumption – based on value, not rows.",
+        subDescription:
+          "Govern with RBAC. Align your ETL tool with the same seamless experience you expect from your cloud data warehouse.",
+      },
+    ],
   },
   {
     id: 2,
     title: "Data Engineers",
     person: "Romilly Hills",
     bgColor: "bg-[#6234f7]",
+    position: "Leaders",
+    extraSubDescription: (
+      <div className={`p-4 rounded-3xl flex gap-4 bg-[#32046d]`}>
+        <TextRiverIcon width={46} height={46} />
+        <p className="text-base font-medium text-white">
+          Before Rivery, it took us
+          <span className="text-[#ffd300]"> 2 weeks </span>
+          to build a new connector. Now, we can do it in{" "}
+          <span className="text-[#ffd300]">half a day</span>
+        </p>
+      </div>
+    ),
+    leaders: [
+      {
+        para: "Action proactively with full monitoring control. Easily manage deployments across multiple environments and versions.",
+        description:
+          "Remotely execute, edit, deploy, and manage data pipelines with API and CLI that integrate with your architecture.",
+        subDescription:
+          "Run Python and use DataFrames within your data flow. No extra code. No extra infrastructure.",
+      },
+    ],
   },
   {
     id: 3,
     title: "Data Analysts",
     person: "David Piazza",
     bgColor: "bg-[#ffd300]",
+    position: "Analysts",
+    extraSubDescription: (
+      <div className={`p-4 rounded-3xl flex gap-4 bg-[#32046d]`}>
+        <TextRiverIcon width={46} height={46} />
+        <p className="text-base font-medium text-white">
+          It now takes our BI team
+          <span className="text-[#ffd300]"> a fifth of the time </span> to
+          generate reports our teams need in order to make the most crucial
+          business decisions.
+        </p>
+      </div>
+    ),
+    leaders: [
+      {
+        para: "Access data without code or API management. Plug into your data and apply SQL logic to build end-to-end pipelines.",
+        description:
+          "Invest more time on data modeling. Rivery automatically creates target schemas and manages incremental loads.",
+        subDescription:
+          "Easily push data directly into your tech stack. Send notifications to Slack, or update user data in your martech.",
+      },
+    ],
   },
 ];

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { RiveryIcon, RiveryRightArrow, TextRiverIcon } from "../../locals/icon";
+import { RiveryIcon, RiveryRightArrow } from "../../locals/icon";
 import { RiveryCardsData } from "../../utils/constant";
 
 const Rivery = () => {
@@ -7,10 +7,10 @@ const Rivery = () => {
 
   return (
     <div
-      className={`grid container mx-auto w-full gap-4 my-10`}
+      className={`grid container mx-auto w-full gap-4 my-10  `}
       style={{
         gridTemplateColumns: RiveryCardsData.map((card) =>
-          activeCard === card.id ? "2fr" : "1fr"
+          activeCard === card.id ? "2fr " : "1fr"
         ).join(" "),
       }}
     >
@@ -18,7 +18,7 @@ const Rivery = () => {
         <div
           key={index}
           onMouseEnter={() => setActiveCard(card.id)}
-          className={`transition-all duration-500 rounded-2xl border p-5 space-y-5 ${card.bgColor}`}
+          className={`transition duration-[10s] rounded-2xl border p-5 space-y-5 ${card.bgColor} `}
         >
           {/* Top Section */}
           <div className="flex justify-between items-center mb-20">
@@ -45,15 +45,10 @@ const Rivery = () => {
             </div>
           ) : (
             <>
-              <div className="bg-yellow-400 p-4 rounded-3xl flex gap-4">
-                <TextRiverIcon width={46} height={46} />
-                <p>
-                  Rivery’s{" "}
-                  <span className="text-[#6234f7]">
-                    out-of-the-box starter kits
-                  </span>{" "}
-                  are amazing. They helped us build our initial data pipelines
-                  really fast and meet our objectives right out of the gate.
+              <div className={`p-4 rounded-3xl flex gap-4`}>
+                {/* <TextRiverIcon width={46} height={46} /> */}
+                <p className="text-base font-normal">
+                  {card.extraSubDescription}
                 </p>
               </div>
               <div className="flex flex-col items-center">
@@ -62,25 +57,26 @@ const Rivery = () => {
                   {card.person}
                 </h1>
                 <p className="text-xl font-medium text-white">
-                  Data Engineer Team Lead
+                  Data {card.position}
                 </p>
               </div>
               <div className="space-y-4">
                 <h1 className="text-white font-medium text-2xl">
-                  Data Leaders
+                  Data {card.position}
                 </h1>
-                <p className="text-white font-medium text-lg">
-                  Cut hours of dev, maintenance, and upkeep with automated and
-                  pre-built solutions.
-                </p>
-                <p className="text-white font-medium text-lg">
-                  Gain total control over your spend with full visibility into
-                  your team’s consumption – based on value, not rows.
-                </p>
-                <p className="text-white font-medium text-lg">
-                  Govern with RBAC. Align your ETL tool with the same seamless
-                  experience you expect from your cloud data warehouse.
-                </p>
+                {card.leaders.map((leader, index) => (
+                  <div key={index}>
+                    <p className="text-white font-medium text-lg">
+                      {leader.para}
+                    </p>
+                    <p className="text-white font-medium text-lg">
+                      {leader.description}
+                    </p>
+                    <p className="text-white font-medium text-lg">
+                      {leader.subDescription}
+                    </p>
+                  </div>
+                ))}
               </div>
             </>
           )}
