@@ -602,7 +602,7 @@ export const RiveryCardsData = [
     title: "Data Engineers",
     person: "Romilly Hills",
     bgColor: "bg-[#6234f7]",
-    position: "Leaders",
+    position: "Engineers",
     extraSubDescription: (
       <div className={`p-4 rounded-3xl flex gap-4 bg-[#32046d]`}>
         <TextRiverIcon width={46} height={46} />

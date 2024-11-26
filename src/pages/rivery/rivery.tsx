@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { RiveryIcon, RiveryRightArrow } from "../../locals/icon";
+import { Avatar, RiveryIcon, RiveryRightArrow } from "../../locals/icon";
 import { RiveryCardsData } from "../../utils/constant";
 
 const Rivery = () => {
@@ -7,10 +7,10 @@ const Rivery = () => {
 
   return (
     <div
-      className={`grid container mx-auto w-full gap-4 my-10  `}
+      className={`grid container mx-auto w-full gap-4 my-10 transition-all duration-1000 ease-linear transform `}
       style={{
         gridTemplateColumns: RiveryCardsData.map((card) =>
-          activeCard === card.id ? "2fr " : "1fr"
+          activeCard === card.id ? "2fr" : "1fr"
         ).join(" "),
       }}
     >
@@ -18,10 +18,15 @@ const Rivery = () => {
         <div
           key={index}
           onMouseEnter={() => setActiveCard(card.id)}
-          className={`transition duration-[10s] rounded-2xl border p-5 space-y-5 ${card.bgColor} `}
+          className={`rounded-2xl border p-5 space-y-5 h-[640px] ${card.bgColor}`}
         >
           {/* Top Section */}
-          <div className="flex justify-between items-center mb-20">
+          {/* {activeCard !== card.id ? ( */}
+          <div
+            className={`${
+              activeCard !== card.id ? "" : "hidden"
+            } flex justify-between items-center mb-20`}
+          >
             <div>
               <h4 className="text-xl font-light text-white">Data</h4>
               <h2 className="text-3xl font-semibold text-white">
@@ -30,10 +35,34 @@ const Rivery = () => {
             </div>
             <RiveryRightArrow />
           </div>
+          {/* ) : ( */}
+          <div
+            className={`${
+              activeCard !== card.id ? "invisible" : ""
+            } flex justify-center items-center`}
+          >
+            <div className="w-full flex gap-5 items-center">
+              <Avatar />
+              <div className="flex flex-col">
+                <h4 className="text-lg font-medium text-white">
+                  {card.person}
+                </h4>
+                <p className=" text-base font-medium text-white">
+                  Data {card.position}
+                </p>
+              </div>
+            </div>
+            <h1 className="text-xl font-medium text-white">CITIZEN</h1>
+          </div>
+          {/* )} */}
 
           {/* Conditional Content */}
           {activeCard !== card.id ? (
-            <div className="flex flex-col items-center">
+            <div
+              className={`flex flex-col items-center ${
+                activeCard !== card.id ? "" : "hidden"
+              } `}
+            >
               <RiveryIcon />
               <h1 className="text-xl font-semibold text-white pt-10">
                 {card.person}
