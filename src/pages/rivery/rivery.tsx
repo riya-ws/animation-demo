@@ -18,14 +18,12 @@ const Rivery = () => {
         <div
           key={index}
           onMouseEnter={() => setActiveCard(card.id)}
-          className={`rounded-2xl border p-5 space-y-5 h-[640px] ${card.bgColor}`}
+          className={`rounded-2xl border p-5 h-[550px] overflow-hidden ${card.bgColor}`}
         >
-          {/* Top Section */}
-          {/* {activeCard !== card.id ? ( */}
           <div
             className={`${
               activeCard !== card.id ? "" : "hidden"
-            } flex justify-between items-center mb-20`}
+            } flex justify-between items-center`}
           >
             <div>
               <h4 className="text-xl font-light text-white">Data</h4>
@@ -35,11 +33,11 @@ const Rivery = () => {
             </div>
             <RiveryRightArrow />
           </div>
-          {/* ) : ( */}
+          
           <div
             className={`${
               activeCard !== card.id ? "invisible" : ""
-            } flex justify-center items-center`}
+            } flex justify-center items-center w-[800px]`}
           >
             <div className="w-full flex gap-5 items-center">
               <Avatar />
@@ -54,13 +52,10 @@ const Rivery = () => {
             </div>
             <h1 className="text-xl font-medium text-white">CITIZEN</h1>
           </div>
-          {/* )} */}
-
-          {/* Conditional Content */}
           {activeCard !== card.id ? (
             <div
               className={`flex flex-col items-center ${
-                activeCard !== card.id ? "" : "hidden"
+                activeCard !== card.id ? "" : "invisible"
               } `}
             >
               <RiveryIcon />
@@ -74,13 +69,21 @@ const Rivery = () => {
             </div>
           ) : (
             <>
-              <div className={`p-4 rounded-3xl flex gap-4`}>
-                {/* <TextRiverIcon width={46} height={46} /> */}
+              <div
+                className={`my-10 rounded-3xl flex gap-4 transition-all duration-1000 ease-linear transform w-[800px] ${
+                  activeCard !== card.id ? "invisible" : ""
+                }`}
+              >
+                {/* <TextRiverIcon width={46} height={46} />  */}
                 <p className="text-base font-normal">
                   {card.extraSubDescription}
                 </p>
               </div>
-              <div className="flex flex-col items-center">
+              <div
+                className={`flex flex-col items-center ${
+                  activeCard !== card.id ? "" : "hidden"
+                } `}
+              >
                 <RiveryIcon />
                 <h1 className="text-xl font-semibold text-white">
                   {card.person}
@@ -89,12 +92,12 @@ const Rivery = () => {
                   Data {card.position}
                 </p>
               </div>
-              <div className="space-y-4">
-                <h1 className="text-white font-medium text-2xl">
+              <div className=" w-[800px]">
+                <h1 className="text-white font-medium text-2xl mb-3">
                   Data {card.position}
                 </h1>
                 {card.leaders.map((leader, index) => (
-                  <div key={index}>
+                  <div key={index} className="space-y-4 ">
                     <p className="text-white font-medium text-lg">
                       {leader.para}
                     </p>
