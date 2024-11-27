@@ -577,7 +577,9 @@ export const RiveryCardsData = [
     bgColor: "bg-[#32046d]",
     position: "Leaders",
     extraSubDescription: (
-      <div className={`p-4 rounded-xl flex gap-4 bg-[#ffd300]`}>
+      <div
+        className={`p-4 rounded-xl flex max-lg:flex-col items-center gap-4 bg-[#ffd300] max-lg:max-w-[800px]`}
+      >
         <TextRiverIcon width={46} height={46} />
         <p className="text-base font-medium ">
           Rivery’s{" "}
@@ -604,7 +606,9 @@ export const RiveryCardsData = [
     bgColor: "bg-[#6234f7]",
     position: "Engineers",
     extraSubDescription: (
-      <div className={`p-4 rounded-xl flex gap-4 bg-[#32046d]`}>
+      <div
+        className={`p-4 rounded-xl flex  max-lg:flex-col items-center max-lg:max-w-[800px] gap-4 bg-[#32046d]`}
+      >
         <TextRiverIcon width={46} height={46} />
         <p className="text-base font-medium text-white">
           Before Rivery, it took us
@@ -631,7 +635,9 @@ export const RiveryCardsData = [
     bgColor: "bg-[#ffd300]",
     position: "Analysts",
     extraSubDescription: (
-      <div className={`p-4 rounded-xl flex gap-4 bg-[#32046d]`}>
+      <div
+        className={`p-4 rounded-xl flex  max-lg:flex-col items-center max-lg:max-w-[800px] gap-4 bg-[#32046d]`}
+      >
         <TextRiverIcon width={46} height={46} />
         <p className="text-base font-medium text-white">
           It now takes our BI team
