@@ -1,9 +1,14 @@
 import { useState } from "react";
-import { Avatar, RiveryIcon, RiveryRightArrow } from "../../locals/icon";
+import {
+  Avatar,
+  RiveryIcon,
+  RiveryRightArrow,
+  DownArrowIntegration,
+} from "../../locals/icon";
 import { RiveryCardsData } from "../../utils/constant";
 
 const Rivery = () => {
-  const [activeCard, setActiveCard] = useState(1);
+  const [activeCard, setActiveCard] = useState<number | null>(1);
 
   return (
     <>
@@ -120,60 +125,76 @@ const Rivery = () => {
       </div>
 
       {/*Mobile screen*/}
+      <div className="flex flex-col container mx-auto w-full my-10 transition-all duration-1000 ease-linear transform lg:hidden px-5">
+        {RiveryCardsData.map((card) => (
+          <div>
+            {/* Header with title */}
+            <div
+              className="flex w-full justify-between items-center cursor-pointer"
+              key={card.id}
+              onClick={() =>
+                setActiveCard(activeCard === card.id ? null : card.id)
+              }
+            >
+              <h1 className="text-lg font-semibold py-3">
+                Data {card.position}
+              </h1>
+              <div
+                className={`transition-transform duration-1000 ${
+                  activeCard === card.id ? "rotate-[-160deg]" : ""
+                }`}
+              >
+                <DownArrowIntegration />
+              </div>
+            </div>
 
-      <div
-        className={`flex flex-col container mx-auto w-full gap-4 my-10 transition-all duration-1000 ease-linear transform lg:hidden px-5`}
-      >
-        {/* {RiveryCardsData.map((card) => (
-          <h1>Data {card.position}</h1>
-        ))} */}
-        {RiveryCardsData.map((card, index) => (
-          <div
-            key={index}
-            onMouseEnter={() => setActiveCard(card.id)}
-            className={`rounded-2xl border p-5  overflow-hidden ${card.bgColor}`}
-          >
-            <div className={` flex justify-center items-center p-7`}>
-              <div className="w-full flex gap-5 items-center flex-col justify-center">
-                <h1 className="text-xl font-medium text-white">CITIZEN</h1>
-                <Avatar />
-                <div className="flex flex-col items-center justify-center">
-                  <h4 className="text-lg font-medium text-white">
-                    {card.person}
-                  </h4>
-                  <p className=" text-base font-medium text-white">
-                    Data {card.position}
+            {/* Card Content */}
+            {activeCard === card.id && (
+              <div
+                className={`rounded-2xl border p-5 overflow-hidden transition-all duration-300 ease-in-out mb-5 ${card.bgColor}`}
+              >
+                <div className="flex justify-center items-center p-7">
+                  <div className="w-full flex gap-5 items-center flex-col justify-center">
+                    <h1 className="text-xl font-medium text-white">CITIZEN</h1>
+                    <Avatar />
+                    <div className="flex flex-col items-center justify-center">
+                      <h4 className="text-lg font-medium text-white">
+                        {card.person}
+                      </h4>
+                      <p className="text-base font-medium text-white">
+                        Data {card.position}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mb-5 rounded-3xl flex gap-4 transition-all duration-1000 ease-linear transform">
+                  <p className="text-base font-normal">
+                    {card.extraSubDescription}
                   </p>
                 </div>
-              </div>
-            </div>
 
-            {/* <> */}
-            <div
-              className={`mb-5 rounded-3xl flex gap-4 transition-all duration-1000 ease-linear transform `}
-            >
-              <p className="text-base font-normal">
-                {card.extraSubDescription}
-              </p>
-            </div>
-            {/* <div className={`flex flex-col items-center `}></div> */}
-            {/* <div className=""> */}
-            <h1 className="text-white font-medium text-2xl mb-3">
-              Data {card.position}
-            </h1>
-            {card.leaders.map((leader, index) => (
-              <div key={index} className="space-y-4 max-w-[725px]">
-                <p className="text-white font-medium text-lg">{leader.para}</p>
-                <p className="text-white font-medium text-lg">
-                  {leader.description}
-                </p>
-                <p className="text-white font-medium text-lg">
-                  {leader.subDescription}
-                </p>
+                <h1 className="text-white font-medium text-2xl mb-3">
+                  Data {card.position}
+                </h1>
+                {card.leaders.map((leader, index) => (
+                  <div key={index} className="space-y-4 max-w-[725px]">
+                    <p className="text-white font-medium text-lg">
+                      {leader.para}
+                    </p>
+                    <p className="text-white font-medium text-lg">
+                      {leader.description}
+                    </p>
+                    <p className="text-white font-medium text-lg">
+                      {leader.subDescription}
+                    </p>
+                  </div>
+                ))}
               </div>
-            ))}
-            {/* </div> */}
-            {/* </> */}
+            )}
+
+            {/* Divider */}
+            <div className="h-0.5 w-full bg-[#75749c]"></div>
           </div>
         ))}
       </div>
