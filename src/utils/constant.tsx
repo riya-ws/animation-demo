@@ -93,6 +93,11 @@ export const SliderDemoData = [
     description: "Made by data pros for data pros",
     path: "/rivery",
   },
+  {
+    title: "Demo 12",
+    description: "How we do it",
+    path: "/spotagency-infinite-scroll",
+  },
 ];
 export const WorkData = [
   {
@@ -658,3 +663,17 @@ export const RiveryCardsData = [
     ],
   },
 ];
+export const SpotagencyScrollData =[
+  {
+    description : "Bringing value to the business by driving strategy and objectives",
+    bgColor: "#c9ff33",
+  },
+  {
+    description : "Balancing aesthetics and logic",
+    bgColor: "#0d0d0d",
+  },
+  {
+    description : "Payment in installments",
+    bgColor: "#bba9ff",
+  }
+]

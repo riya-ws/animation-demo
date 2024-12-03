@@ -1,8 +1,13 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import DataIntegration from "./pages/data-integration/data-integration";
-import Rivery from "./pages/rivery/rivery";
+const DataIntegration = lazy(
+  () => import("./pages/data-integration/data-integration")
+);
+const Rivery = lazy(() => import("./pages/rivery/rivery"));
+const SpotagencyInfiniteScroll = lazy(
+  () => import("./pages/spotagency-infinite-scroll/spotagency-infinite-scroll")
+);
 const SpotagencyDoing = lazy(
   () => import("./pages/spotagency-doing/spotagency-doing")
 );
@@ -58,12 +63,13 @@ const App = () => {
             <Route path="/card-rotation" element={<Rotation />} />
             <Route path="/spot-agency-doing" element={<SpotagencyDoing />} />
             <Route
-              path="painless-data-integration"
+              path="/painless-data-integration"
               element={<DataIntegration />}
             />
+            <Route path="/rivery" element={<Rivery />} />
             <Route
-              path="/rivery"
-              element={<Rivery />}
+              path="/spotagency-infinite-scroll"
+              element={<SpotagencyInfiniteScroll />}
             />
           </Routes>
         </Suspense>

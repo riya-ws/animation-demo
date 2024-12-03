@@ -946,7 +946,6 @@ export const DownArrowIntegration = () => {
     </svg>
   );
 };
-import * as React from "react";
 
 export const RiveryIcon = () => {
   return (
