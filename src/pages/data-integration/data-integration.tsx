@@ -2,6 +2,7 @@ import { useState } from "react";
 import { DataIntegrationData } from "../../utils/constant";
 import "./data-integration.css";
 import { DownArrowIntegration, SearchIntegration } from "../../locals/icon";
+import { Link } from "react-router-dom";
 const DataIntegration = () => {
   const [activeButton, setActiveButton] = useState("Database");
   const [inputValue, setInputValue] = useState("");
@@ -78,6 +79,24 @@ const DataIntegration = () => {
             <DownArrowIntegration />
           </div>
         </div>
+      </div>
+
+      <div className="container mx-auto my-20 flex flex-col items-center">
+        <h1 className="text-4xl max-md:text-xl text-center font-bold pb-5">
+          Reference website :{" "}
+          <Link
+            target="_blank"
+            to="https://rivery.io/product/data-transformation/"
+          >
+            Demo
+          </Link>
+        </h1>
+        <h2 className="text-xl text-center">
+          Status: The section functions smoothly and is fully responsive.
+          <p>
+            <b>Note </b>: Please click on the demo to navigate to the reference demo.
+          </p>
+        </h2>
       </div>
     </>
   );

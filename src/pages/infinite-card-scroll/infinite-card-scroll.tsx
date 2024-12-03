@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./infinite-card-scroll.css";
+import { Link } from "react-router-dom";
+import Referencevideo from "../../video/infinite-scrolling-card.webm";
 
 const cardsArray = Array.from({ length: 31 }, (_, i) => i);
 
@@ -79,7 +81,7 @@ const InfiniteCardScroll = () => {
                       ? "scale(0.7) translateX(-200%)"
                       : isPrev3
                       ? "scale(0.5) translateX(-300%)"
-                       : isPrev4
+                      : isPrev4
                       ? "scale(0.3) translateX(-200%)"
                       : "scale(0.5)",
                     opacity: isActive
@@ -114,13 +116,13 @@ const InfiniteCardScroll = () => {
 
           <div className="actions flex gap-5">
             <button
-              className="text-white bg-amber-300 w-16 h-16 rounded-xl"
+              className="text-white bg-amber-300 w-24 h-16 rounded-xl"
               onClick={handlePrev}
             >
               Prev
             </button>
             <button
-              className="text-white bg-amber-300 w-16 h-16 rounded-xl"
+              className="text-white bg-amber-300 w-24 h-16 rounded-xl"
               onClick={handleNext}
             >
               Next
@@ -129,6 +131,26 @@ const InfiniteCardScroll = () => {
         </div>
       </div>
       <div className="drag-proxy"></div>
+
+      <div className="container mx-auto my-20 flex flex-col items-center">
+        <h1 className="text-4xl max-md:text-xl text-center font-bold pb-3">
+          Reference website :{" "}
+          <Link target="_blank" to="https://codepen.io/GreenSock/pen/RwKwLWK">
+            Demo
+          </Link>
+        </h1>
+        <h2 className="text-xl pb-3">
+          <h2 className="text-xl text-center">
+            <b>Status </b>: The section functions smoothly and is fully
+            responsive. However, one issue remains: when scrolling, only 
+            card is visible in background , and the reference card is not displayed.
+          </h2>
+        </h2>
+
+        <video width="750" height="500" controls>
+          <source src={Referencevideo} type="video/mp4" />
+        </video>
+      </div>
     </>
   );
 };

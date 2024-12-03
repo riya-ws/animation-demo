@@ -50,8 +50,8 @@
     transform-origin: 50% 0% 0px;
     --border-style: solid;
     --border-top-width: 1px;
-    background: linear-gradient(180deg, #fcfaff 0%, rgb(233, 229, 255) 100%);
     border-radius: 30px;
+    background: linear-gradient(180deg, #fcfaff 0%, rgb(233, 229, 255) 100%);
     flex: none;
     height: 520px;
     overflow: hidden;
@@ -60,6 +60,7 @@
     max-width: 1280px;
     will-change: var(--framer-will-change-override, transform);
   }
+ 
   @media screen and (max-width: 768px) {
     .account-main {
       flex-direction: column !important;

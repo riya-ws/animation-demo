@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import "./infinite-logo.css";
 import { InfiniteLogoData } from "../../utils/constant";
+import { Link } from "react-router-dom";
+import Referencevideo from "../../video/infinite-logo.webm"
 
 const InfiniteLogo = () => {
   useEffect(() => {
@@ -39,6 +41,25 @@ const InfiniteLogo = () => {
             </li>
           </ul>
         </div>
+      </div>
+
+      <div className="container mx-auto my-20 flex flex-col items-center">
+        <h1 className="text-4xl max-md:text-xl text-center font-bold pb-3">
+          Reference website :{" "}
+          <Link
+            target="_blank"
+            to="/"
+          >
+            Demo
+          </Link>
+        </h1>
+        <h2 className="text-xl pb-3">
+          Status: The section functions smoothly and is fully responsive.
+        </h2>
+
+        <video width="750" height="500" controls>
+          <source src={Referencevideo} type="video/mp4" />
+        </video>
       </div>
     </>
   );

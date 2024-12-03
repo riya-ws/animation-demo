@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { stickyRevealData } from "../../utils/constant";
 import stickyReveal from "../../assets/linear.png";
-
+import { Link } from "react-router-dom";
+import Referencevideo from "../../video/sticky-scroll-reveal.webm";
 const ScrollReveal = () => {
   const [currentItem, setCurrentItem] = useState(() => {
     return (
@@ -32,9 +33,7 @@ const ScrollReveal = () => {
             section.getBoundingClientRect().top -
             scrollContainer.getBoundingClientRect().top;
 
-          if (sectionTop < scrollContainer.clientHeight / 4
-
-          ) {
+          if (sectionTop < scrollContainer.clientHeight / 4) {
             setCurrentItem(stickyRevealData[index]);
             setBgGradient(gradients[index % gradients.length]);
           }
@@ -57,7 +56,7 @@ const ScrollReveal = () => {
         className={`bg-black flex w-full gap-10 my-10 ${
           currentItem.title === "Real time changes"
             ? "bg-black"
-            : "bg-darkBlue"
+            : "bg-darkBlue-600"
         }`}
       >
         <div
@@ -79,7 +78,9 @@ const ScrollReveal = () => {
                         : "text-gray-400 opacity-50"
                     }`}
                   >
-                    <h1 className="lg:text-4xl text-2xl font-bold">{item.title}</h1>
+                    <h1 className="lg:text-4xl text-2xl font-bold">
+                      {item.title}
+                    </h1>
                     <p className="text-lg font-normal">{item.description}</p>
                   </div>
                 </div>
@@ -114,6 +115,25 @@ const ScrollReveal = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="container mx-auto my-20 flex flex-col items-center">
+        <h1 className="text-4xl max-md:text-xl text-center font-bold pb-3">
+          Reference website :{" "}
+          <Link
+            target="_blank"
+            to="https://ui.aceternity.com/components/sticky-scroll-reveal"
+          >
+            Demo
+          </Link>
+        </h1>
+        <h2 className="text-xl pb-3">
+          Status: The section functions smoothly and is fully responsive.
+        </h2>
+
+        <video width="750" height="500" controls>
+          <source src={Referencevideo} type="video/mp4" />
+        </video>
       </div>
     </>
   );

@@ -15,6 +15,7 @@ module.exports = {
         secondary: "#FFFFFF",
         darkBlue: {
           700: "#1d024f",
+          600:"#0f172a"
         },
         neutral: {
           750: "#2d2d2d",

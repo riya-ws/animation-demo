@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { SpotLock, TopArrow } from "../../locals/icon";
 import { AgencyDoingData } from "../../utils/constant";
+import { Link } from "react-router-dom";
 const SpotagencyDoing = () => {
   const [activeCardIndex, setActiveCardIndex] = useState(null);
 
@@ -81,6 +82,22 @@ const SpotagencyDoing = () => {
             In progress...
           </button>
         </div>
+      </div>
+
+      <div className="container mx-auto my-20 flex flex-col items-center">
+        <h1 className="text-4xl max-md:text-xl text-center font-bold pb-3">
+          Reference website :{" "}
+          <Link
+            target="_blank"
+            to="https://spotagency.io/"
+          >
+            Demo
+          </Link>
+        </h1>
+        <h2 className="text-xl pb-3 text-center">
+          Status: The section functions smoothly and is fully responsive.
+        </h2>
+
       </div>
     </>
   );

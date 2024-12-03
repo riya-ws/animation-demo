@@ -6,6 +6,7 @@ import {
   DownArrowIntegration,
 } from "../../locals/icon";
 import { RiveryCardsData } from "../../utils/constant";
+import { Link } from "react-router-dom";
 
 const Rivery = () => {
   const [activeCard, setActiveCard] = useState<number | null>(1);
@@ -197,6 +198,24 @@ const Rivery = () => {
             <div className="h-0.5 w-full bg-[#75749c]"></div>
           </div>
         ))}
+      </div>
+
+
+      <div className="container mx-auto my-20 flex flex-col items-center">
+        <h1 className="text-4xl max-md:text-xl text-center font-bold pb-3">
+          Reference website :{" "}
+          <Link
+            target="_blank"
+            to="https://rivery.io/"
+          >
+            Demo
+          </Link>
+        </h1>
+        <h2 className="text-xl pb-3 text-center">
+          Status: The section functions smoothly and is fully responsive.
+        </h2>
+
+      
       </div>
     </>
   );

@@ -327,6 +327,22 @@ const ScrollDrivenDemoThree = () => {
           for browser compatibility tables.
         </div>
       </div>
+
+      <div className="container mx-auto my-20 flex flex-col items-center">
+        <h1 className="text-4xl max-md:text-xl text-center font-bold pb-3">
+          Reference website :{" "}
+          <Link
+            target="_blank"
+            to="https://tympanus.net/Development/ScrollCarousel/index3.html"
+          >
+            Demo
+          </Link>
+        </h1>
+        <h2 className="text-xl pb-3 text-center">
+          Status: The section functions smoothly and is fully responsive.
+        </h2>
+
+      </div>
     </>
   );
 };

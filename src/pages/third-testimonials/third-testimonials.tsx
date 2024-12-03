@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import { Avatar, GradientStar } from "../../locals/icon";
+import { CardAvtar, GradientStar } from "../../locals/icon";
 import "./third-testimonial.css";
 import { TempTestimonials } from "../../utils/constant";
-
+import { Link } from "react-router-dom";
+import Referencevideo from "../../video/superprof-demo.webm";
 const ThirdTestimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [liWidth, setLiWidth] = useState(0);
@@ -146,7 +147,7 @@ const ThirdTestimonials = () => {
                   <div className="review text-left space-y-7">
                     <div className="details flex items-center gap-1.5">
                       <div className="avatar">
-                        <Avatar />
+                        <CardAvtar />
                       </div>
                       <div className="infos">
                         <p className="text-2xl font-bold">{testimonial.name}</p>
@@ -175,6 +176,24 @@ const ThirdTestimonials = () => {
             </ul>
           </div>
         </div>
+      </div>
+
+      <div className="container mx-auto my-20 flex flex-col items-center">
+        <h1 className="text-4xl max-md:text-xl text-center font-bold pb-5">
+          Reference website :{" "}
+          <Link target="_blank" to="https://www.superprof.co.uk/">
+            Demo
+          </Link>
+        </h1>
+        <h2 className="text-xl text-center">
+          Issue: Clicking the arrow causes a glitch on the card, and the section
+          does not open smoothly.
+         <p><b>Note </b>: Please click on the demo to navigate to the reference demo.</p>
+        </h2>
+
+        <video width="750" height="500" controls>
+          <source src={Referencevideo} type="video/mp4" />
+        </video>
       </div>
     </>
   );
