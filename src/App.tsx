@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+const SunsetAi = lazy(() => import("./pages/sunset-ai/sunset-ai"));
 const DataIntegration = lazy(
   () => import("./pages/data-integration/data-integration")
 );
@@ -71,6 +72,7 @@ const App = () => {
               path="/spotagency-infinite-scroll"
               element={<SpotagencyInfiniteScroll />}
             />
+            <Route path="/sunset-ai" element={<SunsetAi />} />
           </Routes>
         </Suspense>
       </BrowserRouter>

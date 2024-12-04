@@ -21,8 +21,8 @@ const SpotagencyInfiniteScroll = () => {
   }, []);
   return (
     <>
-      <div className="bg-[#e6e6e6] h-screen">
-        <div className="container mx-auto ">
+      <div className="bg-[#e6e6e6] h-screen py-10">
+        <div className="container mx-auto">
           <h1 className="text-7xl max-md:text-4xl font-medium py-7 max-lg:text-center">
             How do we do it
           </h1>

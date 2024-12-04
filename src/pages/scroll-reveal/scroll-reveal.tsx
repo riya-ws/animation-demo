@@ -10,18 +10,15 @@ const ScrollReveal = () => {
       stickyRevealData[0]
     );
   });
-
-  const sectionRef = useRef<(HTMLDivElement | null)[]>([]);
-  const scrollContainerRef = useRef<HTMLDivElement | null>(null);
-
   const [bgGradient, setBgGradient] = useState<string>(
     "linear-gradient(to bottom right, #FF007A, #6A00FF)"
   );
-
   const gradients: string[] = [
     "linear-gradient(to bottom right, #FF007A, #6A00FF)",
     "linear-gradient(to bottom right, #FFA500, #FFFF00)",
   ];
+  const sectionRef = useRef<(HTMLDivElement | null)[]>([]);
+  const scrollContainerRef = useRef<HTMLDivElement | null>(null);
 
   const handleScroll = () => {
     const scrollContainer = scrollContainerRef.current;

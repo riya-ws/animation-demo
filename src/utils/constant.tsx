@@ -36,6 +36,13 @@ import sprinkHomeIntegration from "../assets/data-integration/21-sprinklr-home.w
 import mixHomeIntegration from "../assets/data-integration/24-mix-home.webp";
 import rdsPostHomeIntegration from "../assets/data-integration/60-rds-post-home.webp";
 import faceHomeIntegration from "../assets/data-integration/26-face-home.webp";
+import aiScheduling from "../assets/ai/scheduling-ai.png";
+import missTask from "../assets/ai/miss-task.avif";
+import optionalTime from "../assets/ai/optimal-time.avif";
+import assistant from "../assets/ai/to-do.avif";
+import weeklyView from "../assets/ai/weekly-picture.avif";
+import accessApp from "../assets/ai/access-anywhere.avif";
+
 
 export const SliderDemoData = [
   {
@@ -84,19 +91,24 @@ export const SliderDemoData = [
     path: "/spot-agency-doing",
   },
   {
-    title: "Demo 10",
+    title: "Demo 11",
+    description: "How we do it",
+    path: "/spotagency-infinite-scroll",
+  },
+  {
+    title: "Demo 11",
     description: "Painless data integration section",
     path: "/painless-data-integration",
   },
   {
-    title: "Demo 11",
+    title: "Demo 12",
     description: "Made by data pros for data pros",
     path: "/rivery",
   },
   {
-    title: "Demo 12",
-    description: "How we do it",
-    path: "/spotagency-infinite-scroll",
+    title: "Demo 13",
+    description: "Why BeforeSunset AI?",
+    path: "/sunset-ai",
   },
 ];
 export const WorkData = [
@@ -663,11 +675,11 @@ export const RiveryCardsData = [
     ],
   },
 ];
-
 export const SpotagencyScrollData = {
   business: [
     {
-      description: "Bringing value to the business by driving strategy and objectives",
+      description:
+        "Bringing value to the business by driving strategy and objectives",
       bgColor: "#c9ff33",
     },
     {
@@ -690,3 +702,47 @@ export const SpotagencyScrollData = {
     },
   ],
 };
+export const SunsetData = [
+  {
+    subtitle: "AI Features",
+    title: "AI Scheduling",
+    paragraph:
+      "Choose your preferred planning technique, and let AI optimize your day using proven productivity methods.",
+    image: aiScheduling,
+  },
+  {
+    subtitle: "AI Features",
+    title: "Find Optimal Time",
+    paragraph:
+      "If you’re struggling to find time for tasks, AI will place them in the most suitable slot on your calendar.",
+    image: optionalTime,
+  },
+  {
+    subtitle: "AI Features",
+    title: "To-do Assistant",
+    paragraph:
+      "View your tasks in actionable format with AI, which also helps break them into subtasks for easier completion.",
+    image: assistant,
+  },
+  {
+    subtitle: "Weekly & Monthly View",
+    title: "See the big picture",
+    paragraph:
+      "Utilize Weekly and Monthly views to plan ahead and efficiently manage your task schedule.",
+    image: weeklyView,
+  },
+  {
+    subtitle: "Mobile App",
+    title: "Access Anywhere",
+    paragraph:
+      "Effortlessly manage your tasks and schedule, accessible on all devices via web and mobile apps for seamless convenience.",
+    image: accessApp,
+  },
+  {
+    subtitle: "To-do Management",
+    title: "Never miss a task",
+    paragraph:
+      "Keep all your tasks in view with due dates, reminders, and deadlines, ensuring you never miss a task.",
+    image: missTask,
+  },
+];
