@@ -1,0 +1,38 @@
+.spot-agency-infinite.scroller {
+  overflow: hidden;
+  display: flex;
+  gap: 20px;
+}
+
+.scroller__inner_agency {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 1s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+
+.spot-agency-infinite.scroller[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+.spot-agency-infinite.scroller[data-direction="left"] {
+  --_animation-direction: forwards;
+}
+
+.spot-agency-infinite.scroller[data-speed="fast"] {
+  --_animation-duration: 12s;
+}
+
+.spot-agency-infinite.scroller[data-speed="slow"] {
+  --_animation-duration: 18s;
+}
+
+@keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
