@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { SpotagencyScrollData } from "../../utils/constant";
 import "./spotagency-infinite-scroll.css";
+import { Link } from "react-router-dom";
 
 const SpotagencyInfiniteScroll = () => {
   const scrollerRef = useRef<HTMLDivElement>(null);
@@ -22,7 +23,9 @@ const SpotagencyInfiniteScroll = () => {
     <>
       <div className="bg-[#e6e6e6] h-screen">
         <div className="container mx-auto ">
-          <h1 className="text-7xl max-md:text-4xl font-medium py-7 max-lg:text-center">How do we do it</h1>
+          <h1 className="text-7xl max-md:text-4xl font-medium py-7 max-lg:text-center">
+            How do we do it
+          </h1>
 
           {/*Mobile screen*/}
           <div className="lg:hidden block bg-[#e6e6e6] ">
@@ -111,6 +114,25 @@ const SpotagencyInfiniteScroll = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="container mx-auto my-20 flex flex-col items-center">
+          <h1 className="text-4xl max-md:text-xl text-center font-bold pb-5">
+            Reference website :{" "}
+            <Link
+              target="_blank"
+              to="https://spotagency.io/"
+            >
+              Demo
+            </Link>
+          </h1>
+          <h2 className="text-xl text-center">
+            Issue: The section works smoothly and is responsive, but when new cards load or appear, the page experiences some jerky scrolling behavior.
+            <p>
+              <b>Note </b>: Please click on the demo to navigate to the
+              reference demo.
+            </p>
+          </h2>
         </div>
       </div>
     </>
