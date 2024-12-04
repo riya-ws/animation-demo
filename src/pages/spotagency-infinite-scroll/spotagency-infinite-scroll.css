@@ -13,6 +13,7 @@
   flex-wrap: nowrap;
   animation: scroll var(--_animation-duration, 1s)
     var(--_animation-direction, forwards) linear infinite;
+  will-change: transform;
 }
 
 .spot-agency-infinite.scroller[data-direction="right"] {
@@ -32,7 +33,19 @@
 }
 
 @keyframes scroll {
-    to {
-      transform: translate(calc(-50% - 0.5rem));
-    }
+  to {
+    transform: translate(calc(-50% - 0.5rem));
   }
+}
+.scroller__inner_agency:after {
+  content: "";
+  display: block;
+  width: 100%;
+}
+
+@media screen and (max-width: 790px) {
+  .scroller__inner_agency {
+    animation: none;
+    display: none;
+  }
+}

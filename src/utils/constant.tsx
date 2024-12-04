@@ -663,17 +663,30 @@ export const RiveryCardsData = [
     ],
   },
 ];
-export const SpotagencyScrollData =[
-  {
-    description : "Bringing value to the business by driving strategy and objectives",
-    bgColor: "#c9ff33",
-  },
-  {
-    description : "Balancing aesthetics and logic",
-    bgColor: "#0d0d0d",
-  },
-  {
-    description : "Payment in installments",
-    bgColor: "#bba9ff",
-  }
-]
+
+export const SpotagencyScrollData = {
+  business: [
+    {
+      description: "Bringing value to the business by driving strategy and objectives",
+      bgColor: "#c9ff33",
+    },
+    {
+      description: "Balancing aesthetics and logic",
+      bgColor: "#0d0d0d",
+    },
+    {
+      description: "Payment in installments",
+      bgColor: "#bba9ff",
+    },
+  ],
+  brand: [
+    {
+      description: "At the intersection of technology, research and wow",
+      bgColor: "#ff611d",
+    },
+    {
+      description: "Transparent work process",
+      bgColor: "#ffffff",
+    },
+  ],
+};
